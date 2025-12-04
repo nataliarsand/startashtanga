@@ -33,16 +33,16 @@
   --color-accent-600: 150 65 52;    /* #964134 - deep terracotta */
   --color-accent-700: 130 55 45;    /* #82372D - dark terracotta */
 
-  /* Secondary accent - sky blue for special highlights */
-  --color-sky-400: 160 215 230;     /* #A0D7E6 - light sky */
-  --color-sky-500: 144 203 220;     /* #90CBDC - sky blue */
-  --color-sky-600: 115 175 195;     /* #73AFC3 - muted sky */
+  /* Info/secondary accent - for tips, highlights, and informational elements */
+  --color-info-light: 160 215 230;  /* #A0D7E6 - light */
+  --color-info-base: 144 203 220;   /* #90CBDC - base */
+  --color-info-muted: 115 175 195;  /* #73AFC3 - muted */
+  --color-info-dark: 45 100 120;    /* #2D6478 - dark (accessible) */
 
-  /* Semantic colors */
+  /* Semantic status colors */
   --color-success: 34 197 94;       /* #22c55e */
   --color-warning: 234 179 8;       /* #eab308 */
-  --color-error: 170 80 66;         /* #AA5042 - using terracotta */
-  --color-info: 144 203 220;        /* #90CBDC - using sky blue */
+  --color-error: 170 80 66;         /* #AA5042 */
 
   /* Background colors */
   --color-bg-base: 255 253 250;     /* #FFFDF9 - warm white */
@@ -223,10 +223,11 @@
   --color-accent-600: rgb(var(--color-accent-600));
   --color-accent-700: rgb(var(--color-accent-700));
 
-  /* Sky blue accent */
-  --color-sky-400: rgb(var(--color-sky-400));
-  --color-sky-500: rgb(var(--color-sky-500));
-  --color-sky-600: rgb(var(--color-sky-600));
+  /* Info accent */
+  --color-info-light: rgb(var(--color-info-light));
+  --color-info-base: rgb(var(--color-info-base));
+  --color-info-muted: rgb(var(--color-info-muted));
+  --color-info-dark: rgb(var(--color-info-dark));
 
   /* Font families */
   --font-sans: var(--font-family-sans);
@@ -379,6 +380,39 @@
   .animate-slide-down {
     animation: slideDown var(--transition-duration-slow)
       var(--transition-timing-out);
+  }
+
+  /* Background colors - semantic naming */
+  .bg-surface { background-color: #F5EDDF; }           /* Main surface/card background */
+  .bg-surface-alt { background-color: #EEE2CE; }       /* Alternative surface */
+  .bg-emphasis { background-color: #4F3130; }          /* Strong emphasis background */
+  .bg-accent { background-color: #AA5042; }            /* Accent/CTA background */
+  .bg-info { background-color: #2D6478; }              /* Info/tip accent background */
+  .bg-info-subtle { background-color: #f8fcfd; }       /* Info/tip subtle background */
+  .bg-warning-subtle { background-color: #fdf8f7; }    /* Warning subtle background */
+
+  /* Text colors - semantic naming */
+  .text-heading { color: #4F3130; }                    /* Headings and strong text */
+  .text-body { color: #753742; }                       /* Body text */
+  .text-subtle { color: #967369; }                     /* Subtle/muted text */
+  .text-accent { color: #AA5042; }                     /* Accent text */
+  .text-info { color: #2D6478; }                       /* Info/tip text */
+  .text-on-dark { color: #F5EDDF; }                    /* Text on dark backgrounds */
+  .text-link-on-dark { color: #90CBDC; }               /* Links on dark backgrounds */
+
+  /* Border colors - semantic naming */
+  .border-default { border-color: #DCC8AF; }           /* Default borders */
+  .border-subtle { border-color: #EEE2CE; }            /* Subtle borders */
+  .border-accent { border-color: #AA5042; }            /* Accent borders */
+  .border-info { border-color: #90CBDC; }              /* Info/tip borders */
+
+  /* Gradients */
+  .gradient-hero {
+    background: linear-gradient(135deg, #AA5042 0%, #753742 50%, #4F3130 100%);
+  }
+
+  .gradient-cta {
+    background: linear-gradient(135deg, #AA5042 0%, #753742 100%);
   }
 }
 

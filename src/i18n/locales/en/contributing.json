@@ -1,0 +1,92 @@
+{
+  "hero": {
+    "title": "Contribute",
+    "subtitle": "Help make Ashtanga Yoga accessible to everyone"
+  },
+  "nav": {
+    "intro": "Join the effort",
+    "ways": "Ways to contribute",
+    "shala": "Share your shala",
+    "wanted": "Help wanted",
+    "technical": "For developers"
+  },
+  "intro": {
+    "title": "Join the effort",
+    "text": "Start Ashtanga is a collaborative project, anyone can help improve it. All our content is freely available and we welcome contributions from practitioners around the world."
+  },
+  "ways": {
+    "title": "Ways to contribute",
+    "items": [
+      {
+        "icon": "pen",
+        "title": "Content & translations",
+        "description": "Help improve existing content, fix typos, or translate the site into your language to reach more practitioners worldwide."
+      },
+      {
+        "icon": "lightbulb",
+        "title": "Suggest improvements",
+        "description": "Have ideas for new features, better explanations, or resources we should add? We'd love to hear your suggestions."
+      },
+      {
+        "icon": "code",
+        "title": "Development",
+        "description": "This is an open-source project built with React and TypeScript. Help us build new features, fix bugs, or improve the codebase."
+      },
+      {
+        "icon": "share",
+        "title": "Spread the word",
+        "description": "Share Start Ashtanga with fellow practitioners, yoga studios, or anyone curious about beginning their Ashtanga journey."
+      }
+    ]
+  },
+  "shala": {
+    "title": "Share your shala",
+    "text": "Know a great Mysore program? Help us build a global directory so beginners can find authentic teachers near them.",
+    "note": "We're currently collecting shala information from the community. Once we have enough data to represent the global Ashtanga community fairly, we'll publish the directory — we don't want to favor just a few places.",
+    "coming": "Coming soon: We'll also be collecting information about workshops and events.",
+    "button": "Submit your shala"
+  },
+  "wanted": {
+    "title": "Help wanted",
+    "text": "We're actively looking for help with these larger projects:",
+    "items": [
+      {
+        "icon": "database",
+        "title": "Shala directory backend",
+        "description": "Build a system to manage and display Mysore shalas worldwide, database design, API, and admin tools."
+      },
+      {
+        "icon": "palette",
+        "title": "Logo design",
+        "description": "Create an identity for Start Ashtanga. We're considering a logo contest, reach out if you're interested!"
+      },
+      {
+        "icon": "hashtag",
+        "title": "Social media",
+        "description": "Help create and maintain our social media presence to grow the community and share updates."
+      },
+      {
+        "icon": "books",
+        "title": "Resources library",
+        "description": "Curate and maintain a library of books, articles, and other learning materials for practitioners."
+      }
+    ]
+  },
+  "technical": {
+    "title": "For developers",
+    "text": "This project is open source and built with React, TypeScript, and Tailwind CSS. If you're a developer, you can contribute code, report issues, or help build new features.",
+    "features": [
+      "React 19 with TypeScript",
+      "Vite for fast development",
+      "i18next for internationalization",
+      "Fully accessible components"
+    ],
+    "githubButton": "View on GitHub",
+    "guideButton": "Contributing guide"
+  },
+  "cta": {
+    "title": "Ready to contribute?",
+    "text": "Every contribution, big or small, helps make Ashtanga more accessible.",
+    "button": "Get in touch"
+  }
+}

@@ -4,3 +4,5 @@ export { default as GlossaryTooltip } from './GlossaryTooltip';
 export { default as PageHero } from './PageHero';
 export { default as ContentCard } from './ContentCard';
 export { default as CalloutBox } from './CalloutBox';
+export { default as ChecklistItem } from './ChecklistItem';
+export { default as SectionNav } from './SectionNav';

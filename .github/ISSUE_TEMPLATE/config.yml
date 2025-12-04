@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Questions & Discussions
+    url: https://github.com/nataliarsand/startashtanga/discussions
+    about: Ask questions or start a discussion about Ashtanga yoga or the project
+  - name: Translation Help
+    url: https://github.com/nataliarsand/startashtanga/discussions/categories/translations
+    about: Get help with translations or find translation collaborators

@@ -24,7 +24,7 @@ Whether you're curious about your first Mysore class or want to deepen your unde
 
 ```bash
 # Clone the repository
-git clone https://github.com/USERNAME/startashtanga.git
+git clone https://github.com/nataliarsand/startashtanga.git
 cd startashtanga
 
 # Install dependencies
@@ -48,6 +48,9 @@ The site will be available at `http://localhost:5173`.
 | `npm run format` | Format code with Prettier |
 | `npm run format:check` | Check code formatting |
 | `npm run typecheck` | Run TypeScript type checking |
+| `npm run test` | Run tests in watch mode |
+| `npm run test:run` | Run tests once |
+| `npm run test:coverage` | Run tests with coverage report |
 
 ## Project Structure
 
@@ -199,9 +202,9 @@ import { NewPage } from './routes';
 
 ## Contributing
 
-We welcome contributions! This project is meant to be built by the global Ashtanga community.
+We welcome contributions! This project is meant to be built by the global Ashtanga community. See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
 
-### How to Contribute
+### Quick Start for Contributors
 
 1. **Fork** the repository
 2. **Create a branch** for your feature (`git checkout -b feature/amazing-feature`)
@@ -209,19 +212,60 @@ We welcome contributions! This project is meant to be built by the global Ashtan
 4. **Push** to your branch (`git push origin feature/amazing-feature`)
 5. **Open a Pull Request**
 
-### Contribution Ideas
+### Types of Contributions
 
-- Translate content to your language
-- Fix typos or improve existing content
-- Add information about Ashtanga concepts
-- Improve accessibility
-- Add your local shala to the directory (coming soon)
-- Report bugs or suggest features via Issues
+#### Content & Translations
+
+Help improve existing content, fix typos, or translate the site into your language.
+
+**To add or edit content:**
+1. Find the relevant translation file in `src/i18n/locales/en/`
+2. Edit the JSON content directly
+3. Submit a PR with your changes
+
+**To add a new language:**
+1. Create a new folder: `src/i18n/locales/[language-code]/`
+2. Copy all JSON files from `src/i18n/locales/en/`
+3. Translate the content in each JSON file
+4. Update `src/i18n/i18n.ts` to register the new language (see [Adding a New Language](#adding-a-new-language) above)
+
+#### Share Your Shala
+
+Know a great Mysore program? Help us build a global directory.
+
+**How to submit a shala:**
+- For now, open a GitHub Issue with the shala details (name, location, teacher, website, contact)
+- We're building a shala directory backend - help wanted! (see below)
+
+#### Suggest Improvements
+
+Have ideas for new features or better explanations?
+
+**How to suggest:**
+- Open a GitHub Issue describing your idea
+- For bug reports, include steps to reproduce
+- For feature requests, explain the use case
+
+#### Spread the Word
+
+Share Start Ashtanga with fellow practitioners, yoga studios, or anyone curious about Ashtanga.
+
+### Help Wanted
+
+We're actively looking for help with these larger projects:
+
+- [ ] **Shala directory backend** - Build a system to manage and display Mysore shalas worldwide (database, API, admin tools)
+- [ ] **Logo design** - Create an identity for Start Ashtanga
+- [ ] **Social media** - Help create and maintain our social media presence
+- [ ] **Resources library** - Curate books, articles, and learning materials for practitioners
+
+Interested in helping with any of these? Open an issue or reach out via our [contact form](https://tally.so/r/waGkrN).
 
 ### Code Style
 
 - Run `npm run lint` before committing
 - Run `npm run format` to auto-format code
+- Run `npm run typecheck` to check TypeScript types
 - Follow existing patterns in the codebase
 - Use translation keys for all user-facing text
 
@@ -232,4 +276,4 @@ This project is open source and available under the [MIT License](LICENSE).
 ## Links
 
 - Website: [startashtanga.com](https://startashtanga.com)
-- GitHub: [github.com/USERNAME/startashtanga](https://github.com/USERNAME/startashtanga)
+- GitHub: [github.com/nataliarsand/startashtanga](https://github.com/nataliarsand/startashtanga)

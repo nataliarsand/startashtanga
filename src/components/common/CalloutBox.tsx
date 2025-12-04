@@ -10,21 +10,21 @@ interface CalloutBoxProps {
   variant?: CalloutVariant;
 }
 
-const variantStyles: Record<CalloutVariant, { borderColor: string; bgColor: string; iconColor: string }> = {
+const variantStyles: Record<CalloutVariant, { borderClass: string; bgClass: string; iconClass: string }> = {
   info: {
-    borderColor: '#90CBDC',
-    bgColor: '#f8fcfd',
-    iconColor: '#90CBDC',
+    borderClass: 'border-info',
+    bgClass: 'bg-info-subtle',
+    iconClass: 'text-info',
   },
   warning: {
-    borderColor: '#AA5042',
-    bgColor: '#fdf8f7',
-    iconColor: '#AA5042',
+    borderClass: 'border-accent',
+    bgClass: 'bg-warning-subtle',
+    iconClass: 'text-accent',
   },
   tip: {
-    borderColor: '#90CBDC',
-    bgColor: '#f8fcfd',
-    iconColor: '#90CBDC',
+    borderClass: 'border-info',
+    bgClass: 'bg-info-subtle',
+    iconClass: 'text-info',
   },
 };
 
@@ -38,21 +38,19 @@ export default function CalloutBox({
 
   return (
     <div
-      className="flex gap-4 rounded-2xl border-l-4 p-5"
-      style={{ borderColor: styles.borderColor, backgroundColor: styles.bgColor }}
+      className={`flex gap-4 rounded-2xl border-l-4 p-5 ${styles.borderClass} ${styles.bgClass}`}
     >
       <FontAwesomeIcon
         icon={icon}
-        className="mt-0.5 h-5 w-5 flex-shrink-0"
-        style={{ color: styles.iconColor }}
+        className={`mt-0.5 h-5 w-5 flex-shrink-0 ${styles.iconClass}`}
       />
       <div>
         {title && (
-          <h4 className="font-semibold" style={{ color: '#4F3130' }}>
+          <h4 className="text-heading font-semibold">
             {title}
           </h4>
         )}
-        <div className={title ? 'mt-1' : ''} style={{ color: '#753742' }}>
+        <div className={`text-body ${title ? 'mt-1' : ''}`}>
           {children}
         </div>
       </div>

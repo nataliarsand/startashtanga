@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
-import type { ComponentPropsWithoutRef, CSSProperties } from 'react';
+import type { ComponentPropsWithoutRef } from 'react';
 
-type ButtonVariant = 'primary' | 'secondary' | 'outline';
+type ButtonVariant = 'primary' | 'secondary' | 'outline' | 'info';
 type ButtonSize = 'sm' | 'md' | 'lg';
 
 interface BaseButtonProps {
@@ -35,26 +35,17 @@ interface ButtonAsAnchorProps
 
 type ButtonProps = ButtonAsButtonProps | ButtonAsLinkProps | ButtonAsAnchorProps;
 
-const variantStyles: Record<ButtonVariant, CSSProperties> = {
-  primary: {
-    backgroundColor: '#AA5042',
-    color: '#FFFFFF',
-  },
-  secondary: {
-    backgroundColor: '#F5EDDF',
-    color: '#4F3130',
-  },
-  outline: {
-    backgroundColor: 'transparent',
-    color: '#4F3130',
-    border: '2px solid #DCC8AF',
-  },
+const variantStyles: Record<ButtonVariant, string> = {
+  primary: 'bg-accent text-white hover:opacity-90',
+  secondary: 'bg-surface text-heading hover:opacity-90',
+  outline: 'bg-transparent text-heading border-2 border-default hover:border-accent',
+  info: 'bg-info text-white hover:opacity-90',
 };
 
 const sizeStyles: Record<ButtonSize, string> = {
-  sm: 'px-4 py-2 text-sm',
+  sm: 'px-3 py-1.5 text-sm',
   md: 'px-5 py-2.5 text-sm',
-  lg: 'px-8 py-3 text-base',
+  lg: 'px-6 py-3 text-base',
 };
 
 export default function Button({
@@ -64,25 +55,27 @@ export default function Button({
   ...props
 }: ButtonProps) {
   const baseClassName =
-    'inline-flex items-center justify-center rounded-lg font-semibold transition-all hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 disabled:opacity-50 disabled:cursor-not-allowed';
+    'inline-flex items-center justify-center rounded-lg font-semibold transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 disabled:opacity-50 disabled:cursor-not-allowed';
 
-  const combinedClassName = `${baseClassName} ${sizeStyles[size]} ${className}`;
-  const style = variantStyles[variant];
+  const combinedClassName = `${baseClassName} ${variantStyles[variant]} ${sizeStyles[size]} ${className}`;
 
   if (props.as === 'link') {
-    const { as: _, to, children, ...rest } = props;
+    const { as: _as, to, children, ...rest } = props;
+    void _as;
     return (
-      <Link to={to} className={combinedClassName} style={style} {...rest}>
+      <Link to={to} className={combinedClassName} {...rest}>
         {children}
       </Link>
     );
   }
 
   if (props.as === 'a') {
-    const { as: _, ...rest } = props;
-    return <a className={combinedClassName} style={style} {...rest} />;
+    const { as: _as, ...rest } = props;
+    void _as;
+    return <a className={combinedClassName} {...rest} />;
   }
 
-  const { as: _, ...rest } = props;
-  return <button className={combinedClassName} style={style} {...rest} />;
+  const { as: _as, ...rest } = props;
+  void _as;
+  return <button className={combinedClassName} {...rest} />;
 }

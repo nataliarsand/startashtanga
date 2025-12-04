@@ -4,12 +4,10 @@ import {
   faHeart,
   faBookOpen,
   faUsers,
-  faCodeBranch,
-  faHandshake,
-  faEnvelope,
+  faArrowRight,
 } from '@fortawesome/free-solid-svg-icons';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import { Button, PageHero, ContentCard, CalloutBox } from '../components/common';
+import { Button, PageHero, ContentCard, SectionNav } from '../components/common';
+import { siteConfig } from '../config/site';
 
 export default function About() {
   const { t } = useTranslation('about');
@@ -26,38 +24,54 @@ export default function About() {
     users: faUsers,
   };
 
+  const navItems = [
+    { id: 'mission', label: t('nav.mission') },
+    { id: 'approach', label: t('nav.approach') },
+    { id: 'values', label: t('nav.values') },
+    { id: 'contact', label: t('nav.contact') },
+  ];
+
   return (
     <>
       <PageHero
         title={t('hero.title')}
         subtitle={t('hero.subtitle')}
-      />
+      >
+        <SectionNav items={navItems} />
+      </PageHero>
 
       {/* Content */}
       <div className="bg-white py-16 sm:py-20">
         <div className="container-main max-w-3xl">
           {/* Mission */}
-          <section>
-            <h2
-              className="text-2xl font-bold sm:text-3xl"
-              style={{ color: '#4F3130' }}
-            >
+          <section id="mission">
+            <h2 className="text-heading text-2xl font-bold sm:text-3xl">
               {t('mission.title')}
             </h2>
-            <p className="mt-4 text-lg leading-relaxed" style={{ color: '#753742' }}>
+            <p className="text-body mt-4 text-lg leading-relaxed">
               {t('mission.text')}
             </p>
           </section>
 
           {/* Divider */}
-          <hr className="my-12" style={{ borderColor: '#DCC8AF' }} />
+          <hr className="border-default my-12" />
+
+          {/* Approach */}
+          <section id="approach">
+            <h2 className="text-heading text-2xl font-bold sm:text-3xl">
+              {t('approach.title')}
+            </h2>
+            <p className="text-body mt-4 leading-relaxed">
+              {t('approach.text')}
+            </p>
+          </section>
+
+          {/* Divider */}
+          <hr className="border-default my-12" />
 
           {/* Values */}
-          <section>
-            <h2
-              className="text-2xl font-bold sm:text-3xl"
-              style={{ color: '#4F3130' }}
-            >
+          <section id="values">
+            <h2 className="text-heading text-2xl font-bold sm:text-3xl">
               {t('values.title')}
             </h2>
 
@@ -65,20 +79,17 @@ export default function About() {
               {values.map((value, index) => (
                 <ContentCard key={index}>
                   <div className="flex items-start gap-4">
-                    <div
-                      className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full"
-                      style={{ backgroundColor: '#AA5042' }}
-                    >
+                    <div className="bg-accent flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full">
                       <FontAwesomeIcon
                         icon={iconMap[value.icon] || faHeart}
                         className="h-5 w-5 text-white"
                       />
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold" style={{ color: '#4F3130' }}>
+                      <h3 className="text-heading text-lg font-semibold">
                         {value.title}
                       </h3>
-                      <p className="mt-1" style={{ color: '#753742' }}>
+                      <p className="text-body mt-1">
                         {value.description}
                       </p>
                     </div>
@@ -89,88 +100,23 @@ export default function About() {
           </section>
 
           {/* Divider */}
-          <hr className="my-12" style={{ borderColor: '#DCC8AF' }} />
-
-          {/* Open Source */}
-          <section>
-            <h2
-              className="text-2xl font-bold sm:text-3xl"
-              style={{ color: '#4F3130' }}
-            >
-              {t('openSource.title')}
-            </h2>
-            <p className="mt-4 leading-relaxed" style={{ color: '#753742' }}>
-              {t('openSource.text')}
-            </p>
-
-            <div className="mt-6">
-              <CalloutBox icon={faHandshake} title={t('openSource.contribute.title')} variant="info">
-                <p>{t('openSource.contribute.text')}</p>
-              </CalloutBox>
-            </div>
-
-            <ContentCard className="mt-6">
-              <div className="flex items-start gap-4">
-                <div
-                  className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full"
-                  style={{ backgroundColor: '#4F3130' }}
-                >
-                  <FontAwesomeIcon icon={faCodeBranch} className="h-5 w-5 text-white" />
-                </div>
-                <div>
-                  <h3 className="font-semibold" style={{ color: '#4F3130' }}>
-                    {t('openSource.technical.title')}
-                  </h3>
-                  <p className="mt-1 text-sm" style={{ color: '#753742' }}>
-                    {t('openSource.technical.text')}
-                  </p>
-                  <div className="mt-3">
-                    <Button
-                      as="a"
-                      href="https://github.com/natalifernandez/startashtanga"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      variant="outline"
-                      size="sm"
-                    >
-                      <FontAwesomeIcon icon={faGithub} className="mr-2 h-4 w-4" />
-                      {t('openSource.githubButton')}
-                    </Button>
-                  </div>
-                </div>
-              </div>
-            </ContentCard>
-          </section>
-
-          {/* Divider */}
-          <hr className="my-12" style={{ borderColor: '#DCC8AF' }} />
+          <hr className="border-default my-12" />
 
           {/* Contact */}
-          <section>
-            <h2
-              className="text-2xl font-bold sm:text-3xl"
-              style={{ color: '#4F3130' }}
-            >
+          <section id="contact">
+            <h2 className="text-heading text-2xl font-bold sm:text-3xl">
               {t('contact.title')}
             </h2>
-            <p className="mt-4" style={{ color: '#753742' }}>
+            <p className="text-body mt-4">
               {t('contact.text')}
             </p>
 
-            <div className="mt-6 flex flex-wrap gap-3">
+            <div className="mt-6">
               <Button
                 as="a"
-                href="mailto:hello@startashtanga.com"
-              >
-                <FontAwesomeIcon icon={faEnvelope} className="mr-2 h-4 w-4" />
-                {t('contact.emailButton')}
-              </Button>
-              <Button
-                as="a"
-                href="https://forms.gle/YOUR_FORM_ID"
+                href={siteConfig.contact.formUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                variant="outline"
               >
                 {t('contact.formButton')}
               </Button>
@@ -179,22 +125,18 @@ export default function About() {
         </div>
       </div>
 
-      {/* CTA */}
-      <section
-        className="py-16"
-        style={{
-          background: 'linear-gradient(135deg, #AA5042 0%, #753742 100%)',
-        }}
-      >
+      {/* CTA - Contributing */}
+      <section className="gradient-cta py-16">
         <div className="container-main text-center">
-          <FontAwesomeIcon icon={faHandshake} className="h-10 w-10 text-white/80" />
+          <FontAwesomeIcon icon={faUsers} className="h-10 w-10 text-white/80" />
           <h2 className="mt-4 text-2xl font-bold text-white sm:text-3xl">
             {t('cta.title')}
           </h2>
           <p className="mx-auto mt-3 max-w-md text-white/80">{t('cta.text')}</p>
           <div className="mt-8">
-            <Button as="link" to="/getting-started" variant="secondary" size="lg">
+            <Button as="link" to="/contribute" variant="secondary" size="lg">
               {t('cta.button')}
+              <FontAwesomeIcon icon={faArrowRight} className="ml-2 h-4 w-4" />
             </Button>
           </div>
         </div>

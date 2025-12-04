@@ -12,10 +12,11 @@ export default function Header() {
     { to: '/getting-started', label: t('gettingStarted') },
     { to: '/glossary', label: t('glossary') },
     { to: '/about', label: t('about') },
+    { to: '/contribute', label: t('contribute') },
   ];
 
   return (
-    <header className="border-b bg-white" style={{ borderColor: '#DCC8AF' }}>
+    <header className="border-default border-b bg-white">
       <nav
         className="container-main flex items-center justify-between py-4"
         aria-label="Main navigation"
@@ -23,8 +24,7 @@ export default function Header() {
         {/* Logo / Site name */}
         <Link
           to="/"
-          className="text-xl font-semibold transition-colors"
-          style={{ color: '#4F3130' }}
+          className="text-heading text-xl font-semibold transition-colors"
         >
           Start Ashtanga
         </Link>
@@ -38,12 +38,11 @@ export default function Header() {
                   to={link.to}
                   className={({ isActive }) =>
                     `text-sm font-medium transition-colors ${
-                      isActive ? 'font-semibold' : 'hover:opacity-80'
+                      isActive
+                        ? 'text-heading font-semibold'
+                        : 'text-body hover:opacity-80'
                     }`
                   }
-                  style={({ isActive }) => ({
-                    color: isActive ? '#4F3130' : '#753742',
-                  })}
                 >
                   {link.label}
                 </NavLink>
@@ -56,8 +55,7 @@ export default function Header() {
         {/* Mobile menu button */}
         <button
           type="button"
-          className="inline-flex items-center justify-center rounded-md p-2 md:hidden"
-          style={{ color: '#753742' }}
+          className="text-body inline-flex items-center justify-center rounded-md p-2 md:hidden"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-expanded={mobileMenuOpen}
           aria-controls="mobile-menu"
@@ -101,8 +99,7 @@ export default function Header() {
       {mobileMenuOpen && (
         <div
           id="mobile-menu"
-          className="border-t md:hidden"
-          style={{ borderColor: '#DCC8AF' }}
+          className="border-default border-t md:hidden"
         >
           <ul className="container-main space-y-1 py-4">
             {navLinks.map((link) => (
@@ -111,13 +108,11 @@ export default function Header() {
                   to={link.to}
                   className={({ isActive }) =>
                     `block rounded-md px-3 py-2 text-base font-medium ${
-                      isActive ? 'font-semibold' : ''
+                      isActive
+                        ? 'bg-surface text-heading font-semibold'
+                        : 'text-body'
                     }`
                   }
-                  style={({ isActive }) => ({
-                    color: isActive ? '#4F3130' : '#753742',
-                    backgroundColor: isActive ? '#F5EDDF' : 'transparent',
-                  })}
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {link.label}

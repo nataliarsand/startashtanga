@@ -58,12 +58,7 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section
-        className="relative overflow-hidden py-24 sm:py-32"
-        style={{
-          background: 'linear-gradient(135deg, #AA5042 0%, #753742 50%, #4F3130 100%)',
-        }}
-      >
+      <section className="gradient-hero relative overflow-hidden py-24 sm:py-32">
         {/* Mandala decoration */}
         <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/4 opacity-10 sm:translate-x-1/3">
           <img
@@ -125,16 +120,13 @@ export default function Home() {
           <div className="grid gap-12 sm:grid-cols-3 sm:gap-8">
             {features.map((feature, index) => (
               <div key={index} className="relative pl-14">
-                <div
-                  className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-xl text-white"
-                  style={{ backgroundColor: '#AA5042' }}
-                >
+                <div className="bg-accent absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-xl text-white">
                   <FontAwesomeIcon icon={feature.icon} className="h-5 w-5" />
                 </div>
-                <h3 className="text-lg font-semibold" style={{ color: '#4F3130' }}>
+                <h3 className="text-heading text-lg font-semibold">
                   {feature.title}
                 </h3>
-                <p className="mt-2 leading-relaxed" style={{ color: '#753742' }}>
+                <p className="text-body mt-2 leading-relaxed">
                   {feature.description}
                 </p>
               </div>
@@ -144,15 +136,12 @@ export default function Home() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 sm:py-20" style={{ backgroundColor: '#F5EDDF' }}>
+      <section className="bg-surface py-16 sm:py-20">
         <div className="container-main text-center">
-          <h2
-            className="text-2xl font-bold sm:text-3xl"
-            style={{ color: '#4F3130' }}
-          >
+          <h2 className="text-heading text-2xl font-bold sm:text-3xl">
             {t('cta.title')}
           </h2>
-          <p className="mx-auto mt-3 max-w-md" style={{ color: '#753742' }}>
+          <p className="text-body mx-auto mt-3 max-w-md">
             {t('cta.description')}
           </p>
           <div className="mt-8">

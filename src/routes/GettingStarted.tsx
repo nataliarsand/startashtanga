@@ -17,6 +17,7 @@ import {
   PageHero,
   ContentCard,
   CalloutBox,
+  SectionNav,
 } from '../components/common';
 
 export default function GettingStarted() {
@@ -83,19 +84,7 @@ export default function GettingStarted() {
   return (
     <>
       <PageHero title={t('hero.title')} subtitle={t('hero.subtitle')}>
-        {/* Quick nav */}
-        <nav className="mx-auto mt-8 flex max-w-2xl flex-wrap justify-center gap-2">
-          {navItems.map((item) => (
-            <a
-              key={item.id}
-              href={`#${item.id}`}
-              className="rounded-full px-4 py-2 text-sm font-medium transition-all hover:opacity-80"
-              style={{ backgroundColor: '#FFFFFF', color: '#753742' }}
-            >
-              {item.label}
-            </a>
-          ))}
-        </nav>
+        <SectionNav items={navItems} />
       </PageHero>
 
       {/* Content */}
@@ -103,13 +92,10 @@ export default function GettingStarted() {
         <div className="container-main max-w-3xl">
           {/* What is Ashtanga */}
           <section id="ashtanga">
-            <h2
-              className="text-2xl font-bold sm:text-3xl"
-              style={{ color: '#4F3130' }}
-            >
+            <h2 className="text-heading text-2xl font-bold sm:text-3xl">
               {t('ashtanga.title')}
             </h2>
-            <p className="mt-4 text-lg leading-relaxed" style={{ color: '#753742' }}>
+            <p className="text-body mt-4 text-lg leading-relaxed">
               {t('ashtanga.introParts.before')}{' '}
               <GlossaryTooltip term="Mysore" />{t('ashtanga.introParts.after')}
             </p>
@@ -131,16 +117,15 @@ export default function GettingStarted() {
 
             {/* Sequences */}
             <ContentCard className="mt-6">
-              <h3 className="font-semibold" style={{ color: '#4F3130' }}>
+              <h3 className="text-heading font-semibold">
                 {t('ashtanga.sequences.title')}
               </h3>
               <ul className="mt-4 space-y-3">
                 {sequenceItems.map((item, index) => (
-                  <li key={index} className="flex gap-3" style={{ color: '#753742' }}>
+                  <li key={index} className="text-body flex gap-3">
                     <FontAwesomeIcon
                       icon={faCircleCheck}
-                      className="mt-1 h-4 w-4 flex-shrink-0"
-                      style={{ color: '#AA5042' }}
+                      className="text-accent mt-1 h-4 w-4 flex-shrink-0"
                     />
                     {item.hasTerm ? (
                       <>
@@ -154,7 +139,7 @@ export default function GettingStarted() {
                   </li>
                 ))}
               </ul>
-              <p className="mt-4 text-sm italic" style={{ color: '#967369' }}>
+              <p className="text-subtle mt-4 text-sm italic">
                 {t('ashtanga.sequences.noteParts.before')}{' '}
                 <GlossaryTooltip term="Primary Series" />
                 {t('ashtanga.sequences.noteParts.after')}
@@ -163,16 +148,15 @@ export default function GettingStarted() {
 
             {/* Tristhana */}
             <ContentCard className="mt-6">
-              <h3 className="font-semibold" style={{ color: '#4F3130' }}>
+              <h3 className="text-heading font-semibold">
                 {t('ashtanga.tristhana.title')}
               </h3>
               <ul className="mt-4 space-y-3">
                 {tristhanaItems.map((item, index) => (
-                  <li key={index} className="flex gap-3" style={{ color: '#753742' }}>
+                  <li key={index} className="text-body flex gap-3">
                     <FontAwesomeIcon
                       icon={faCircleCheck}
-                      className="mt-1 h-4 w-4 flex-shrink-0"
-                      style={{ color: '#AA5042' }}
+                      className="text-accent mt-1 h-4 w-4 flex-shrink-0"
                     />
                     <span>
                       {item.label} (<GlossaryTooltip term={item.term} />
@@ -185,17 +169,14 @@ export default function GettingStarted() {
           </section>
 
           {/* Divider */}
-          <hr className="my-12" style={{ borderColor: '#DCC8AF' }} />
+          <hr className="border-default my-12" />
 
           {/* Led vs Mysore */}
           <section id="led-vs-mysore">
-            <h2
-              className="text-2xl font-bold sm:text-3xl"
-              style={{ color: '#4F3130' }}
-            >
+            <h2 className="text-heading text-2xl font-bold sm:text-3xl">
               {t('ledVsMysore.title')}
             </h2>
-            <p className="mt-4 text-lg leading-relaxed" style={{ color: '#753742' }}>
+            <p className="text-body mt-4 text-lg leading-relaxed">
               {t('ledVsMysore.intro')}
             </p>
 
@@ -204,30 +185,25 @@ export default function GettingStarted() {
               {/* Led Class */}
               <ContentCard>
                 <div className="flex items-center gap-3">
-                  <div
-                    className="flex h-10 w-10 items-center justify-center rounded-full"
-                    style={{ backgroundColor: '#AA5042' }}
-                  >
+                  <div className="bg-accent flex h-10 w-10 items-center justify-center rounded-full">
                     <FontAwesomeIcon icon={faUsers} className="h-5 w-5 text-white" />
                   </div>
-                  <h3 className="text-lg font-semibold" style={{ color: '#4F3130' }}>
+                  <h3 className="text-heading text-lg font-semibold">
                     {t('ledVsMysore.led.title')}
                   </h3>
                 </div>
-                <p className="mt-3 text-sm" style={{ color: '#753742' }}>
+                <p className="text-body mt-3 text-sm">
                   {t('ledVsMysore.led.description')}
                 </p>
                 <ul className="mt-4 space-y-2">
                   {ledPoints.map((point, index) => (
                     <li
                       key={index}
-                      className="flex items-start gap-2 text-sm"
-                      style={{ color: '#753742' }}
+                      className="text-body flex items-start gap-2 text-sm"
                     >
                       <FontAwesomeIcon
                         icon={faChevronRight}
-                        className="mt-1.5 h-2 w-2 flex-shrink-0"
-                        style={{ color: '#AA5042' }}
+                        className="text-accent mt-1.5 h-2 w-2 flex-shrink-0"
                       />
                       {point}
                     </li>
@@ -236,41 +212,33 @@ export default function GettingStarted() {
               </ContentCard>
 
               {/* Mysore Style */}
-              <div
-                className="rounded-2xl border-2 p-6"
-                style={{ backgroundColor: '#FFFFFF', borderColor: '#AA5042' }}
-              >
+              <ContentCard variant="featured">
                 <div className="flex items-center gap-3">
-                  <div
-                    className="flex h-10 w-10 items-center justify-center rounded-full"
-                    style={{ backgroundColor: '#AA5042' }}
-                  >
+                  <div className="bg-accent flex h-10 w-10 items-center justify-center rounded-full">
                     <FontAwesomeIcon icon={faUser} className="h-5 w-5 text-white" />
                   </div>
-                  <h3 className="text-lg font-semibold" style={{ color: '#4F3130' }}>
+                  <h3 className="text-heading text-lg font-semibold">
                     {t('ledVsMysore.mysore.title')}
                   </h3>
                 </div>
-                <p className="mt-3 text-sm" style={{ color: '#753742' }}>
+                <p className="text-body mt-3 text-sm">
                   {t('ledVsMysore.mysore.description')}
                 </p>
                 <ul className="mt-4 space-y-2">
                   {mysorePoints.map((point, index) => (
                     <li
                       key={index}
-                      className="flex items-start gap-2 text-sm"
-                      style={{ color: '#753742' }}
+                      className="text-body flex items-start gap-2 text-sm"
                     >
                       <FontAwesomeIcon
                         icon={faChevronRight}
-                        className="mt-1.5 h-2 w-2 flex-shrink-0"
-                        style={{ color: '#AA5042' }}
+                        className="text-accent mt-1.5 h-2 w-2 flex-shrink-0"
                       />
                       {point}
                     </li>
                   ))}
                 </ul>
-              </div>
+              </ContentCard>
             </div>
 
             {/* Recommendation */}
@@ -282,41 +250,34 @@ export default function GettingStarted() {
           </section>
 
           {/* Divider */}
-          <hr className="my-12" style={{ borderColor: '#DCC8AF' }} />
+          <hr className="border-default my-12" />
 
           {/* First Class */}
           <section id="first-class">
-            <h2
-              className="text-2xl font-bold sm:text-3xl"
-              style={{ color: '#4F3130' }}
-            >
+            <h2 className="text-heading text-2xl font-bold sm:text-3xl">
               {t('firstClass.title')}
             </h2>
-            <p className="mt-4" style={{ color: '#753742' }}>
+            <p className="text-body mt-4">
               {t('firstClass.intro')}
             </p>
 
             {/* Class Schedule */}
-            <div
-              className="mt-8 rounded-2xl p-6"
-              style={{ backgroundColor: '#F5EDDF' }}
-            >
+            <div className="bg-surface mt-8 rounded-2xl p-6">
               <div className="flex items-start gap-3">
                 <FontAwesomeIcon
                   icon={faClock}
-                  className="mt-1 h-5 w-5 flex-shrink-0"
-                  style={{ color: '#AA5042' }}
+                  className="text-accent mt-1 h-5 w-5 flex-shrink-0"
                 />
                 <div>
-                  <h3 className="font-semibold" style={{ color: '#4F3130' }}>
+                  <h3 className="text-heading font-semibold">
                     {t('firstClass.classSchedule.title')}
                   </h3>
-                  <p className="mt-2" style={{ color: '#753742' }}>
+                  <p className="text-body mt-2">
                     {t('firstClass.classSchedule.textParts.before')}{' '}
                     <GlossaryTooltip term="Shala">shala</GlossaryTooltip>
                     {t('firstClass.classSchedule.textParts.after')}
                   </p>
-                  <p className="mt-2 text-sm" style={{ color: '#967369' }}>
+                  <p className="text-subtle mt-2 text-sm">
                     {t('firstClass.classSchedule.arrivalNote')}
                   </p>
                 </div>
@@ -327,14 +288,11 @@ export default function GettingStarted() {
             <div className="mt-8 space-y-6">
               {firstClassSteps.map((step, index) => (
                 <div key={step.id || index} className="flex gap-4">
-                  <div
-                    className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full text-sm font-bold text-white"
-                    style={{ backgroundColor: '#AA5042' }}
-                  >
+                  <div className="bg-accent flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full text-sm font-bold text-white">
                     {index + 1}
                   </div>
                   <div>
-                    <h4 className="font-semibold" style={{ color: '#4F3130' }}>
+                    <h4 className="text-heading font-semibold">
                       {step.titleParts ? (
                         <>
                           {step.titleParts.before}{' '}
@@ -345,7 +303,7 @@ export default function GettingStarted() {
                         step.title
                       )}
                     </h4>
-                    <p className="mt-1" style={{ color: '#753742' }}>
+                    <p className="text-body mt-1">
                       {step.textParts ? (
                         <>
                           {step.textParts.before}{' '}
@@ -362,20 +320,16 @@ export default function GettingStarted() {
             </div>
 
             {/* Opening Mantra */}
-            <div
-              className="mt-8 flex gap-4 rounded-2xl border-l-4 p-5"
-              style={{ borderColor: '#90CBDC', backgroundColor: '#f8fcfd' }}
-            >
+            <div className="bg-info-subtle border-info mt-8 flex gap-4 rounded-2xl border-l-4 p-5">
               <FontAwesomeIcon
                 icon={faOm}
-                className="mt-0.5 h-5 w-5 flex-shrink-0"
-                style={{ color: '#90CBDC' }}
+                className="text-info mt-0.5 h-5 w-5 flex-shrink-0"
               />
               <div>
-                <h4 className="font-semibold" style={{ color: '#4F3130' }}>
+                <h4 className="text-heading font-semibold">
                   {t('firstClass.mantra.title')}
                 </h4>
-                <p className="mt-1" style={{ color: '#753742' }}>
+                <p className="text-body mt-1">
                   {t('firstClass.mantra.textParts.before')}{' '}
                   <GlossaryTooltip term="Samasthitih" />{' '}
                   {t('firstClass.mantra.textParts.after')}
@@ -384,28 +338,22 @@ export default function GettingStarted() {
             </div>
 
             {/* Duration note */}
-            <div
-              className="mt-8 rounded-2xl p-5"
-              style={{ backgroundColor: '#F5EDDF' }}
-            >
-              <h4 className="font-semibold" style={{ color: '#4F3130' }}>
+            <div className="bg-surface mt-8 rounded-2xl p-5">
+              <h4 className="text-heading font-semibold">
                 {t('firstClass.duration.title')}
               </h4>
-              <p className="mt-1" style={{ color: '#753742' }}>
+              <p className="text-body mt-1">
                 {t('firstClass.duration.text')}
               </p>
             </div>
           </section>
 
           {/* Divider */}
-          <hr className="my-12" style={{ borderColor: '#DCC8AF' }} />
+          <hr className="border-default my-12" />
 
           {/* What to Bring */}
           <section id="what-to-bring">
-            <h2
-              className="text-2xl font-bold sm:text-3xl"
-              style={{ color: '#4F3130' }}
-            >
+            <h2 className="text-heading text-2xl font-bold sm:text-3xl">
               {t('whatToBring.title')}
             </h2>
 
@@ -413,13 +361,12 @@ export default function GettingStarted() {
               {whatToBringItems.map((item, index) => (
                 <div
                   key={index}
-                  className="rounded-xl p-4"
-                  style={{ backgroundColor: '#F5EDDF' }}
+                  className="bg-surface rounded-xl p-4"
                 >
-                  <p className="font-semibold" style={{ color: '#4F3130' }}>
+                  <p className="text-heading font-semibold">
                     {item.item}
                   </p>
-                  <p className="mt-1 text-sm" style={{ color: '#753742' }}>
+                  <p className="text-body mt-1 text-sm">
                     {item.note}
                   </p>
                 </div>
@@ -427,31 +374,25 @@ export default function GettingStarted() {
             </div>
 
             {/* Important */}
-            <div
-              className="mt-6 rounded-2xl border-l-4 p-5"
-              style={{ borderColor: '#AA5042', backgroundColor: '#fdf8f7' }}
-            >
+            <div className="bg-warning-subtle border-accent mt-6 rounded-2xl border-l-4 p-5">
               <div className="flex gap-3">
                 <FontAwesomeIcon
                   icon={faTriangleExclamation}
-                  className="mt-0.5 h-5 w-5 flex-shrink-0"
-                  style={{ color: '#AA5042' }}
+                  className="text-accent mt-0.5 h-5 w-5 flex-shrink-0"
                 />
                 <div>
-                  <h4 className="font-semibold" style={{ color: '#4F3130' }}>
+                  <h4 className="text-heading font-semibold">
                     {t('whatToBring.important.title')}
                   </h4>
                   <ul className="mt-2 space-y-1">
                     {importantItems.map((item, index) => (
                       <li
                         key={index}
-                        className="flex items-start gap-2"
-                        style={{ color: '#753742' }}
+                        className="text-body flex items-start gap-2"
                       >
                         <FontAwesomeIcon
                           icon={faChevronRight}
-                          className="mt-1.5 h-2 w-2"
-                          style={{ color: '#AA5042' }}
+                          className="text-accent mt-1.5 h-2 w-2"
                         />
                         {item}
                       </li>
@@ -463,56 +404,43 @@ export default function GettingStarted() {
           </section>
 
           {/* Divider */}
-          <hr className="my-12" style={{ borderColor: '#DCC8AF' }} />
+          <hr className="border-default my-12" />
 
           {/* Find a Shala */}
           <section id="find-shala">
-            <h2
-              className="text-2xl font-bold sm:text-3xl"
-              style={{ color: '#4F3130' }}
-            >
+            <h2 className="text-heading text-2xl font-bold sm:text-3xl">
               {t('findShala.title')}
             </h2>
-            <p className="mt-4" style={{ color: '#753742' }}>
+            <p className="text-body mt-4">
               {t('findShala.text')}
             </p>
 
-            <div
-              className="mt-6 rounded-2xl border-2 border-dashed p-6 text-center"
-              style={{ borderColor: '#DCC8AF', backgroundColor: '#F5EDDF' }}
-            >
+            <ContentCard variant="placeholder" className="mt-6 text-center">
               <FontAwesomeIcon
                 icon={faLocationDot}
-                className="h-8 w-8"
-                style={{ color: '#AA5042' }}
+                className="text-accent h-8 w-8"
               />
-              <p className="mt-3 font-medium" style={{ color: '#753742' }}>
+              <p className="text-body mt-3 font-medium">
                 {t('findShala.comingSoon')}
               </p>
-            </div>
+            </ContentCard>
 
-            <div
-              className="mt-6 rounded-2xl p-5"
-              style={{ backgroundColor: '#f8fcfd' }}
-            >
-              <h4 className="font-semibold" style={{ color: '#4F3130' }}>
+            <ContentCard variant="tip" className="mt-6 p-5">
+              <h4 className="text-heading font-semibold">
                 {t('findShala.tip.title')}
               </h4>
-              <p className="mt-1" style={{ color: '#753742' }}>
+              <p className="text-body mt-1">
                 {t('findShala.tip.text')}
               </p>
-            </div>
+            </ContentCard>
           </section>
 
           {/* Divider */}
-          <hr className="my-12" style={{ borderColor: '#DCC8AF' }} />
+          <hr className="border-default my-12" />
 
           {/* FAQ */}
           <section id="faq">
-            <h2
-              className="text-2xl font-bold sm:text-3xl"
-              style={{ color: '#4F3130' }}
-            >
+            <h2 className="text-heading text-2xl font-bold sm:text-3xl">
               {t('faq.title')}
             </h2>
 
@@ -520,21 +448,16 @@ export default function GettingStarted() {
               {faqItems.map((item, index) => (
                 <details
                   key={index}
-                  className="group rounded-xl"
-                  style={{ backgroundColor: '#F5EDDF' }}
+                  className="bg-surface group rounded-xl"
                 >
-                  <summary
-                    className="flex cursor-pointer items-center justify-between p-4 font-semibold"
-                    style={{ color: '#4F3130' }}
-                  >
+                  <summary className="text-heading flex cursor-pointer items-center justify-between p-4 font-semibold">
                     {item.q}
                     <FontAwesomeIcon
                       icon={faChevronRight}
-                      className="h-3 w-3 transition-transform group-open:rotate-90"
-                      style={{ color: '#AA5042' }}
+                      className="text-accent h-3 w-3 transition-transform group-open:rotate-90"
                     />
                   </summary>
-                  <p className="px-4 pb-4" style={{ color: '#753742' }}>
+                  <p className="text-body px-4 pb-4">
                     {item.a}
                   </p>
                 </details>
@@ -545,12 +468,7 @@ export default function GettingStarted() {
       </div>
 
       {/* CTA */}
-      <section
-        className="py-16"
-        style={{
-          background: 'linear-gradient(135deg, #AA5042 0%, #753742 100%)',
-        }}
-      >
+      <section className="gradient-cta py-16">
         <div className="container-main text-center">
           <h2 className="text-2xl font-bold text-white sm:text-3xl">
             {t('cta.title')}

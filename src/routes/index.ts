@@ -1,4 +1,5 @@
 export { default as Home } from './Home';
 export { default as About } from './About';
+export { default as Contributing } from './Contributing';
 export { default as GettingStarted } from './GettingStarted';
 export { default as Glossary } from './Glossary';

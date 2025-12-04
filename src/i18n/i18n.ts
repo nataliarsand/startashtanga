@@ -7,6 +7,7 @@ import commonEn from './locales/en/common.json';
 import navEn from './locales/en/nav.json';
 import homeEn from './locales/en/home.json';
 import aboutEn from './locales/en/about.json';
+import contributingEn from './locales/en/contributing.json';
 import gettingStartedEn from './locales/en/gettingStarted.json';
 import glossaryEn from './locales/en/glossary.json';
 
@@ -26,6 +27,7 @@ const resources = {
     nav: navEn,
     home: homeEn,
     about: aboutEn,
+    contributing: contributingEn,
     gettingStarted: gettingStartedEn,
     glossary: glossaryEn,
   },
@@ -47,7 +49,7 @@ i18n
     resources,
     fallbackLng: 'en',
     defaultNS: 'common',
-    ns: ['common', 'nav', 'home', 'about', 'gettingStarted', 'glossary'],
+    ns: ['common', 'nav', 'home', 'about', 'contributing', 'gettingStarted', 'glossary'],
 
     // Language detection options
     detection: {

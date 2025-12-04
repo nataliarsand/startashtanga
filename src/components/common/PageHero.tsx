@@ -6,19 +6,13 @@ interface PageHeroProps {
 
 export default function PageHero({ title, subtitle, children }: PageHeroProps) {
   return (
-    <section
-      className="py-16 sm:py-20"
-      style={{ backgroundColor: '#F5EDDF' }}
-    >
+    <section className="bg-surface py-16 sm:py-20">
       <div className="container-main text-center">
-        <h1
-          className="text-4xl font-bold tracking-tight sm:text-5xl"
-          style={{ color: '#4F3130' }}
-        >
+        <h1 className="text-heading text-4xl font-bold tracking-tight sm:text-5xl">
           {title}
         </h1>
         {subtitle && (
-          <p className="mx-auto mt-4 max-w-xl text-lg" style={{ color: '#753742' }}>
+          <p className="text-body mx-auto mt-4 max-w-xl text-lg">
             {subtitle}
           </p>
         )}

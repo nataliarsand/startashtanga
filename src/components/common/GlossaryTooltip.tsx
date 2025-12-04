@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, useLayoutEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
@@ -40,12 +40,15 @@ export default function GlossaryTooltip({ term, children }: GlossaryTooltipProps
     }, 150);
   };
 
-  useEffect(() => {
+  // Use useLayoutEffect to calculate position synchronously before paint
+  // This is a legitimate use case for measuring DOM and updating position
+  useLayoutEffect(() => {
     if (isVisible && containerRef.current) {
       const rect = containerRef.current.getBoundingClientRect();
       const spaceAbove = rect.top;
 
       // Show below if not enough space above (less than 120px)
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setPosition(spaceAbove < 120 ? 'bottom' : 'top');
     }
   }, [isVisible]);
@@ -71,8 +74,7 @@ export default function GlossaryTooltip({ term, children }: GlossaryTooltipProps
       onMouseLeave={hideTooltip}
     >
       <span
-        className="cursor-help border-b border-dotted transition-colors"
-        style={{ borderColor: '#AA5042', color: 'inherit' }}
+        className="border-accent cursor-help border-b border-dotted transition-colors"
         onFocus={showTooltip}
         onBlur={hideTooltip}
         tabIndex={0}
@@ -86,19 +88,17 @@ export default function GlossaryTooltip({ term, children }: GlossaryTooltipProps
         <div
           id={`tooltip-${term}`}
           role="tooltip"
-          className={`absolute left-1/2 z-50 w-64 -translate-x-1/2 rounded-lg p-3 shadow-lg ${
+          className={`bg-emphasis absolute left-1/2 z-50 w-64 -translate-x-1/2 rounded-lg p-3 shadow-lg ${
             position === 'top' ? 'bottom-full mb-2' : 'top-full mt-2'
           }`}
-          style={{ backgroundColor: '#4F3130' }}
           onMouseEnter={showTooltip}
           onMouseLeave={hideTooltip}
         >
           {/* Arrow */}
           <div
-            className={`absolute left-1/2 h-2 w-2 -translate-x-1/2 rotate-45 ${
+            className={`bg-emphasis absolute left-1/2 h-2 w-2 -translate-x-1/2 rotate-45 ${
               position === 'top' ? '-bottom-1' : '-top-1'
             }`}
-            style={{ backgroundColor: '#4F3130' }}
           />
 
           <div className="relative">
@@ -117,8 +117,7 @@ export default function GlossaryTooltip({ term, children }: GlossaryTooltipProps
             </p>
             <Link
               to="/glossary"
-              className="mt-2 inline-block text-xs transition-opacity hover:opacity-80 focus:outline-none focus:underline"
-              style={{ color: '#90CBDC' }}
+              className="text-link-on-dark mt-2 inline-block text-xs transition-opacity hover:opacity-80 focus:underline focus:outline-none"
             >
               View in glossary →
             </Link>
