@@ -3,3 +3,4 @@ export { default as About } from './About';
 export { default as Contributing } from './Contributing';
 export { default as GettingStarted } from './GettingStarted';
 export { default as Glossary } from './Glossary';
+export { default as PrimarySeries } from './PrimarySeries';

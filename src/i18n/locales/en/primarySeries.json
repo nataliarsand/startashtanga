@@ -1,0 +1,225 @@
+{
+  "hero": {
+    "title": "The Primary Series",
+    "subtitle": "Yoga Chikitsa — The complete sequence of the first series"
+  },
+  "nav": {
+    "openingMantra": "Opening Mantra",
+    "suryaNamaskara": "Surya Namaskara",
+    "standing": "Standing",
+    "seated": "Seated",
+    "finishing": "Finishing",
+    "closingMantra": "Closing Mantra"
+  },
+  "intro": {
+    "title": "About the Primary Series",
+    "text": "The Primary Series, known as Yoga Chikitsa (yoga therapy), is the foundation of Ashtanga practice. It detoxifies and aligns the body, building the strength, flexibility, and focus needed for deeper practice. The sequence is always practiced in the same order, creating a moving meditation through repetition."
+  },
+  "openingMantra": {
+    "title": "Opening Mantra",
+    "subtitle": "Chanted at the beginning of practice to honour the lineage of teachers",
+    "sanskrit": [
+      "ॐ",
+      "वन्दे गुरूणां चरणारविन्दे",
+      "सन्दर्शितस्वात्मसुखावबोधे ।",
+      "निःश्रेयसे जाङ्गलिकायमाने",
+      "संसारहालाहलमोहशान्त्यै ॥",
+      "",
+      "आबाहुपुरुषाकारं",
+      "शङ्खचक्रासिधारिणम् ।",
+      "सहस्रशिरसं श्वेतं",
+      "प्रणमामि पतञ्जलिम् ॥",
+      "ॐ"
+    ],
+    "transliteration": [
+      "Oṁ",
+      "Vande gurūṇāṁ caraṇāravinde",
+      "Sandarśita svātma sukhāva bodhe",
+      "Niḥ-śreyase jāṅgalikāyamāne",
+      "Saṁsāra hālāhala moha śāntyai",
+      "",
+      "Ābāhu puruṣākāraṁ",
+      "Śaṅkhacakrāsi dhāriṇam",
+      "Sahasra śirasaṁ śvetaṁ",
+      "Praṇamāmi patañjalim",
+      "Oṁ"
+    ],
+    "translation": [
+      "Om",
+      "I bow to the lotus feet of the gurus,",
+      "Who awaken insight into the happiness of pure being,",
+      "Who are the jungle physicians,",
+      "Pacifying delusion, the poison of saṁsāra.",
+      "",
+      "Taking the form of a man to the shoulders,",
+      "Holding a conch, a discus, and a sword,",
+      "One thousand heads white,",
+      "To Patañjali, I salute.",
+      "Om"
+    ]
+  },
+  "suryaNamaskara": {
+    "title": "Surya Namaskara",
+    "subtitle": "Sun Salutations — The opening sequence",
+    "description": "Each practice begins with Sun Salutations to warm the body and establish the breath-movement connection.",
+    "groups": [
+      {
+        "name": "Surya Namaskara A",
+        "sanskrit": "सूर्य नमस्कार अ",
+        "repetitions": "5 times",
+        "poses": [
+          { "name": "Samasthitih", "sanskrit": "समस्थिति", "meaning": "Equal standing" },
+          { "name": "Ekam - Urdhva Hastasana", "sanskrit": "ऊर्ध्व हस्तासन", "meaning": "Upward hands pose" },
+          { "name": "Dve - Uttanasana", "sanskrit": "उत्तानासन", "meaning": "Intense stretch" },
+          { "name": "Trini - Uttanasana (head up)", "sanskrit": "उत्तानासन", "meaning": "Head lifted" },
+          { "name": "Chatvari - Chaturanga Dandasana", "sanskrit": "चतुरङ्ग दण्डासन", "meaning": "Four-limbed staff pose" },
+          { "name": "Pancha - Urdhva Mukha Svanasana", "sanskrit": "ऊर्ध्व मुख श्वानासन", "meaning": "Upward facing dog" },
+          { "name": "Shat - Adho Mukha Svanasana", "sanskrit": "अधो मुख श्वानासन", "meaning": "Downward facing dog (5 breaths)" },
+          { "name": "Sapta - Uttanasana (head up)", "sanskrit": "उत्तानासन", "meaning": "Head lifted" },
+          { "name": "Astau - Uttanasana", "sanskrit": "उत्तानासन", "meaning": "Intense stretch" },
+          { "name": "Nava - Urdhva Hastasana", "sanskrit": "ऊर्ध्व हस्तासन", "meaning": "Upward hands pose" },
+          { "name": "Samasthitih", "sanskrit": "समस्थिति", "meaning": "Equal standing" }
+        ]
+      },
+      {
+        "name": "Surya Namaskara B",
+        "sanskrit": "सूर्य नमस्कार ब",
+        "repetitions": "5 times",
+        "poses": [
+          { "name": "Samasthitih", "sanskrit": "समस्थिति", "meaning": "Equal standing" },
+          { "name": "Ekam - Utkatasana", "sanskrit": "उत्कटासन", "meaning": "Fierce pose" },
+          { "name": "Dve - Uttanasana", "sanskrit": "उत्तानासन", "meaning": "Intense stretch" },
+          { "name": "Trini - Uttanasana (head up)", "sanskrit": "उत्तानासन", "meaning": "Head lifted" },
+          { "name": "Chatvari - Chaturanga Dandasana", "sanskrit": "चतुरङ्ग दण्डासन", "meaning": "Four-limbed staff pose" },
+          { "name": "Pancha - Urdhva Mukha Svanasana", "sanskrit": "ऊर्ध्व मुख श्वानासन", "meaning": "Upward facing dog" },
+          { "name": "Shat - Adho Mukha Svanasana", "sanskrit": "अधो मुख श्वानासन", "meaning": "Downward facing dog" },
+          { "name": "Sapta - Virabhadrasana A (right)", "sanskrit": "वीरभद्रासन", "meaning": "Warrior pose (right side)" },
+          { "name": "Astau - Chaturanga Dandasana", "sanskrit": "चतुरङ्ग दण्डासन", "meaning": "Four-limbed staff pose" },
+          { "name": "Nava - Urdhva Mukha Svanasana", "sanskrit": "ऊर्ध्व मुख श्वानासन", "meaning": "Upward facing dog" },
+          { "name": "Dasa - Adho Mukha Svanasana", "sanskrit": "अधो मुख श्वानासन", "meaning": "Downward facing dog" },
+          { "name": "Ekadasa - Virabhadrasana A (left)", "sanskrit": "वीरभद्रासन", "meaning": "Warrior pose (left side)" },
+          { "name": "Dvadasa - Chaturanga Dandasana", "sanskrit": "चतुरङ्ग दण्डासन", "meaning": "Four-limbed staff pose" },
+          { "name": "Trayodasa - Urdhva Mukha Svanasana", "sanskrit": "ऊर्ध्व मुख श्वानासन", "meaning": "Upward facing dog" },
+          { "name": "Chaturdasa - Adho Mukha Svanasana", "sanskrit": "अधो मुख श्वानासन", "meaning": "Downward facing dog (5 breaths)" },
+          { "name": "Panchadasa - Uttanasana (head up)", "sanskrit": "उत्तानासन", "meaning": "Head lifted" },
+          { "name": "Sodasa - Uttanasana", "sanskrit": "उत्तानासन", "meaning": "Intense stretch" },
+          { "name": "Saptadasa - Utkatasana", "sanskrit": "उत्कटासन", "meaning": "Fierce pose" },
+          { "name": "Samasthitih", "sanskrit": "समस्थिति", "meaning": "Equal standing" }
+        ]
+      }
+    ]
+  },
+  "standing": {
+    "title": "Standing Sequence",
+    "subtitle": "Fundamental poses that build strength and alignment",
+    "poses": [
+      { "name": "Padangushthasana", "sanskrit": "पादाङ्गुष्ठासन", "meaning": "Big toe pose" },
+      { "name": "Padahastasana", "sanskrit": "पादहस्तासन", "meaning": "Hand under foot pose" },
+      { "name": "Utthita Trikonasana", "sanskrit": "उत्थित त्रिकोणासन", "meaning": "Extended triangle pose", "sides": true },
+      { "name": "Parivritta Trikonasana", "sanskrit": "परिवृत्त त्रिकोणासन", "meaning": "Revolved triangle pose", "sides": true },
+      { "name": "Utthita Parsvakonasana", "sanskrit": "उत्थित पार्श्वकोणासन", "meaning": "Extended side angle pose", "sides": true },
+      { "name": "Parivritta Parsvakonasana", "sanskrit": "परिवृत्त पार्श्वकोणासन", "meaning": "Revolved side angle pose", "sides": true },
+      { "name": "Prasarita Padottanasana A", "sanskrit": "प्रसारित पादोत्तानासन", "meaning": "Wide-legged forward fold A" },
+      { "name": "Prasarita Padottanasana B", "sanskrit": "प्रसारित पादोत्तानासन", "meaning": "Wide-legged forward fold B" },
+      { "name": "Prasarita Padottanasana C", "sanskrit": "प्रसारित पादोत्तानासन", "meaning": "Wide-legged forward fold C" },
+      { "name": "Prasarita Padottanasana D", "sanskrit": "प्रसारित पादोत्तानासन", "meaning": "Wide-legged forward fold D" },
+      { "name": "Parsvottanasana", "sanskrit": "पार्श्वोत्तानासन", "meaning": "Intense side stretch", "sides": true },
+      { "name": "Utthita Hasta Padangushthasana A", "sanskrit": "उत्थित हस्त पादाङ्गुष्ठासन", "meaning": "Extended hand to big toe A", "sides": true },
+      { "name": "Utthita Hasta Padangushthasana B", "sanskrit": "उत्थित हस्त पादाङ्गुष्ठासन", "meaning": "Extended hand to big toe B", "sides": true },
+      { "name": "Utthita Hasta Padangushthasana C", "sanskrit": "उत्थित हस्त पादाङ्गुष्ठासन", "meaning": "Extended hand to big toe C", "sides": true },
+      { "name": "Utthita Hasta Padangushthasana D", "sanskrit": "उत्थित हस्त पादाङ्गुष्ठासन", "meaning": "Extended hand to big toe D", "sides": true },
+      { "name": "Ardha Baddha Padmottanasana", "sanskrit": "अर्ध बद्ध पद्मोत्तानासन", "meaning": "Half bound lotus forward fold", "sides": true },
+      { "name": "Utkatasana", "sanskrit": "उत्कटासन", "meaning": "Fierce pose / Chair pose" },
+      { "name": "Virabhadrasana A", "sanskrit": "वीरभद्रासन", "meaning": "Warrior pose A", "sides": true },
+      { "name": "Virabhadrasana B", "sanskrit": "वीरभद्रासन", "meaning": "Warrior pose B", "sides": true }
+    ]
+  },
+  "seated": {
+    "title": "Seated Sequence",
+    "subtitle": "The heart of the Primary Series — forward folds, twists, and hip openers",
+    "poses": [
+      { "name": "Dandasana", "sanskrit": "दण्डासन", "meaning": "Staff pose" },
+      { "name": "Paschimottanasana A", "sanskrit": "पश्चिमोत्तानासन", "meaning": "Western intense stretch A" },
+      { "name": "Paschimottanasana B", "sanskrit": "पश्चिमोत्तानासन", "meaning": "Western intense stretch B" },
+      { "name": "Paschimottanasana C", "sanskrit": "पश्चिमोत्तानासन", "meaning": "Western intense stretch C" },
+      { "name": "Purvottanasana", "sanskrit": "पूर्वोत्तानासन", "meaning": "Eastern intense stretch" },
+      { "name": "Ardha Baddha Padma Paschimottanasana", "sanskrit": "अर्ध बद्ध पद्म पश्चिमोत्तानासन", "meaning": "Half bound lotus forward fold", "sides": true },
+      { "name": "Tiryam-Mukha Ekapada Paschimottanasana", "sanskrit": "तिर्यङ्मुख एकपाद पश्चिमोत्तानासन", "meaning": "Reverse face one leg forward fold", "sides": true },
+      { "name": "Janu Sirsasana A", "sanskrit": "जानु शीर्षासन", "meaning": "Head to knee pose A", "sides": true },
+      { "name": "Janu Sirsasana B", "sanskrit": "जानु शीर्षासन", "meaning": "Head to knee pose B", "sides": true },
+      { "name": "Janu Sirsasana C", "sanskrit": "जानु शीर्षासन", "meaning": "Head to knee pose C", "sides": true },
+      { "name": "Marichyasana A", "sanskrit": "मरीच्यासन", "meaning": "Pose dedicated to Marichi A", "sides": true },
+      { "name": "Marichyasana B", "sanskrit": "मरीच्यासन", "meaning": "Pose dedicated to Marichi B", "sides": true },
+      { "name": "Marichyasana C", "sanskrit": "मरीच्यासन", "meaning": "Pose dedicated to Marichi C", "sides": true },
+      { "name": "Marichyasana D", "sanskrit": "मरीच्यासन", "meaning": "Pose dedicated to Marichi D", "sides": true, "gatekeeper": true },
+      { "name": "Navasana", "sanskrit": "नावासन", "meaning": "Boat pose", "repetitions": "5 times" },
+      { "name": "Bhujapidasana", "sanskrit": "भुजपीडासन", "meaning": "Shoulder pressing pose" },
+      { "name": "Kurmasana", "sanskrit": "कूर्मासन", "meaning": "Tortoise pose" },
+      { "name": "Supta Kurmasana", "sanskrit": "सुप्त कूर्मासन", "meaning": "Sleeping tortoise pose", "gatekeeper": true },
+      { "name": "Garbha Pindasana", "sanskrit": "गर्भ पिण्डासन", "meaning": "Embryo in the womb pose" },
+      { "name": "Kukkutasana", "sanskrit": "कुक्कुटासन", "meaning": "Rooster pose" },
+      { "name": "Baddha Konasana A", "sanskrit": "बद्ध कोणासन", "meaning": "Bound angle pose A" },
+      { "name": "Baddha Konasana B", "sanskrit": "बद्ध कोणासन", "meaning": "Bound angle pose B" },
+      { "name": "Upavishta Konasana A", "sanskrit": "उपविष्ट कोणासन", "meaning": "Seated angle pose A" },
+      { "name": "Upavishta Konasana B", "sanskrit": "उपविष्ट कोणासन", "meaning": "Seated angle pose B" },
+      { "name": "Supta Konasana", "sanskrit": "सुप्त कोणासन", "meaning": "Reclining angle pose" },
+      { "name": "Supta Padangushthasana A", "sanskrit": "सुप्त पादाङ्गुष्ठासन", "meaning": "Reclining big toe pose A", "sides": true },
+      { "name": "Supta Padangushthasana B", "sanskrit": "सुप्त पादाङ्गुष्ठासन", "meaning": "Reclining big toe pose B", "sides": true },
+      { "name": "Ubhaya Padangushthasana", "sanskrit": "उभय पादाङ्गुष्ठासन", "meaning": "Both big toes pose" },
+      { "name": "Urdhva Mukha Paschimottanasana", "sanskrit": "ऊर्ध्व मुख पश्चिमोत्तानासन", "meaning": "Upward facing forward fold" },
+      { "name": "Setu Bandhasana", "sanskrit": "सेतु बन्धासन", "meaning": "Bridge pose" }
+    ]
+  },
+  "finishing": {
+    "title": "Finishing Sequence",
+    "subtitle": "Backbends, inversions, and closing poses",
+    "poses": [
+      { "name": "Urdhva Dhanurasana", "sanskrit": "ऊर्ध्व धनुरासन", "meaning": "Upward bow pose", "repetitions": "3 times" },
+      { "name": "Paschimottanasana", "sanskrit": "पश्चिमोत्तानासन", "meaning": "Western intense stretch" },
+      { "name": "Salamba Sarvangasana", "sanskrit": "सालम्ब सर्वाङ्गासन", "meaning": "Supported shoulderstand" },
+      { "name": "Halasana", "sanskrit": "हलासन", "meaning": "Plough pose" },
+      { "name": "Karnapidasana", "sanskrit": "कर्णपीडासन", "meaning": "Ear pressure pose" },
+      { "name": "Urdhva Padmasana", "sanskrit": "ऊर्ध्व पद्मासन", "meaning": "Upward lotus pose" },
+      { "name": "Pindasana", "sanskrit": "पिण्डासन", "meaning": "Embryo pose" },
+      { "name": "Matsyasana", "sanskrit": "मत्स्यासन", "meaning": "Fish pose" },
+      { "name": "Uttana Padasana", "sanskrit": "उत्तान पादासन", "meaning": "Extended leg pose" },
+      { "name": "Sirsasana A", "sanskrit": "शीर्षासन", "meaning": "Headstand A" },
+      { "name": "Sirsasana B", "sanskrit": "शीर्षासन", "meaning": "Headstand B" },
+      { "name": "Urdhva Dandasana", "sanskrit": "ऊर्ध्व दण्डासन", "meaning": "Upward staff pose" },
+      { "name": "Baddha Padmasana", "sanskrit": "बद्ध पद्मासन", "meaning": "Bound lotus pose" },
+      { "name": "Yoga Mudra", "sanskrit": "योग मुद्रा", "meaning": "Yoga seal" },
+      { "name": "Padmasana", "sanskrit": "पद्मासन", "meaning": "Lotus pose" },
+      { "name": "Nādi Śodhana", "sanskrit": "नाड़ी शोधन", "meaning": "Alternate nostril breathing", "pranayama": true },
+      { "name": "Uth Pluthi", "sanskrit": "उत्प्लुथि", "meaning": "Sprung up (10 breaths)" },
+      { "name": "Rest", "sanskrit": "", "meaning": "Final rest" }
+    ]
+  },
+  "closingMantra": {
+    "title": "Closing Mantra",
+    "subtitle": "Chanted at the end of practice to share the benefits with all beings",
+    "sanskrit": [
+      "ॐ",
+      "स्वस्ति प्रजाभ्यः परिपालयन्तां",
+      "न्यायेन मार्गेण महीं महीशाः ।",
+      "गोब्राह्मणेभ्यः शुभमस्तु नित्यं",
+      "लोकाः समस्ताः सुखिनो भवन्तु ॥",
+      "ॐ शान्तिः शान्तिः शान्तिः"
+    ],
+    "transliteration": [
+      "Oṁ",
+      "Svasti prajābhyaḥ paripālayantāṁ",
+      "Nyāyena mārgeṇa mahīṁ mahīśāḥ",
+      "Go-brāhmaṇebhyaḥ śubham astu nityaṁ",
+      "Lokāḥ samastāḥ sukhino bhavantu",
+      "Oṁ śāntiḥ śāntiḥ śāntiḥ"
+    ],
+    "translation": [
+      "Om",
+      "May the rulers of the earth protect the well-being of the people,",
+      "With justice, by means of the right path.",
+      "May there always be good fortune for cows, Brahmins, and all living beings,",
+      "May all the beings in all the worlds be happy.",
+      "Om peace, peace, peace"
+    ]
+  }
+}
