@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRepeat, faRightLeft } from '@fortawesome/free-solid-svg-icons';
 import {
+  Badge,
   PageHero,
   SectionNav,
   ContentCard,
@@ -17,6 +18,7 @@ interface Pose {
   repetitions?: string;
   gatekeeper?: boolean;
   pranayama?: boolean;
+  count?: string;
 }
 
 interface SuryaGroup {
@@ -83,7 +85,10 @@ export default function PrimarySeries() {
               <span className="italic">{pose.meaning}</span>
             </p>
           </div>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-3">
+            {pose.count && (
+              <Badge>{pose.count}</Badge>
+            )}
             {pose.sides && (
               <span className="text-accent flex items-center gap-1 text-xs">
                 <FontAwesomeIcon icon={faRightLeft} className="h-3 w-3" />
