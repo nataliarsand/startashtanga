@@ -1,0 +1,130 @@
+{
+  "hero": {
+    "title": "Glossary",
+    "subtitle": "Key terms you'll encounter in Ashtanga Yoga"
+  },
+  "search": {
+    "placeholder": "Search terms..."
+  },
+  "terms": [
+    {
+      "term": "Ashtanga",
+      "sanskrit": "अष्टाङ्ग",
+      "definition": "Means \"eight limbs\" in Sanskrit. Refers to the eight-limbed path of yoga outlined by Patanjali, and also to the specific style of yoga taught by K. Pattabhi Jois."
+    },
+    {
+      "term": "Mysore",
+      "definition": "A city in Karnataka, India, where Ashtanga Yoga was developed. Also refers to the self-paced teaching style where students practice individually while the teacher provides one-on-one guidance."
+    },
+    {
+      "term": "Shala",
+      "sanskrit": "शाला",
+      "definition": "A yoga school or practice space. Literally means \"home\" or \"hall\" in Sanskrit."
+    },
+    {
+      "term": "Vinyasa",
+      "sanskrit": "विन्यास",
+      "definition": "The synchronisation of breath and movement. Each movement in Ashtanga has a specific breath count."
+    },
+    {
+      "term": "Ujjayi",
+      "sanskrit": "उज्जायी",
+      "definition": "The breathing technique used throughout Ashtanga practice. Created by slightly constricting the throat, producing a soft, ocean-like sound."
+    },
+    {
+      "term": "Bandha",
+      "sanskrit": "बन्ध",
+      "definition": "Energy locks in the body. The three main bandhas are Mula Bandha (root lock), Uddiyana Bandha (abdominal lock), and Jalandhara Bandha (throat lock)."
+    },
+    {
+      "term": "Drishti",
+      "sanskrit": "दृष्टि",
+      "definition": "Gazing point. Each asana has a specific drishti to help focus the mind and direct energy."
+    },
+    {
+      "term": "Asana",
+      "sanskrit": "आसन",
+      "definition": "Physical posture. The third limb of Ashtanga yoga. In common usage, refers to the poses practiced in yoga."
+    },
+    {
+      "term": "Surya Namaskara",
+      "sanskrit": "सूर्य नमस्कार",
+      "definition": "Sun Salutation. The opening sequence of Ashtanga practice. There are two versions: A and B."
+    },
+    {
+      "term": "Primary Series",
+      "definition": "Yoga Chikitsa (योग चिकित्सा), meaning \"yoga therapy.\" The first series of Ashtanga, focused on detoxifying and aligning the body."
+    },
+    {
+      "term": "Led Class",
+      "definition": "A class where all students move together following the teacher's count, as opposed to Mysore style where each student moves at their own pace."
+    },
+    {
+      "term": "Parampara",
+      "sanskrit": "परम्परा",
+      "definition": "The lineage or succession of teachers passing knowledge from guru to student. An important concept in traditional yoga."
+    },
+    {
+      "term": "Savasana",
+      "sanskrit": "शवासन",
+      "definition": "Corpse pose. You might hear of it as the final resting pose at the end of practice, however, in Ashtanga we don't say Savasana, we only say rest. This is the where the body integrates the benefits of the practice."
+    },
+    {
+      "term": "Pranayama",
+      "sanskrit": "प्राणायाम",
+      "definition": "Breath control practices. The fourth limb of Ashtanga yoga. Traditionally taught after proficiency in asana."
+    },
+    {
+      "term": "Moon Days",
+      "definition": "Full and new moon days when Ashtanga practitioners traditionally rest from practice."
+    },
+    {
+      "term": "Sanskrit",
+      "sanskrit": "संस्कृत",
+      "definition": "The ancient Indian language in which yoga texts are written. Pose names and counting in Ashtanga are traditionally done in Sanskrit."
+    },
+    {
+      "term": "Mantra",
+      "sanskrit": "मन्त्र",
+      "definition": "Sacred sound or phrase. Ashtanga practice traditionally begins and ends with specific chanted mantras."
+    },
+    {
+      "term": "Guru",
+      "sanskrit": "गुरु",
+      "definition": "Teacher or spiritual guide. Literally means \"dispeller of darkness.\""
+    },
+    {
+      "term": "Sangha",
+      "sanskrit": "सङ्घ",
+      "definition": "Community of practitioners. In yoga, refers to the supportive community of fellow students and teachers who share the practice."
+    },
+    {
+      "term": "Sadhana",
+      "sanskrit": "साधना",
+      "definition": "Spiritual practice or discipline. Your daily yoga practice is your sadhana—a dedicated effort toward self-realisation."
+    },
+    {
+      "term": "Karma",
+      "sanskrit": "कर्म",
+      "definition": "Action, and the consequences of action. In yoga philosophy, refers to the principle that every action has effects that shape our future experiences."
+    },
+    {
+      "term": "Samasthitih",
+      "sanskrit": "समस्थिति",
+      "definition": "Equal standing. The foundational standing posture where you stand at attention with feet together, arms by your sides, and weight evenly distributed. The starting and returning point for many sequences."
+    },
+    {
+      "term": "Opening Mantra",
+      "definition": "The Ashtanga opening prayer chanted at the beginning of practice, honouring the lineage of teachers. It begins with 'Vande Gurunam' and is traditionally done in call-and-response with the teacher."
+    },
+    {
+      "term": "Closing Mantra",
+      "definition": "The prayer chanted at the end of Ashtanga practice, offering the benefits of the practice to all beings. It begins with 'Svasthi Praja Bhyaha' and wishes peace and wellbeing to all."
+    },
+    {
+      "term": "Sutra",
+      "sanskrit": "सूत्र",
+      "definition": "Literally means \"thread\" in Sanskrit. Refers to a concise teaching or aphorism. The Yoga Sutras of Patanjali are the foundational text of yoga philosophy, containing 196 sutras on the theory and practice of yoga."
+    }
+  ]
+}

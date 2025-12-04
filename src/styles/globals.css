@@ -1,0 +1,420 @@
+@import 'tailwindcss';
+
+/*
+ * =============================================================================
+ * DESIGN TOKENS (CSS Custom Properties)
+ * =============================================================================
+ * All design values are defined here as CSS variables for easy maintenance.
+ * To change the look of the entire site, just update these values.
+ * =============================================================================
+ */
+
+:root {
+  /* -------------------------------------------------------------------------
+   * COLORS
+   * -------------------------------------------------------------------------
+   * Warm, earthy palette inspired by traditional yoga aesthetics
+   * Base colors: #F5EDDF, #753742, #90CBDC, #AA5042, #4F3130
+   */
+  --color-primary-50: 245 237 223;  /* #F5EDDF - warm cream */
+  --color-primary-100: 238 226 206; /* #EEE2CE - light sand */
+  --color-primary-200: 220 200 175; /* #DCC8AF - sand */
+  --color-primary-300: 190 160 140; /* #BEA08C - warm tan */
+  --color-primary-400: 150 115 105; /* #967369 - muted terracotta */
+  --color-primary-500: 117 55 66;   /* #753742 - burgundy */
+  --color-primary-600: 100 50 58;   /* #64323A - deep burgundy */
+  --color-primary-700: 85 45 50;    /* #552D32 - dark burgundy */
+  --color-primary-800: 70 42 44;    /* #462A2C - darker brown */
+  --color-primary-900: 79 49 48;    /* #4F3130 - deep brown */
+  --color-primary-950: 45 28 28;    /* #2D1C1C - near black */
+
+  /* Accent color - terracotta for CTAs and highlights */
+  --color-accent-500: 170 80 66;    /* #AA5042 - terracotta */
+  --color-accent-600: 150 65 52;    /* #964134 - deep terracotta */
+  --color-accent-700: 130 55 45;    /* #82372D - dark terracotta */
+
+  /* Secondary accent - sky blue for special highlights */
+  --color-sky-400: 160 215 230;     /* #A0D7E6 - light sky */
+  --color-sky-500: 144 203 220;     /* #90CBDC - sky blue */
+  --color-sky-600: 115 175 195;     /* #73AFC3 - muted sky */
+
+  /* Semantic colors */
+  --color-success: 34 197 94;       /* #22c55e */
+  --color-warning: 234 179 8;       /* #eab308 */
+  --color-error: 170 80 66;         /* #AA5042 - using terracotta */
+  --color-info: 144 203 220;        /* #90CBDC - using sky blue */
+
+  /* Background colors */
+  --color-bg-base: 255 253 250;     /* #FFFDF9 - warm white */
+  --color-bg-subtle: 245 237 223;   /* #F5EDDF - cream */
+  --color-bg-muted: 238 226 206;    /* #EEE2CE - light sand */
+
+  /* Text colors */
+  --color-text-base: 79 49 48;      /* #4F3130 - deep brown */
+  --color-text-muted: 117 55 66;    /* #753742 - burgundy */
+  --color-text-subtle: 150 115 105; /* #967369 - muted terracotta */
+  --color-text-inverted: 245 237 223; /* #F5EDDF - cream */
+
+  /* Border colors */
+  --color-border-base: 220 200 175; /* #DCC8AF - sand */
+  --color-border-muted: 238 226 206; /* #EEE2CE - light sand */
+
+  /* -------------------------------------------------------------------------
+   * TYPOGRAPHY
+   * -------------------------------------------------------------------------
+   */
+  --font-family-sans:
+    'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif;
+  --font-family-serif: Georgia, Cambria, 'Times New Roman', Times, serif;
+  --font-family-mono:
+    ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono',
+    monospace;
+
+  /* Font sizes (rem) */
+  --font-size-xs: 0.75rem; /* 12px */
+  --font-size-sm: 0.875rem; /* 14px */
+  --font-size-base: 1rem; /* 16px */
+  --font-size-lg: 1.125rem; /* 18px */
+  --font-size-xl: 1.25rem; /* 20px */
+  --font-size-2xl: 1.5rem; /* 24px */
+  --font-size-3xl: 1.875rem; /* 30px */
+  --font-size-4xl: 2.25rem; /* 36px */
+  --font-size-5xl: 3rem; /* 48px */
+
+  /* Font weights */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Line heights */
+  --line-height-tight: 1.25;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.625;
+  --line-height-loose: 2;
+
+  /* Letter spacing */
+  --letter-spacing-tight: -0.025em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.025em;
+
+  /* -------------------------------------------------------------------------
+   * SPACING
+   * -------------------------------------------------------------------------
+   * Based on 4px grid (0.25rem)
+   */
+  --spacing-0: 0;
+  --spacing-1: 0.25rem; /* 4px */
+  --spacing-2: 0.5rem; /* 8px */
+  --spacing-3: 0.75rem; /* 12px */
+  --spacing-4: 1rem; /* 16px */
+  --spacing-5: 1.25rem; /* 20px */
+  --spacing-6: 1.5rem; /* 24px */
+  --spacing-8: 2rem; /* 32px */
+  --spacing-10: 2.5rem; /* 40px */
+  --spacing-12: 3rem; /* 48px */
+  --spacing-16: 4rem; /* 64px */
+  --spacing-20: 5rem; /* 80px */
+  --spacing-24: 6rem; /* 96px */
+
+  /* Container max-widths */
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1280px;
+  --container-2xl: 1536px;
+
+  /* -------------------------------------------------------------------------
+   * BORDERS & RADIUS
+   * -------------------------------------------------------------------------
+   */
+  --border-width-thin: 1px;
+  --border-width-medium: 2px;
+  --border-width-thick: 4px;
+
+  --radius-none: 0;
+  --radius-sm: 0.125rem; /* 2px */
+  --radius-base: 0.25rem; /* 4px */
+  --radius-md: 0.375rem; /* 6px */
+  --radius-lg: 0.5rem; /* 8px */
+  --radius-xl: 0.75rem; /* 12px */
+  --radius-2xl: 1rem; /* 16px */
+  --radius-full: 9999px;
+
+  /* -------------------------------------------------------------------------
+   * SHADOWS
+   * -------------------------------------------------------------------------
+   */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-base: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg:
+    0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl:
+    0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+
+  /* -------------------------------------------------------------------------
+   * TRANSITIONS & ANIMATIONS
+   * -------------------------------------------------------------------------
+   */
+  --transition-duration-fast: 150ms;
+  --transition-duration-base: 200ms;
+  --transition-duration-slow: 300ms;
+  --transition-duration-slower: 500ms;
+
+  --transition-timing-default: cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-timing-in: cubic-bezier(0.4, 0, 1, 1);
+  --transition-timing-out: cubic-bezier(0, 0, 0.2, 1);
+  --transition-timing-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+  /* Composed transitions */
+  --transition-colors:
+    color var(--transition-duration-base) var(--transition-timing-default),
+    background-color var(--transition-duration-base)
+      var(--transition-timing-default),
+    border-color var(--transition-duration-base)
+      var(--transition-timing-default);
+  --transition-transform: transform var(--transition-duration-base)
+    var(--transition-timing-default);
+  --transition-shadow: box-shadow var(--transition-duration-base)
+    var(--transition-timing-default);
+  --transition-all: all var(--transition-duration-base)
+    var(--transition-timing-default);
+
+  /* -------------------------------------------------------------------------
+   * Z-INDEX SCALE
+   * -------------------------------------------------------------------------
+   */
+  --z-behind: -1;
+  --z-base: 0;
+  --z-dropdown: 10;
+  --z-sticky: 20;
+  --z-fixed: 30;
+  --z-modal-backdrop: 40;
+  --z-modal: 50;
+  --z-popover: 60;
+  --z-tooltip: 70;
+}
+
+/*
+ * =============================================================================
+ * TAILWIND THEME CONFIGURATION
+ * =============================================================================
+ * This section integrates CSS variables with Tailwind's utility classes.
+ * =============================================================================
+ */
+
+@theme {
+  /* Colors using CSS variables (RGB values for opacity support) */
+  --color-primary-50: rgb(var(--color-primary-50));
+  --color-primary-100: rgb(var(--color-primary-100));
+  --color-primary-200: rgb(var(--color-primary-200));
+  --color-primary-300: rgb(var(--color-primary-300));
+  --color-primary-400: rgb(var(--color-primary-400));
+  --color-primary-500: rgb(var(--color-primary-500));
+  --color-primary-600: rgb(var(--color-primary-600));
+  --color-primary-700: rgb(var(--color-primary-700));
+  --color-primary-800: rgb(var(--color-primary-800));
+  --color-primary-900: rgb(var(--color-primary-900));
+  --color-primary-950: rgb(var(--color-primary-950));
+
+  --color-accent-500: rgb(var(--color-accent-500));
+  --color-accent-600: rgb(var(--color-accent-600));
+  --color-accent-700: rgb(var(--color-accent-700));
+
+  /* Sky blue accent */
+  --color-sky-400: rgb(var(--color-sky-400));
+  --color-sky-500: rgb(var(--color-sky-500));
+  --color-sky-600: rgb(var(--color-sky-600));
+
+  /* Font families */
+  --font-sans: var(--font-family-sans);
+  --font-serif: var(--font-family-serif);
+  --font-mono: var(--font-family-mono);
+
+  /* Border radius */
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius-md);
+  --radius-lg: var(--radius-lg);
+  --radius-xl: var(--radius-xl);
+  --radius-2xl: var(--radius-2xl);
+
+  /* Shadows */
+  --shadow-sm: var(--shadow-sm);
+  --shadow: var(--shadow-base);
+  --shadow-md: var(--shadow-md);
+  --shadow-lg: var(--shadow-lg);
+  --shadow-xl: var(--shadow-xl);
+}
+
+/*
+ * =============================================================================
+ * BASE STYLES
+ * =============================================================================
+ */
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    font-family: var(--font-family-sans);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-normal);
+    color: rgb(var(--color-text-base));
+    background-color: rgb(var(--color-bg-base));
+  }
+
+  h1 {
+    font-size: var(--font-size-4xl);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-tight);
+    letter-spacing: var(--letter-spacing-tight);
+  }
+
+  h2 {
+    font-size: var(--font-size-3xl);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--line-height-tight);
+    letter-spacing: var(--letter-spacing-tight);
+  }
+
+  h3 {
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--line-height-tight);
+  }
+
+  h4 {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--line-height-tight);
+  }
+
+  p {
+    line-height: var(--line-height-relaxed);
+  }
+
+  a {
+    transition: var(--transition-colors);
+  }
+
+  ul,
+  ol {
+    line-height: var(--line-height-relaxed);
+  }
+
+  /* Responsive heading sizes */
+  @media (min-width: 640px) {
+    h1 {
+      font-size: var(--font-size-5xl);
+    }
+  }
+}
+
+/*
+ * =============================================================================
+ * COMPONENT STYLES
+ * =============================================================================
+ */
+
+@layer components {
+  /* Main container with responsive padding */
+  .container-main {
+    width: 100%;
+    max-width: var(--container-xl);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--spacing-4);
+    padding-right: var(--spacing-4);
+  }
+
+  @media (min-width: 640px) {
+    .container-main {
+      padding-left: var(--spacing-6);
+      padding-right: var(--spacing-6);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container-main {
+      padding-left: var(--spacing-8);
+      padding-right: var(--spacing-8);
+    }
+  }
+
+  /* Focus ring utility */
+  .focus-ring {
+    outline: none;
+  }
+
+  .focus-ring:focus-visible {
+    outline: 2px solid rgb(var(--color-primary-500));
+    outline-offset: 2px;
+  }
+}
+
+/*
+ * =============================================================================
+ * UTILITY CLASSES
+ * =============================================================================
+ */
+
+@layer utilities {
+  /* Animation utilities using CSS variables */
+  .animate-fade-in {
+    animation: fadeIn var(--transition-duration-slow)
+      var(--transition-timing-out);
+  }
+
+  .animate-slide-up {
+    animation: slideUp var(--transition-duration-slow)
+      var(--transition-timing-out);
+  }
+
+  .animate-slide-down {
+    animation: slideDown var(--transition-duration-slow)
+      var(--transition-timing-out);
+  }
+}
+
+/*
+ * =============================================================================
+ * KEYFRAME ANIMATIONS
+ * =============================================================================
+ */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

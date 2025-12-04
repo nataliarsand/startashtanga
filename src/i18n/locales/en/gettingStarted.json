@@ -1,0 +1,201 @@
+{
+  "hero": {
+    "title": "Getting Started",
+    "subtitle": "Everything you need to begin your Ashtanga practice"
+  },
+  "nav": {
+    "whatIsAshtanga": "What is Ashtanga?",
+    "ledVsMysore": "Led vs Mysore",
+    "firstClass": "Your first class",
+    "whatToBring": "What to bring",
+    "findShala": "Find a shala",
+    "faq": "FAQ"
+  },
+  "ashtanga": {
+    "title": "What is Ashtanga Yoga?",
+    "introParts": {
+      "before": "Ashtanga Yoga is a dynamic, physically demanding practice that follows a set sequence of postures. Developed by K. Pattabhi Jois in",
+      "after": ", India, it combines breath, movement, and gaze into a moving meditation."
+    },
+    "eightLimbs": {
+      "title": "The Eight Limbs",
+      "textParts": {
+        "before": "\"Ashtanga\" means \"eight limbs\" in",
+        "mid1": ", referring to the eight-fold path outlined in Patanjali's Yoga",
+        "mid2": ". The physical postures (",
+        "mid3": ") are just one limb—the practice also encompasses ethical guidelines, breath control, and meditation."
+      }
+    },
+    "sequences": {
+      "title": "The sequences",
+      "items": [
+        { "hasTerm": true, "before": "", "term": "Primary Series", "after": " (Yoga Chikitsa) — detoxifies and aligns the body" },
+        { "text": "Intermediate Series (Nadi Shodhana) — purifies the nervous system" },
+        { "text": "Advanced Series (Sthira Bhaga) — integrates strength and grace" }
+      ],
+      "noteParts": {
+        "before": "Most practitioners spend years in the",
+        "after": ". There's no rush—each pose prepares you for the next."
+      }
+    },
+    "tristhana": {
+      "title": "The Tristhana method",
+      "items": [
+        { "label": "Breath", "term": "Ujjayi", "suffix": "pranayama", "description": "steady, audible breathing" },
+        { "label": "Posture", "term": "Asana", "description": "the physical shapes" },
+        { "label": "Gaze", "term": "Drishti", "description": "focal points to direct attention" }
+      ]
+    }
+  },
+  "ledVsMysore": {
+    "title": "Led Class vs Mysore Style",
+    "intro": "There are two ways to practice Ashtanga: Led classes and Mysore style. Both are valuable, but they offer different experiences.",
+    "led": {
+      "title": "Led Class",
+      "description": "The teacher calls out poses and everyone moves together at the same pace.",
+      "points": [
+        "Set pace—everyone follows the teacher's count",
+        "Great for learning the correct vinyasa count",
+        "Energising group experience",
+        "Usually offered once or twice a week"
+      ]
+    },
+    "mysore": {
+      "title": "Mysore Style",
+      "description": "Students practice independently while the teacher provides individual guidance.",
+      "points": [
+        "Self-paced—you move at your own rhythm",
+        "One-on-one attention and adjustments",
+        "Practice what you know, learn new poses gradually",
+        "Flexible arrival time within a window"
+      ]
+    },
+    "recommendation": {
+      "title": "Which should I start with?",
+      "text": "We recommend starting with Mysore. Despite what the name might suggest, it's actually better for beginners because you get personalised attention and can learn at your own pace. You won't feel lost trying to keep up with experienced practitioners."
+    }
+  },
+  "firstClass": {
+    "title": "Your first Mysore class",
+    "intro": "Walking into a Mysore room for the first time can feel intimidating. The room will likely be warm, humid, and filled with the sound of breath—this is normal. Here's exactly what to expect.",
+    "classSchedule": {
+      "title": "When do classes start?",
+      "textParts": {
+        "before": "Mysore classes typically start early—6:00am, 6:30am, or sometimes 7:00 or 7:30am depending on the",
+        "after": ". Some shalas offer multiple shifts, for example one at 6:30am and another at 8:30am. Classes usually run for about 2 hours."
+      },
+      "arrivalNote": "You can arrive at any point that gives you enough time to practice. If a class starts at 6:30am and runs until 8:30am, you could arrive anytime before roughly 7:50am to have about 40 minutes of practice."
+    },
+    "steps": [
+      {
+        "title": "Arrive and introduce yourself",
+        "text": "When you arrive, you'll likely see people already deep in their practice—that's completely normal. Find the teacher, introduce yourself, and let them know you're new. They may ask you a few questions about any injuries or previous yoga experience."
+      },
+      {
+        "title": "Find your spot",
+        "text": "The teacher will help you find a place for your mat, or show you where to borrow one from the studio. Set up quietly and wait—the room may be silent except for the sound of breathing."
+      },
+      {
+        "id": "learn-vinyasas",
+        "titleParts": {
+          "before": "Learn your first",
+          "after": ""
+        },
+        "textParts": {
+          "before": "The teacher will guide you through the opening sequence—typically",
+          "after": "A and B. They'll teach you the movements and breathing pattern, then ask you to repeat it a few times on your own while they watch and correct you."
+        }
+      },
+      {
+        "title": "Build gradually",
+        "textParts": {
+          "before": "Depending on how you're doing—both with what was just taught and your energy levels—the teacher might add a few more poses. There's no rush. Some days you might only learn",
+          "after": ", and that's exactly right."
+        }
+      },
+      {
+        "title": "Closing and rest",
+        "text": "When it's time to finish, the teacher will show you the closing sequence—typically the last three poses. Then you must rest. We always rest after practice; it helps the body absorb what you've done."
+      }
+    ],
+    "mantra": {
+      "title": "The opening mantra",
+      "textParts": {
+        "before": "At some point during the class, the teacher may call everyone to stand in",
+        "after": "for the opening mantra. This is a call-and-response chant—the teacher says a line and students repeat. Don't worry if you don't know the words; just stand respectfully and listen."
+      }
+    },
+    "duration": {
+      "title": "How long will it take?",
+      "text": "Your first class might only be 30-45 minutes. As you learn more poses, your practice will naturally grow longer—eventually reaching 60-90 minutes or more."
+    }
+  },
+  "whatToBring": {
+    "title": "What to bring",
+    "items": [
+      {
+        "item": "Yoga mat",
+        "note": "Most shalas have mats available for you to borrow, but you are welcomed to bring yours"
+      },
+      {
+        "item": "Comfortable clothing",
+        "note": "Form-fitting is best so the teacher can see your alignment"
+      },
+      {
+        "item": "Extra clothes",
+        "note": "You will sweat. Bring fresh clothes if you wish, and maybe your shala has shower facilities"
+      },
+      {
+        "item": "NO water bottle",
+        "note": "We don't drink during practice as it interferes with the internal heat we're building. Hydrate before and after"
+      }
+    ],
+    "important": {
+      "title": "Important",
+      "items": [
+        "Practice on an empty stomach, no food 2-3 hours before is recommended",
+        "Remove jewelry, watches, and strong fragrances",
+        "Silence your phone completely",
+        "Come showered, you'll be practicing in close quarters with others"
+      ]
+    }
+  },
+  "findShala": {
+    "title": "Find a shala",
+    "text": "The best way to learn Ashtanga is with a qualified teacher in person. Look for shalas that offer Mysore-style classes, not just led Ashtanga.",
+    "comingSoon": "We're building a global directory of Mysore programs. Coming soon.",
+    "tip": {
+      "title": "In the meantime",
+      "text": "Search for \"Mysore yoga\" + your city, or check if there are KPJAYI/SYC authorised or certified teachers near you."
+    }
+  },
+  "faq": {
+    "title": "Common questions",
+    "items": [
+      {
+        "q": "Do I need to be flexible to start?",
+        "a": "No. Flexibility comes from practice. You start exactly where you are."
+      },
+      {
+        "q": "What if I can't do a pose?",
+        "a": "Every pose has modifications. Your teacher will adapt the practice to your body."
+      },
+      {
+        "q": "How often should I practice?",
+        "a": "Traditionally 6 days a week, but start with what's sustainable. Even 2-3 days brings benefits."
+      },
+      {
+        "q": "Can I practice at home?",
+        "a": "Yes, once you've learned the sequence. But learning from a teacher first is strongly recommended."
+      },
+      {
+        "q": "I have an injury. Can I still practice?",
+        "a": "Usually yes, with modifications. Always tell your teacher about injuries before class."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to start?",
+    "text": "Find a Mysore class near you and just show up. Everyone was a beginner once."
+  }
+}

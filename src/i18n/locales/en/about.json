@@ -1,0 +1,54 @@
+{
+  "hero": {
+    "title": "About Start Ashtanga",
+    "subtitle": "A community-driven resource for Ashtanga Yoga"
+  },
+  "mission": {
+    "title": "Our mission",
+    "text": "Start Ashtanga is a free, open-source, and non-commercial resource dedicated to making Ashtanga Yoga accessible to everyone. We provide clear, beginner-friendly information about Ashtanga Yoga (Mysore style) and traditional yoga studies, helping newcomers find their path and experienced practitioners deepen their understanding, build and connect with each other."
+  },
+  "values": {
+    "title": "Our values",
+    "items": [
+      {
+        "icon": "heart",
+        "title": "Accessible",
+        "description": "Free, open, and available to everyone regardless of location, background, or experience level. No paywalls, no gatekeeping."
+      },
+      {
+        "icon": "book",
+        "title": "Authentic",
+        "description": "Rooted in traditional teachings from the Mysore lineage while being welcoming and approachable to complete beginners."
+      },
+      {
+        "icon": "users",
+        "title": "Community-driven",
+        "description": "Built by and for the global Ashtanga community. Anyone can contribute content, translations, or improvements."
+      }
+    ]
+  },
+  "openSource": {
+    "title": "Built by the community",
+    "text": "Start Ashtanga is a collaborative project—anyone can help improve it. All our content is freely available and we welcome contributions from practitioners around the world.",
+    "contribute": {
+      "title": "Ways to contribute",
+      "text": "You can help by suggesting corrections, translating content into your language, sharing information about your local shala, or simply spreading the word."
+    },
+    "technical": {
+      "title": "For developers",
+      "text": "This project is open source on GitHub. If you're a developer, you can contribute code, report issues, or help build new features."
+    },
+    "githubButton": "View on GitHub"
+  },
+  "contact": {
+    "title": "Get in touch",
+    "text": "Have questions, suggestions, or feedback? We'd love to hear from you.",
+    "emailButton": "Send us an email",
+    "formButton": "Contact form"
+  },
+  "cta": {
+    "title": "Ready to begin?",
+    "text": "Everything you need to start your Ashtanga practice is right here.",
+    "button": "Get started"
+  }
+}

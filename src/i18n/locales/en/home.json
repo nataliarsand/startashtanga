@@ -1,0 +1,40 @@
+{
+  "hero": {
+    "title": "Start Ashtanga",
+    "subtitle": "Your path into traditional Mysore-style yoga",
+    "tagline": "Free & open source"
+  },
+  "quickActions": {
+    "start": {
+      "label": "Get started",
+      "description": "New to Ashtanga? Begin here"
+    },
+    "findClass": {
+      "label": "Find a shala",
+      "description": "Mysore classes worldwide"
+    },
+    "explore": {
+      "label": "About",
+      "description": "Our mission & community"
+    }
+  },
+  "features": {
+    "mysoreStyle": {
+      "title": "What is Mysore?",
+      "description": "A self-paced, one-on-one teaching style where you learn at your own rhythm."
+    },
+    "forBeginners": {
+      "title": "For all levels",
+      "description": "The practice adapts to you. Start exactly where you are."
+    },
+    "beyondPoses": {
+      "title": "Beyond yoga poses",
+      "description": "Breath, philosophy, and a living tradition. More than just a workout"
+    }
+  },
+  "cta": {
+    "title": "Ready to begin?",
+    "description": "Everything you need to start your Ashtanga journey.",
+    "buttonText": "Start your practice"
+  }
+}
