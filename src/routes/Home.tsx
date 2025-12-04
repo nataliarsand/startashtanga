@@ -6,11 +6,11 @@ import {
   faBookOpen,
   faLocationDot,
   faUsers,
-  faPersonPraying,
+  faHandsPraying,
   faSeedling,
   faOm,
 } from '@fortawesome/free-solid-svg-icons';
-import { Button } from '../components/common';
+import { Button, GlossaryTooltip } from '../components/common';
 
 export default function Home() {
   const { t } = useTranslation('home');
@@ -39,7 +39,7 @@ export default function Home() {
 
   const features = [
     {
-      icon: faPersonPraying,
+      icon: faHandsPraying,
       title: t('features.mysoreStyle.title'),
       description: t('features.mysoreStyle.description'),
     },
@@ -76,7 +76,9 @@ export default function Home() {
             {t('hero.title')}
           </h1>
           <p className="mx-auto mt-4 max-w-lg text-lg text-white/80 sm:text-xl">
-            {t('hero.subtitle')}
+            {t('hero.subtitleParts.before')}{' '}
+            <GlossaryTooltip term="Mysore">Mysore-style</GlossaryTooltip>{' '}
+            {t('hero.subtitleParts.after')}
           </p>
 
           {/* Quick Actions */}

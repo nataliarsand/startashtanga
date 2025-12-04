@@ -1,7 +1,10 @@
 {
   "hero": {
     "title": "Start Ashtanga",
-    "subtitle": "Your path into traditional Mysore-style yoga",
+    "subtitleParts": {
+      "before": "Your path into traditional",
+      "after": "yoga"
+    },
     "tagline": "Free & open source"
   },
   "quickActions": {

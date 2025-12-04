@@ -166,7 +166,10 @@
     "comingSoon": "We're building a global directory of Mysore programs. Coming soon.",
     "tip": {
       "title": "In the meantime",
-      "text": "Search for \"Mysore yoga\" + your city, or check if there are KPJAYI/SYC authorised or certified teachers near you."
+      "textParts": {
+        "before": "Search for \"Mysore yoga\" + your city, or check if there are",
+        "after": "teachers near you."
+      }
     }
   },
   "faq": {
@@ -182,7 +185,11 @@
       },
       {
         "q": "How often should I practice?",
-        "a": "Traditionally 6 days a week unless it is a moon day, but start with what's sustainable. 2-3 times a week is enough to get started."
+        "id": "practice-frequency",
+        "aParts": {
+          "before": "Traditionally 6 days a week unless it is a",
+          "after": ", but start with what's sustainable. 2-3 times a week is enough to get started."
+        }
       },
       {
         "q": "Can I practice at home?",
@@ -191,6 +198,18 @@
       {
         "q": "I have an injury. Can I still practice?",
         "a": "Usually yes, with modifications. Always tell your teacher about injuries before class."
+      },
+      {
+        "q": "I already know some poses. Can I skip ahead?",
+        "id": "skip-ahead",
+        "aParts": {
+          "before": "In Ashtanga, we always start from the beginning and practice poses in order. Even experienced practitioners do the full sequence each time. The repetition is part of the practice, it builds discipline, reveals new layers, and prepares your body for what comes next. Certain poses also act as",
+          "after": "that ensure you're ready before progressing."
+        }
+      },
+      {
+        "q": "I learned this differently at another class. What should I do?",
+        "a": "There are variations in how Ashtanga is taught. When you're in a new shala, follow that teacher's method. If something feels very different from what you learned before, ask your teacher about it, they'll be happy to explain their approach. You always respect the teacher in the room."
       }
     ]
   },

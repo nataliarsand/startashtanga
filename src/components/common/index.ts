@@ -6,3 +6,4 @@ export { default as ContentCard } from './ContentCard';
 export { default as CalloutBox } from './CalloutBox';
 export { default as ChecklistItem } from './ChecklistItem';
 export { default as SectionNav } from './SectionNav';
+export { default as ScrollToTop } from './ScrollToTop';

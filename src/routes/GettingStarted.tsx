@@ -79,7 +79,7 @@ export default function GettingStarted() {
 
   const faqItems = t('faq.items', {
     returnObjects: true,
-  }) as Array<{ q: string; a: string }>;
+  }) as Array<{ q: string; a?: string; id?: string; aParts?: { before: string; after: string } }>;
 
   return (
     <>
@@ -430,7 +430,11 @@ export default function GettingStarted() {
                 {t('findShala.tip.title')}
               </h4>
               <p className="text-body mt-1">
-                {t('findShala.tip.text')}
+                {t('findShala.tip.textParts.before')}{' '}
+                <GlossaryTooltip term="KPJAYI" />/<GlossaryTooltip term="SYC" />{' '}
+                <GlossaryTooltip term="Authorised">authorised</GlossaryTooltip> or{' '}
+                <GlossaryTooltip term="Certified">certified</GlossaryTooltip>{' '}
+                {t('findShala.tip.textParts.after')}
               </p>
             </ContentCard>
           </section>
@@ -458,7 +462,20 @@ export default function GettingStarted() {
                     />
                   </summary>
                   <p className="text-body px-4 pb-4">
-                    {item.a}
+                    {item.aParts ? (
+                      <>
+                        {item.aParts.before}{' '}
+                        {item.id === 'practice-frequency' && (
+                          <GlossaryTooltip term="Moon Days">moon day</GlossaryTooltip>
+                        )}
+                        {item.id === 'skip-ahead' && (
+                          <GlossaryTooltip term="Gatekeeper Pose">gatekeeper poses</GlossaryTooltip>
+                        )}{' '}
+                        {item.aParts.after}
+                      </>
+                    ) : (
+                      item.a
+                    )}
                   </p>
                 </details>
               ))}

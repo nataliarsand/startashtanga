@@ -72,7 +72,7 @@
     {
       "term": "Pranayama",
       "sanskrit": "प्राणायाम",
-      "definition": "Breath control practices. The fourth limb of Ashtanga yoga. Traditionally taught after proficiency in asana."
+      "definition": "Prana means breath in Sanskrit. Pranayama is the breath control practice. The fourth limb of Ashtanga yoga. Traditionally taught after proficiency in asana."
     },
     {
       "term": "Moon Days",
@@ -130,6 +130,57 @@
       "term": "Sutra",
       "sanskrit": "सूत्र",
       "definition": "Literally means \"thread\" in Sanskrit. Refers to a concise teaching or aphorism. The Yoga Sutras of Patanjali are the foundational text of yoga philosophy, containing 196 sutras on the theory and practice of yoga."
+    },
+    {
+      "term": "KPJAYI",
+      "definition": "K. Pattabhi Jois Ashtanga Yoga Institute. The original institute in Mysore, India, founded by Sri K. Pattabhi Jois where Ashtanga Yoga has been taught since 1948. Now led by his grandson R. Sharath Jois, it remains the main source of the Ashtanga lineage."
+    },
+    {
+      "term": "SYC",
+      "definition": "Sharath Yoga Centre. The current name of the main Ashtanga Yoga shala in Mysore, India, led by R. Sharath Jois. Students from around the world travel to Mysore to study at SYC and deepen their practice under the guidance of the lineage holder."
+    },
+    {
+      "term": "Authorised",
+      "definition": "A teacher who has been granted permission by the KPJAYI/SYC lineage to teach Ashtanga Yoga. Authorisation is given after years of dedicated practice and study in Mysore. There are different levels: Authorised Level 1 (can teach Primary Series) and Authorised Level 2 (can teach up to Intermediate Series). This differs from Certified teachers, who have received the highest level of recognition and can teach all series."
+    },
+    {
+      "term": "K. Pattabhi Jois",
+      "definition": "Sri Krishna Pattabhi Jois (1915–2009), known as Guruji, was the founder of Ashtanga Yoga as it is practiced today. He learned from his teacher T. Krishnamacharya and dedicated his life to teaching in Mysore, India. He established KPJAYI and trained thousands of students from around the world, spreading Ashtanga globally."
+    },
+    {
+      "term": "Sharath Jois",
+      "definition": "R. Sharath Jois is the current lineage holder of Ashtanga Yoga and grandson of K. Pattabhi Jois. He began practicing at age 7 and has been teaching since 1994. He now leads Sharath Yoga Centre (SYC) in Mysore, continuing the tradition and authorising teachers worldwide."
+    },
+    {
+      "term": "Krishnamacharya",
+      "definition": "Tirumalai Krishnamacharya (1888–1989), often called the \"father of modern yoga.\" He was the teacher of K. Pattabhi Jois, B.K.S. Iyengar, and Indra Devi, among others. His teachings form the foundation of most modern yoga styles practiced today."
+    },
+    {
+      "term": "Certified",
+      "definition": "The highest level of recognition granted by the KPJAYI/SYC lineage to teach Ashtanga Yoga. Certified teachers have demonstrated mastery of the practice and can teach all series. This is a step above Authorised teachers, who are limited to teaching Primary or Intermediate Series depending on their level."
+    },
+    {
+      "term": "Intermediate Series",
+      "sanskrit": "नाड़ी शोधन",
+      "definition": "Nadi Shodhana, meaning \"nerve cleansing.\" The second series of Ashtanga, focused on purifying the nervous system. It includes deeper backbends, hip openers, and arm balances. Students typically begin this series after completing Primary Series."
+    },
+    {
+      "term": "Advanced Series",
+      "sanskrit": "स्थिर भग",
+      "definition": "Sthira Bhaga, meaning \"divine stability.\" The third and most challenging series of Ashtanga (actually divided into four sub-series: Advanced A, B, C, and D). It integrates strength, flexibility, and grace at the highest level."
+    },
+    {
+      "term": "Tristhana",
+      "sanskrit": "त्रिस्थान",
+      "definition": "The three places of attention in Ashtanga practice: breathing system (pranayama), posture (asana), and gazing point (drishti). These three elements work together to create a moving meditation."
+    },
+    {
+      "term": "Patanjali",
+      "definition": "The ancient sage who compiled the Yoga Sutras, the foundational text of yoga philosophy. His work outlines the eight-limbed path (Ashtanga) and provides guidance on the practice and purpose of yoga. Little is known about his life, with estimates placing him between 500 BCE and 400 CE."
+    },
+    {
+      "term": "Gatekeeper Pose",
+      "definition": "A pose that acts as a checkpoint in the Ashtanga sequence. Your teacher will only give you the next pose once you've developed the strength, flexibility, or understanding needed to practice it safely. Common gatekeepers include Marichyasana D and Supta Kurmasana in the Primary Series."
     }
   ]
 }
