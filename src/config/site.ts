@@ -10,5 +10,5 @@ export const siteConfig = {
   links: {
     github: import.meta.env.VITE_GITHUB_URL || 'https://github.com/nataliarsand/startashtanga',
   },
-  url: import.meta.env.VITE_SITE_URL || 'https://startashtanga.com',
+  url: import.meta.env.VITE_SITE_URL || 'https://www.startashtanga.org',
 } as const;

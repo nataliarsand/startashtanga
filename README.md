@@ -2,7 +2,7 @@
 
 A free, community-driven guide to Ashtanga Yoga for beginners.
 
-**[Visit the website →](https://www.startashtanga.org)**
+**<a href="https://www.startashtanga.org" target="_blank">Visit the website →</a>**
 
 ## What is this?
 
@@ -14,12 +14,12 @@ You don't need to be a developer to help!
 
 - **Improve content** - Fix typos, clarify explanations, suggest better wording
 - **Add translations** - Help make the site available in your language
-- **Share your shala** - Know a great Mysore program? [Submit it here](https://forms.gle/c6iprH8YBpktKkYD7)
+- **Share your shala** - Know a great Mysore program? <a href="https://forms.gle/c6iprH8YBpktKkYD7" target="_blank">Submit it here</a>
 - **Spread the word** - Share with fellow practitioners and yoga studios
 
 We're also looking for help with logo design, social media, and building a resources library.
 
-[Get in touch](https://tally.so/r/waGkrN) or open a GitHub issue.
+<a href="https://forms.gle/ih4ZVFEA5GWNYec86" target="_blank">Get in touch</a> or open a GitHub issue.
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
 

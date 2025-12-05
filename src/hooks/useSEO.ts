@@ -8,7 +8,7 @@ interface SEOProps {
 }
 
 const SITE_NAME = 'Start Ashtanga';
-const BASE_URL = 'https://startashtanga.com';
+const BASE_URL = 'https://www.startashtanga.org';
 
 export default function useSEO({ page, canonical, ogType = 'website' }: SEOProps) {
   const { t } = useTranslation('seo');
