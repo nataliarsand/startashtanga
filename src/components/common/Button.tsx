@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import type { ComponentPropsWithoutRef } from 'react';
 import { track } from '@vercel/analytics';
 
-type ButtonVariant = 'primary' | 'secondary' | 'outline' | 'info';
+type ButtonVariant = 'primary' | 'secondary' | 'outline' | 'info' | 'donate';
 type ButtonSize = 'sm' | 'md' | 'lg';
 
 interface BaseButtonProps {
@@ -42,6 +42,7 @@ const variantStyles: Record<ButtonVariant, string> = {
   secondary: 'bg-surface text-heading hover:opacity-90',
   outline: 'bg-transparent text-heading border-2 border-default hover:border-accent',
   info: 'bg-info text-white hover:opacity-90',
+  donate: 'bg-accent text-white hover:opacity-90',
 };
 
 const sizeStyles: Record<ButtonSize, string> = {

@@ -1,0 +1,6 @@
+# robots.txt for startashtanga.org
+
+User-agent: *
+Allow: /
+
+Sitemap: https://www.startashtanga.org/sitemap.xml

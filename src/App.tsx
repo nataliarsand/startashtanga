@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Layout } from './components/layout';
 import { ScrollToTop } from './components/common';
-import { Home, About, Contributing, GettingStarted, Glossary, PrimarySeries } from './routes';
+import { Home, About, Contributing, GettingStarted, Glossary, NotFound, PrimarySeries } from './routes';
 
 export default function App() {
   return (
@@ -15,6 +15,7 @@ export default function App() {
           <Route path="glossary" element={<Glossary />} />
           <Route path="about" element={<About />} />
           <Route path="contribute" element={<Contributing />} />
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </BrowserRouter>

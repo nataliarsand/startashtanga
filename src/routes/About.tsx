@@ -6,7 +6,7 @@ import {
   faUsers,
   faArrowRight,
 } from '@fortawesome/free-solid-svg-icons';
-import { Button, PageHero, ContentCard, SectionNav } from '../components/common';
+import { Button, PageHero, ContentCard, SectionNav, DonateButton } from '../components/common';
 import { siteConfig } from '../config/site';
 import { useSEO } from '../hooks';
 
@@ -31,6 +31,7 @@ export default function About() {
     { id: 'mission', label: t('nav.mission') },
     { id: 'approach', label: t('nav.approach') },
     { id: 'values', label: t('nav.values') },
+    { id: 'support', label: t('nav.support') },
     { id: 'contact', label: t('nav.contact') },
   ];
 
@@ -99,6 +100,23 @@ export default function About() {
                   </div>
                 </ContentCard>
               ))}
+            </div>
+          </section>
+
+          {/* Divider */}
+          <hr className="border-default my-12" />
+
+          {/* Support */}
+          <section id="support">
+            <h2 className="text-heading text-2xl font-bold sm:text-3xl">
+              {t('support.title')}
+            </h2>
+            <p className="text-body mt-4 leading-relaxed">
+              {t('support.text')}
+            </p>
+
+            <div className="mt-6">
+              <DonateButton size="lg" />
             </div>
           </section>
 

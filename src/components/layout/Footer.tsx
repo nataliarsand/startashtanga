@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { siteConfig } from '../../config/site';
+import { DonateButton } from '../common';
 
 export default function Footer() {
   const { t } = useTranslation('common');
@@ -39,6 +40,9 @@ export default function Footer() {
                 >
                   {t('footer.contact')}
                 </a>
+              </li>
+              <li>
+                <DonateButton size="sm" />
               </li>
             </ul>
           </nav>

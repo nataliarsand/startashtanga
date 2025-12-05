@@ -7,6 +7,7 @@
     "mission": "Our mission",
     "approach": "Our approach",
     "values": "Our values",
+    "support": "Support us",
     "contact": "Get in touch"
   },
   "mission": {
@@ -36,6 +37,10 @@
         "description": "Built by and for the global Ashtanga community. Anyone can contribute content, translations, or improvements."
       }
     ]
+  },
+  "support": {
+    "title": "Support us",
+    "text": "Start Ashtanga is a labor of love, built and maintained by volunteers. Your donation helps cover domain costs, hosting, and the countless hours that go into creating and maintaining this resource. Every contribution, no matter how small, helps keep this project free and accessible to all."
   },
   "contact": {
     "title": "Get in touch",
