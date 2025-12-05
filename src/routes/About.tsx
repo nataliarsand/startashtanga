@@ -8,9 +8,12 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { Button, PageHero, ContentCard, SectionNav } from '../components/common';
 import { siteConfig } from '../config/site';
+import { useSEO } from '../hooks';
 
 export default function About() {
   const { t } = useTranslation('about');
+
+  useSEO({ page: 'about' });
 
   const values = t('values.items', { returnObjects: true }) as Array<{
     title: string;

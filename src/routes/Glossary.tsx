@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { PageHero } from '../components/common';
+import { useSEO } from '../hooks';
 
 interface GlossaryTerm {
   term: string;
@@ -13,6 +14,8 @@ interface GlossaryTerm {
 export default function Glossary() {
   const { t } = useTranslation('glossary');
   const [searchQuery, setSearchQuery] = useState('');
+
+  useSEO({ page: 'glossary' });
 
   const terms = t('terms', { returnObjects: true }) as GlossaryTerm[];
 

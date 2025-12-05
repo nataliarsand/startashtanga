@@ -11,9 +11,12 @@ import {
   faOm,
 } from '@fortawesome/free-solid-svg-icons';
 import { Button, GlossaryTooltip } from '../components/common';
+import { useSEO } from '../hooks';
 
 export default function Home() {
   const { t } = useTranslation('home');
+
+  useSEO({ page: 'home' });
 
   const quickActions = [
     {

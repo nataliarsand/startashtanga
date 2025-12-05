@@ -13,9 +13,12 @@ import {
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { Button, PageHero, ContentCard, ChecklistItem, SectionNav } from '../components/common';
 import { siteConfig } from '../config/site';
+import { useSEO } from '../hooks';
 
 export default function Contributing() {
   const { t } = useTranslation('contributing');
+
+  useSEO({ page: 'contributing' });
 
   const ways = t('ways.items', { returnObjects: true }) as Array<{
     title: string;

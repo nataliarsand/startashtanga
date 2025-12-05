@@ -9,6 +9,7 @@ import {
   CalloutBox,
   GlossaryTooltip,
 } from '../components/common';
+import { useSEO } from '../hooks';
 
 interface Pose {
   name: string;
@@ -30,6 +31,8 @@ interface SuryaGroup {
 
 export default function PrimarySeries() {
   const { t } = useTranslation('primarySeries');
+
+  useSEO({ page: 'primarySeries' });
 
   const navItems = [
     { id: 'opening-mantra', label: t('nav.openingMantra') },

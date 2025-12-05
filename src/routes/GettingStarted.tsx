@@ -19,9 +19,12 @@ import {
   CalloutBox,
   SectionNav,
 } from '../components/common';
+import { useSEO } from '../hooks';
 
 export default function GettingStarted() {
   const { t } = useTranslation('gettingStarted');
+
+  useSEO({ page: 'gettingStarted' });
 
   const navItems = [
     { id: 'ashtanga', label: t('nav.whatIsAshtanga') },

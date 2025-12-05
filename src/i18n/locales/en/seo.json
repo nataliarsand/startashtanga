@@ -1,0 +1,26 @@
+{
+  "home": {
+    "title": "Home",
+    "description": "Free beginner guide to Ashtanga Yoga. Learn Mysore style practice, the Primary Series, Sanskrit counting, and find a shala near you."
+  },
+  "gettingStarted": {
+    "title": "Getting Started with Ashtanga Yoga",
+    "description": "Everything you need for your first Ashtanga class. Learn what Mysore style is, what to bring, what to expect, and how to find a teacher."
+  },
+  "primarySeries": {
+    "title": "Ashtanga Primary Series Pose List",
+    "description": "Complete list of all poses in the Ashtanga Primary Series (Yoga Chikitsa). Includes Sun Salutations, standing, seated, finishing poses, and mantras."
+  },
+  "glossary": {
+    "title": "Ashtanga Yoga Glossary",
+    "description": "Sanskrit yoga terms explained. Learn the meaning of asana, vinyasa, bandha, drishti, and other key Ashtanga Yoga vocabulary."
+  },
+  "about": {
+    "title": "About Start Ashtanga",
+    "description": "Start Ashtanga is a free, open source guide to traditional Ashtanga Yoga. Learn about our mission to make yoga accessible to everyone."
+  },
+  "contributing": {
+    "title": "Contribute to Start Ashtanga",
+    "description": "Help build a free Ashtanga Yoga resource. Contribute content, translations, code, or share your shala. Open source and community driven."
+  }
+}
