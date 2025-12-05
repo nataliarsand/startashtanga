@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import type { ComponentPropsWithoutRef } from 'react';
+import { track } from '@vercel/analytics';
 
 type ButtonVariant = 'primary' | 'secondary' | 'outline' | 'info';
 type ButtonSize = 'sm' | 'md' | 'lg';
@@ -7,6 +8,7 @@ type ButtonSize = 'sm' | 'md' | 'lg';
 interface BaseButtonProps {
   variant?: ButtonVariant;
   size?: ButtonSize;
+  trackingName?: string;
 }
 
 interface ButtonAsButtonProps
@@ -52,6 +54,7 @@ export default function Button({
   variant = 'primary',
   size = 'md',
   className = '',
+  trackingName,
   ...props
 }: ButtonProps) {
   const baseClassName =
@@ -59,23 +62,29 @@ export default function Button({
 
   const combinedClassName = `${baseClassName} ${variantStyles[variant]} ${sizeStyles[size]} ${className}`;
 
+  const handleClick = (destination?: string) => {
+    if (trackingName) {
+      track('button_click', { name: trackingName, destination });
+    }
+  };
+
   if (props.as === 'link') {
     const { as: _as, to, children, ...rest } = props;
     void _as;
     return (
-      <Link to={to} className={combinedClassName} {...rest}>
+      <Link to={to} className={combinedClassName} onClick={() => handleClick(to)} {...rest}>
         {children}
       </Link>
     );
   }
 
   if (props.as === 'a') {
-    const { as: _as, ...rest } = props;
+    const { as: _as, href, ...rest } = props;
     void _as;
-    return <a className={combinedClassName} {...rest} />;
+    return <a href={href} className={combinedClassName} onClick={() => handleClick(href)} {...rest} />;
   }
 
   const { as: _as, ...rest } = props;
   void _as;
-  return <button className={combinedClassName} {...rest} />;
+  return <button className={combinedClassName} onClick={() => handleClick()} {...rest} />;
 }

@@ -495,7 +495,7 @@ export default function GettingStarted() {
           </h2>
           <p className="mx-auto mt-3 max-w-md text-white/80">{t('cta.text')}</p>
           <div className="mt-8">
-            <Button as="link" to="/about" variant="secondary" size="lg">
+            <Button as="link" to="/about" variant="secondary" size="lg" trackingName="getting_started_cta_about">
               Learn about this project
             </Button>
           </div>

@@ -120,6 +120,7 @@ export default function About() {
                 href={siteConfig.contact.formUrl}
                 target="_blank"
                 rel="noopener noreferrer"
+                trackingName="about_contact_form"
               >
                 {t('contact.formButton')}
               </Button>
@@ -137,7 +138,7 @@ export default function About() {
           </h2>
           <p className="mx-auto mt-3 max-w-md text-white/80">{t('cta.text')}</p>
           <div className="mt-8">
-            <Button as="link" to="/contribute" variant="secondary" size="lg">
+            <Button as="link" to="/contribute" variant="secondary" size="lg" trackingName="about_cta_contribute">
               {t('cta.button')}
               <FontAwesomeIcon icon={faArrowRight} className="ml-2 h-4 w-4" />
             </Button>
