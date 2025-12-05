@@ -46,6 +46,16 @@
       "definition": "Gazing point. Each asana has a specific drishti to help focus the mind and direct energy."
     },
     {
+      "term": "Yama",
+      "sanskrit": "यम",
+      "definition": "Ethical restraints. The first limb of Ashtanga yoga. Five principles for how we relate to the world: non-violence (ahimsa), truthfulness (satya), non-stealing (asteya), moderation (brahmacharya), and non-possessiveness (aparigraha)."
+    },
+    {
+      "term": "Niyama",
+      "sanskrit": "नियम",
+      "definition": "Personal observances. The second limb of Ashtanga yoga. Five practices for self-discipline: cleanliness (saucha), contentment (santosha), discipline (tapas), self-study (svadhyaya), and surrender to a higher power (ishvara pranidhana)."
+    },
+    {
       "term": "Asana",
       "sanskrit": "आसन",
       "definition": "Physical posture. The third limb of Ashtanga yoga. In common usage, refers to the poses practiced in yoga."
@@ -77,6 +87,26 @@
       "term": "Pranayama",
       "sanskrit": "प्राणायाम",
       "definition": "Prana means breath in Sanskrit. Pranayama is the breath control practice. The fourth limb of Ashtanga yoga. Traditionally taught after proficiency in asana."
+    },
+    {
+      "term": "Pratyahara",
+      "sanskrit": "प्रत्याहार",
+      "definition": "Withdrawal of the senses. The fifth limb of Ashtanga yoga. The practice of turning attention inward by withdrawing from external distractions, preparing the mind for concentration."
+    },
+    {
+      "term": "Dharana",
+      "sanskrit": "धारणा",
+      "definition": "Concentration. The sixth limb of Ashtanga yoga. The practice of focusing the mind on a single point. In Ashtanga, cultivated through drishti and awareness of breath."
+    },
+    {
+      "term": "Dhyana",
+      "sanskrit": "ध्यान",
+      "definition": "Meditation. The seventh limb of Ashtanga yoga. An unbroken flow of awareness where the mind becomes still and absorbed."
+    },
+    {
+      "term": "Samadhi",
+      "sanskrit": "समाधि",
+      "definition": "Absorption or enlightenment. The eighth and final limb of Ashtanga yoga. A state of complete union and the ultimate goal of yoga practice."
     },
     {
       "term": "Moon Days",
