@@ -22,5 +22,9 @@
   "contributing": {
     "title": "Contribute to Start Ashtanga",
     "description": "Help build a free Ashtanga Yoga resource. Contribute content, translations, code, or share your shala. Open source and community driven."
+  },
+  "shalas": {
+    "title": "Find Ashtanga Yoga Shalas",
+    "description": "Discover Ashtanga Yoga shalas and authorized teachers worldwide. Find a Mysore style practice space near you."
   }
 }

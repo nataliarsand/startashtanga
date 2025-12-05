@@ -1,8 +1,6 @@
 import { useState, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
-import { PageHero } from '../components/common';
+import { PageHero, SearchInput } from '../components/common';
 import { useSEO } from '../hooks';
 
 interface GlossaryTerm {
@@ -33,22 +31,12 @@ export default function Glossary() {
   return (
     <>
       <PageHero title={t('hero.title')} subtitle={t('hero.subtitle')}>
-        {/* Search */}
-        <div className="mx-auto mt-8 max-w-md">
-          <div className="relative">
-            <FontAwesomeIcon
-              icon={faMagnifyingGlass}
-              className="text-subtle absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2"
-            />
-            <input
-              type="text"
-              placeholder={t('search.placeholder')}
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="text-heading border-default focus:border-accent w-full rounded-full border-2 bg-white py-3 pl-11 pr-4 text-sm transition-colors focus:outline-none"
-            />
-          </div>
-        </div>
+        <SearchInput
+          value={searchQuery}
+          onChange={setSearchQuery}
+          placeholder={t('search.placeholder')}
+          className="mx-auto mt-8 max-w-md"
+        />
       </PageHero>
 
       {/* Terms */}

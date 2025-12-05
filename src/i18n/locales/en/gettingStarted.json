@@ -14,28 +14,28 @@
   "ashtanga": {
     "title": "What is Ashtanga Yoga?",
     "introParts": {
-      "before": "Ashtanga Yoga is a dynamic, physically demanding practice that follows a set sequence of postures. Developed by K. Pattabhi Jois in",
-      "after": ", India, it combines breath, movement, and gaze into a moving meditation."
+      "before": "A dynamic practice that follows a set sequence of postures. Developed by K. Pattabhi Jois in",
+      "after": ", India, it weaves breath, movement, and gaze into a moving meditation."
     },
     "eightLimbs": {
       "title": "The Eight Limbs",
       "textParts": {
         "before": "\"Ashtanga\" means \"eight limbs\" in",
-        "mid1": ", referring to the eight-fold path outlined in Patanjali's Yoga",
-        "mid2": ". The physical postures (",
-        "mid3": ") are just one limb, the practice also encompasses ethical guidelines, breath control, and meditation."
+        "mid1": ", referring to the path outlined in Patanjali's Yoga",
+        "mid2": ". Physical postures (",
+        "mid3": ") are just one limb."
       }
     },
     "sequences": {
       "title": "The sequences",
       "items": [
-        { "hasTerm": true, "before": "", "term": "Primary Series", "after": " (Yoga Chikitsa) — detoxifies and aligns the body" },
-        { "text": "Intermediate Series (Nadi Shodhana) — purifies the nervous system" },
-        { "text": "Advanced Series (Sthira Bhaga) — integrates strength and grace" }
+        { "hasTerm": true, "before": "", "term": "Primary Series", "after": " — detoxifies and aligns the body" },
+        { "text": "Intermediate Series — purifies the nervous system" },
+        { "text": "Advanced Series — integrates strength and grace" }
       ],
       "noteParts": {
         "before": "Most practitioners spend years in the",
-        "after": ". There's no rush, each pose prepares you for the next."
+        "after": ". There's no rush—each pose prepares you for the next."
       }
     },
     "tristhana": {
@@ -43,19 +43,18 @@
       "items": [
         { "label": "Breath", "term": "Ujjayi", "suffix": "pranayama", "description": "steady, audible breathing" },
         { "label": "Posture", "term": "Asana", "description": "the physical shapes" },
-        { "label": "Gaze", "term": "Drishti", "description": "focal points to direct attention" }
+        { "label": "Gaze", "term": "Drishti", "description": "focal points for attention" }
       ]
     }
   },
   "ledVsMysore": {
     "title": "Led Class vs Mysore Style",
-    "intro": "There are two ways to practice Ashtanga: Led classes and Mysore style. Both are valuable, but they offer different experiences.",
+    "intro": "Two ways to practice Ashtanga, both valuable.",
     "led": {
       "title": "Led Class",
-      "description": "The teacher calls out poses and everyone moves together at the same pace.",
+      "description": "Everyone moves together following the teacher's count.",
       "points": [
-        "Set pace: everyone follows the teacher's count",
-        "Energising group experience",
+        "Set pace, energising group experience",
         "Usually offered once or twice a week"
       ],
       "vinyasaCountPoint": {
@@ -65,17 +64,16 @@
     },
     "mysore": {
       "title": "Mysore Style",
-      "description": "Students practice independently while the teacher provides individual guidance.",
+      "description": "You practice independently while the teacher guides you.",
       "points": [
-        "Self-paced: you move at your own rhythm",
-        "One-on-one attention and adjustments",
-        "Practice what you know, learn new poses gradually",
-        "Flexible arrival time within a window"
+        "Self-paced with one-on-one attention",
+        "Learn new poses gradually",
+        "Flexible arrival time"
       ]
     },
     "recommendation": {
       "title": "Which should I start with?",
-      "text": "We recommend starting with Mysore. Despite what the name might suggest, it's actually better for beginners because you get personalised attention and can learn at your own pace. You won't feel lost trying to keep up with experienced practitioners."
+      "text": "We recommend Mysore. You get personalised attention and can learn at your own pace—no pressure to keep up with experienced practitioners."
     }
   },
   "firstClass": {
@@ -138,39 +136,39 @@
     "items": [
       {
         "item": "Yoga mat",
-        "note": "Most shalas have mats available for you to borrow, but you are welcomed to bring yours"
+        "note": "Most shalas have mats to borrow, but feel free to bring yours"
       },
       {
         "item": "Comfortable clothing",
-        "note": "Form-fitting is best so the teacher can see your alignment"
+        "note": "Form-fitting so the teacher can see your alignment"
       },
       {
         "item": "Extra clothes and towel",
-        "note": "You will sweat. Bring fresh clothes if you wish, and maybe your shala has shower facilities"
+        "note": "You will sweat. Some shalas offer showers"
       },
       {
         "item": "NO water bottle",
-        "note": "We don't drink during practice as it interferes with the internal heat we're building. Hydrate before and after"
+        "note": "We don't drink during practice. Hydrate before and after"
       }
     ],
     "important": {
       "title": "Important",
       "items": [
-        "Practice on an empty stomach, no food 2-3 hours before is recommended",
+        "Practice on an empty stomach (no food 2-3 hours before)",
         "Remove jewelry, watches, and strong fragrances",
-        "Silence your phone completely",
-        "Come showered, you'll be practicing in close quarters with others"
+        "Leave your phone outside the room",
+        "Come showered"
       ]
     }
   },
   "findShala": {
     "title": "Find a shala",
-    "text": "The best way to learn Ashtanga is with a qualified teacher in person. Look for shalas that offer Mysore-style classes, not just led Ashtanga.",
-    "comingSoon": "We're building a global directory of Mysore programs. Coming soon.",
+    "text": "The best way to learn Ashtanga is with a teacher in person. Look for shalas that offer Mysore-style classes.",
+    "comingSoon": "We're building a global directory. Coming soon.",
     "tip": {
       "title": "In the meantime",
       "textParts": {
-        "before": "Search for \"Mysore yoga\" + your city, or check if there are",
+        "before": "Search \"Mysore yoga\" + your city, or check for",
         "after": "teachers near you."
       }
     }
@@ -184,35 +182,39 @@
       },
       {
         "q": "What if I can't do a pose?",
-        "a": "Every pose has modifications. Your teacher will adapt the practice to your body."
+        "a": "Every pose has modifications. Your teacher will adapt the practice to you."
       },
       {
         "q": "How often should I practice?",
         "id": "practice-frequency",
         "aParts": {
-          "before": "Traditionally 6 days a week unless it is a",
-          "after": ", but start with what's sustainable. 2-3 times a week is enough to get started."
+          "before": "Traditionally 6 days a week, resting on",
+          "after": ". Start with 2-3 times a week."
         }
       },
       {
         "q": "Can I practice at home?",
-        "a": "Yes, once you've learned the sequence. But learning from a teacher first is strongly recommended. You can also find great recorded led classes, pose tutorials and even online shalas to join."
+        "a": "Yes, once you've learned the sequence from a teacher. You can also find recorded led classes and online shalas."
       },
       {
         "q": "I have an injury. Can I still practice?",
-        "a": "Usually yes, with modifications. Always tell your teacher about injuries before class."
+        "a": "Usually yes, with modifications. Always tell your teacher before class."
       },
       {
-        "q": "I already know some poses. Can I skip ahead?",
+        "q": "Can I skip ahead if I know some poses?",
         "id": "skip-ahead",
         "aParts": {
-          "before": "In Ashtanga, we always start from the beginning and practice poses in order. Even experienced practitioners do the full sequence each time. The repetition is part of the practice, it builds discipline, reveals new layers, and prepares your body for what comes next. Certain poses also act as",
+          "before": "We always start from the beginning and practice in order. Repetition builds discipline and prepares your body. Some poses act as",
           "after": "that ensure you're ready before progressing."
         }
       },
       {
-        "q": "I learned this differently at another class. What should I do?",
-        "a": "There are variations in how Ashtanga is taught. When you're in a new shala, follow that teacher's method. If something feels very different from what you learned before, ask your teacher about it, they'll be happy to explain their approach. You always respect the teacher in the room."
+        "q": "I learned this differently elsewhere. What should I do?",
+        "a": "Follow the teacher in the room. You can ask if something feels very different, but generally you respect the teachings in your presence."
+      },
+      {
+        "q": "Do I need a certified or authorised teacher?",
+        "a": "No. Many wonderful teachers haven't had the chance to study in Mysore. What matters is finding someone dedicated to the practice. You can also attend workshops with certified teachers globally."
       }
     ]
   },

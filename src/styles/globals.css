@@ -452,3 +452,9 @@
     transform: translateY(0);
   }
 }
+
+/* Shala card highlight animation */
+.shala-highlight > div {
+  box-shadow: 0 0 0 3px rgb(var(--color-accent-500));
+  transition: box-shadow 0.3s ease;
+}

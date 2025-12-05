@@ -6,6 +6,7 @@ import {
   faTriangleExclamation,
   faChevronRight,
   faLocationDot,
+  faMapLocationDot,
   faUsers,
   faUser,
   faClock,
@@ -443,6 +444,18 @@ export default function GettingStarted() {
               <p className="text-body mt-3 font-medium">
                 {t('findShala.comingSoon')}
               </p>
+              <Button
+                as="a"
+                href="https://forms.gle/c6iprH8YBpktKkYD7"
+                target="_blank"
+                rel="noopener noreferrer"
+                size="sm"
+                className="mt-4"
+                trackingName="getting_started_submit_shala"
+              >
+                <FontAwesomeIcon icon={faMapLocationDot} className="mr-2 h-3 w-3" />
+                Submit a shala
+              </Button>
             </ContentCard>
 
             <ContentCard variant="tip" className="mt-6 p-5">

@@ -12,6 +12,7 @@ import gettingStartedEn from './locales/en/gettingStarted.json';
 import glossaryEn from './locales/en/glossary.json';
 import primarySeriesEn from './locales/en/primarySeries.json';
 import seoEn from './locales/en/seo.json';
+import shalasEn from './locales/en/shalas.json';
 
 // Define available languages
 export const languages = [
@@ -34,6 +35,7 @@ const resources = {
     glossary: glossaryEn,
     primarySeries: primarySeriesEn,
     seo: seoEn,
+    shalas: shalasEn,
   },
   // Add new language resources here, e.g.:
   // 'pt-BR': {
@@ -53,7 +55,7 @@ i18n
     resources,
     fallbackLng: 'en',
     defaultNS: 'common',
-    ns: ['common', 'nav', 'home', 'about', 'contributing', 'gettingStarted', 'glossary', 'primarySeries', 'seo'],
+    ns: ['common', 'nav', 'home', 'about', 'contributing', 'gettingStarted', 'glossary', 'primarySeries', 'seo', 'shalas'],
 
     // Language detection options
     detection: {

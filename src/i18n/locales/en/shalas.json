@@ -1,0 +1,41 @@
+{
+  "hero": {
+    "title": "Find a Shala",
+    "subtitle": "Ashtanga Yoga shalas around the world"
+  },
+  "search": {
+    "placeholder": "Search by city, country, or teacher..."
+  },
+  "results": {
+    "count_one": "{{count}} shala found",
+    "count_other": "{{count}} shalas found",
+    "noResults": "No shalas found matching your search"
+  },
+  "comingSoon": {
+    "title": "Shala Directory",
+    "subtitle": "Know a Mysore program? Help us map it.",
+    "note": "We'll launch once we have enough shalas to represent the global community fairly.",
+    "button": "Submit a shala"
+  },
+  "shalas": [
+    {
+      "id": "ashtanga-yoga-room-amsterdam",
+      "name": "Ashtanga Yoga ROOM Amsterdam",
+      "city": "Amsterdam",
+      "country": "Netherlands",
+      "address": "Evertsenstraat 4-8, 1056EC Amsterdam, Netherlands",
+      "teachers": [
+        { "name": "Tina Rum" }
+      ],
+      "practices": ["mysore", "led-primary", "pranayama", "conference", "meditation"],
+      "website": "https://www.ashtangayogaroomamsterdam.com/",
+      "lat": 52.3676,
+      "lng": 4.8545
+    }
+  ],
+  "cta": {
+    "title": "Know a shala?",
+    "text": "Help us grow this directory.",
+    "button": "Submit a shala"
+  }
+}

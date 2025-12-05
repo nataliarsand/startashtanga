@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 
 interface SEOProps {
-  page: 'home' | 'gettingStarted' | 'primarySeries' | 'glossary' | 'about' | 'contributing';
+  page: 'home' | 'gettingStarted' | 'primarySeries' | 'glossary' | 'about' | 'contributing' | 'shalas';
   canonical?: string;
   ogType?: 'website' | 'article';
 }
