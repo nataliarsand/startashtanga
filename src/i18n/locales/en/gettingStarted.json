@@ -35,7 +35,7 @@
       ],
       "noteParts": {
         "before": "Most practitioners spend years in the",
-        "after": ". There's no rush—each pose prepares you for the next."
+        "after": ". There's no rush, each pose prepares you for the next."
       }
     },
     "tristhana": {
@@ -73,7 +73,7 @@
     },
     "recommendation": {
       "title": "Which should I start with?",
-      "text": "We recommend Mysore. You get personalised attention and can learn at your own pace—no pressure to keep up with experienced practitioners."
+      "text": "We recommend Mysore. You get personalised attention and can learn at your own pace, no pressure to keep up with experienced practitioners."
     }
   },
   "firstClass": {
@@ -178,7 +178,7 @@
     "items": [
       {
         "q": "Why so early?",
-        "a": "Traditionally, early morning (Brahma Muhurta) is considered the best time for practice—the mind is calmer, prana flows more freely, and there are fewer distractions. It also leaves the rest of your day free. That said, some shalas offer afternoon or evening classes too."
+        "a": "Traditionally, early morning (Brahma Muhurta) is considered the best time for practice, the mind is calmer, prana flows more freely, and there are fewer distractions. It also leaves the rest of your day free. That said, some shalas offer afternoon or evening classes too."
       },
       {
         "q": "Do I need to be flexible to start?",
@@ -193,7 +193,7 @@
         "id": "practice-frequency",
         "aParts": {
           "before": "Traditionally 6 days a week, resting on",
-          "after": ". Start with 2-3 times a week."
+          "after": ". You can see benefits from practicing 2-3 times a week."
         }
       },
       {
