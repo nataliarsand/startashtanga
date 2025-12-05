@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faRepeat, faRightLeft } from '@fortawesome/free-solid-svg-icons';
+import { faRepeat, faRightLeft, faCircleInfo } from '@fortawesome/free-solid-svg-icons';
 import {
   Badge,
   PageHero,
@@ -164,7 +164,7 @@ export default function PrimarySeries() {
       <div className="bg-white py-16 sm:py-20">
         <div className="container-main max-w-4xl">
           {/* Intro */}
-          <CalloutBox title={t('intro.title')} variant="info">
+          <CalloutBox icon={faCircleInfo} title={t('intro.title')} variant="info">
             <p>{t('intro.text')}</p>
           </CalloutBox>
 
