@@ -27,7 +27,7 @@ export default function LanguageSwitcher() {
         id="language-select"
         value={i18n.language}
         onChange={(e) => handleLanguageChange(e.target.value as LanguageCode)}
-        className="border-primary-200 text-primary-700 hover:border-primary-300 focus:border-primary-500 focus:ring-primary-500 appearance-none rounded-md border bg-white py-1 pr-7 pl-2 text-sm focus:ring-1 focus:outline-none"
+        className="border-primary-200 text-primary-700 hover:border-primary-300 focus:border-primary-500 focus:ring-primary-500 appearance-none rounded-md border bg-white py-2.5 pr-8 pl-3 text-sm focus:ring-1 focus:outline-none"
       >
         {languages.map((lang) => (
           <option key={lang.code} value={lang.code}>

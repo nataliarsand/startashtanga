@@ -45,7 +45,7 @@ export default function Glossary() {
               placeholder={t('search.placeholder')}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="text-heading border-default w-full rounded-full border-2 bg-white py-3 pl-11 pr-4 text-sm transition-colors focus:outline-none"
+              className="text-heading border-default focus:border-accent w-full rounded-full border-2 bg-white py-3 pl-11 pr-4 text-sm transition-colors focus:outline-none"
             />
           </div>
         </div>

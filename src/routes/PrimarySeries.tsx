@@ -115,7 +115,7 @@ export default function PrimarySeries() {
     transliteration: string[],
     translation: string[]
   ) => (
-    <div className="grid gap-6 lg:grid-cols-3">
+    <div className="grid gap-6 md:grid-cols-3">
       <ContentCard>
         <h4 className="text-heading mb-3 text-sm font-semibold uppercase tracking-wide">
           Sanskrit
