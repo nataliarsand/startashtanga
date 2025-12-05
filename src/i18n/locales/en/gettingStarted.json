@@ -55,10 +55,13 @@
       "description": "The teacher calls out poses and everyone moves together at the same pace.",
       "points": [
         "Set pace: everyone follows the teacher's count",
-        "Great for learning the correct vinyasa count",
         "Energising group experience",
         "Usually offered once or twice a week"
-      ]
+      ],
+      "vinyasaCountPoint": {
+        "before": "Great for learning the correct",
+        "after": ""
+      }
     },
     "mysore": {
       "title": "Mysore Style",

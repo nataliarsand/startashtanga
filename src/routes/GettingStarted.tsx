@@ -199,7 +199,24 @@ export default function GettingStarted() {
                   {t('ledVsMysore.led.description')}
                 </p>
                 <ul className="mt-4 space-y-2">
-                  {ledPoints.map((point, index) => (
+                  <li className="text-body flex items-start gap-2 text-sm">
+                    <FontAwesomeIcon
+                      icon={faChevronRight}
+                      className="text-accent mt-1.5 h-2 w-2 flex-shrink-0"
+                    />
+                    {ledPoints[0]}
+                  </li>
+                  <li className="text-body flex items-start gap-2 text-sm">
+                    <FontAwesomeIcon
+                      icon={faChevronRight}
+                      className="text-accent mt-1.5 h-2 w-2 flex-shrink-0"
+                    />
+                    <span>
+                      {t('ledVsMysore.led.vinyasaCountPoint.before')}{' '}
+                      <GlossaryTooltip term="Vinyasa Count">vinyasa count</GlossaryTooltip>
+                    </span>
+                  </li>
+                  {ledPoints.slice(1).map((point, index) => (
                     <li
                       key={index}
                       className="text-body flex items-start gap-2 text-sm"
