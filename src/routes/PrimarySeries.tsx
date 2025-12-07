@@ -37,6 +37,7 @@ export default function PrimarySeries() {
   const navItems = [
     { id: 'opening-mantra', label: t('nav.openingMantra') },
     { id: 'surya-namaskara', label: t('nav.suryaNamaskara') },
+    { id: 'fundamentals', label: t('nav.fundamentals') },
     { id: 'standing', label: t('nav.standing') },
     { id: 'seated', label: t('nav.seated') },
     { id: 'finishing', label: t('nav.finishing') },
@@ -44,6 +45,7 @@ export default function PrimarySeries() {
   ];
 
   const suryaGroups = t('suryaNamaskara.groups', { returnObjects: true }) as SuryaGroup[];
+  const fundamentalsPoses = t('fundamentals.poses', { returnObjects: true }) as Pose[];
   const standingPoses = t('standing.poses', { returnObjects: true }) as Pose[];
   const seatedPoses = t('seated.poses', { returnObjects: true }) as Pose[];
   const finishingPoses = t('finishing.poses', { returnObjects: true }) as Pose[];
@@ -205,6 +207,17 @@ export default function PrimarySeries() {
                 </ContentCard>
               ))}
             </div>
+          </section>
+
+          <hr className="border-default my-12" />
+
+          {/* Fundamentals */}
+          <section id="fundamentals">
+            <h2 className="text-heading text-2xl font-bold sm:text-3xl">
+              {t('fundamentals.title')}
+            </h2>
+            <p className="text-body mt-2">{t('fundamentals.subtitle')}</p>
+            <div className="mt-6">{renderPoseList(fundamentalsPoses)}</div>
           </section>
 
           <hr className="border-default my-12" />

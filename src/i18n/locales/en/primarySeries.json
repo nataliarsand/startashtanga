@@ -6,7 +6,8 @@
   "nav": {
     "openingMantra": "Opening Mantra",
     "suryaNamaskara": "Surya Namaskara",
-    "standing": "Standing",
+    "fundamentals": "Fundamentals",
+    "standing": "Standing Sequence",
     "seated": "Seated",
     "finishing": "Finishing",
     "closingMantra": "Closing Mantra"
@@ -66,7 +67,7 @@
       {
         "name": "Surya Namaskara A",
         "sanskrit": "सूर्य नमस्कार अ",
-        "repetitions": "5 times",
+        "repetitions": "5-7 times",
         "poses": [
           { "name": "Samasthitih", "sanskrit": "समस्थिति", "meaning": "Equal standing" },
           { "name": "Urdhva Hastasana", "sanskrit": "ऊर्ध्व हस्तासन", "meaning": "Upward hands pose", "count": "Ekam" },
@@ -109,9 +110,9 @@
       }
     ]
   },
-  "standing": {
-    "title": "Standing Sequence",
-    "subtitle": "Fundamental poses that build strength and alignment",
+  "fundamentals": {
+    "title": "Fundamentals",
+    "subtitle": "The foundational poses of every Ashtanga series",
     "poses": [
       { "name": "Padangushthasana", "sanskrit": "पादाङ्गुष्ठासन", "meaning": "Big toe pose" },
       { "name": "Padahastasana", "sanskrit": "पादहस्तासन", "meaning": "Hand under foot pose" },
@@ -123,7 +124,13 @@
       { "name": "Prasarita Padottanasana B", "sanskrit": "प्रसारित पादोत्तानासन", "meaning": "Wide-legged forward fold B" },
       { "name": "Prasarita Padottanasana C", "sanskrit": "प्रसारित पादोत्तानासन", "meaning": "Wide-legged forward fold C" },
       { "name": "Prasarita Padottanasana D", "sanskrit": "प्रसारित पादोत्तानासन", "meaning": "Wide-legged forward fold D" },
-      { "name": "Parsvottanasana", "sanskrit": "पार्श्वोत्तानासन", "meaning": "Intense side stretch", "sides": true },
+      { "name": "Parsvottanasana", "sanskrit": "पार्श्वोत्तानासन", "meaning": "Intense side stretch", "sides": true }
+    ]
+  },
+  "standing": {
+    "title": "Standing Sequence",
+    "subtitle": "Primary Series standing poses",
+    "poses": [
       { "name": "Utthita Hasta Padangushthasana A", "sanskrit": "उत्थित हस्त पादाङ्गुष्ठासन", "meaning": "Extended hand to big toe A", "sides": true },
       { "name": "Utthita Hasta Padangushthasana B", "sanskrit": "उत्थित हस्त पादाङ्गुष्ठासन", "meaning": "Extended hand to big toe B", "sides": true },
       { "name": "Utthita Hasta Padangushthasana C", "sanskrit": "उत्थित हस्त पादाङ्गुष्ठासन", "meaning": "Extended hand to big toe C", "sides": true },
@@ -135,7 +142,7 @@
   },
   "seated": {
     "title": "Seated Sequence",
-    "subtitle": "The heart of the Primary Series — forward folds, twists, and hip openers",
+    "subtitle": "The heart of the Primary Series: forward folds, twists, and hip openers",
     "poses": [
       { "name": "Dandasana", "sanskrit": "दण्डासन", "meaning": "Staff pose" },
       { "name": "Paschimottanasana A", "sanskrit": "पश्चिमोत्तानासन", "meaning": "Western intense stretch A" },
