@@ -12,6 +12,7 @@ import {
 } from '../components/common';
 import type { ShalaData } from '../components/common';
 import { useSEO } from '../hooks';
+import { siteConfig } from '../config/site';
 
 // Set to true to show the full directory, false for coming soon page
 const SHOW_DIRECTORY = false;
@@ -57,7 +58,7 @@ function ShalasComingSoon() {
           <div className="mt-8">
             <Button
               as="a"
-              href="https://forms.gle/c6iprH8YBpktKkYD7"
+              href={siteConfig.forms.shalaSubmission}
               target="_blank"
               rel="noopener noreferrer"
               variant="secondary"
@@ -201,7 +202,7 @@ function ShalasDirectory() {
           <div className="mt-8">
             <Button
               as="a"
-              href="https://forms.gle/c6iprH8YBpktKkYD7"
+              href={siteConfig.forms.shalaSubmission}
               target="_blank"
               rel="noopener noreferrer"
               variant="secondary"

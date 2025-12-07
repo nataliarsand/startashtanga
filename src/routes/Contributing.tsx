@@ -135,7 +135,7 @@ export default function Contributing() {
                   <div className="mt-4">
                     <Button
                       as="a"
-                      href="https://forms.gle/c6iprH8YBpktKkYD7"
+                      href={siteConfig.forms.shalaSubmission}
                       target="_blank"
                       rel="noopener noreferrer"
                       trackingName="contribute_share_shala"

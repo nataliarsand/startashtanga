@@ -12,29 +12,29 @@
   },
   "mission": {
     "title": "Our mission",
-    "text": "Start Ashtanga is a free, open-source, and non-commercial resource dedicated to making Ashtanga Yoga accessible to everyone. We provide clear, beginner-friendly information about Ashtanga Yoga (Mysore style) and traditional yoga studies, helping newcomers find their path and experienced practitioners deepen their understanding, build and connect with each other."
+    "text": "Start Ashtanga is a free, open-source resource for Ashtanga Yoga. We help newcomers begin their practice and experienced practitioners deepen their understanding and connect with each other."
   },
   "approach": {
     "title": "Our approach",
-    "text": "At Start Ashtanga, we don't praise or highlight any single teacher as the source of truth beyond the Jois lineage. We strive to represent all dedicated teachers and their work as fairly and evenly as possible, honoring the tradition while respecting the many voices within it."
+    "text": "We honour the Jois lineage while representing all dedicated teachers fairly, respecting the many voices within the tradition."
   },
   "values": {
     "title": "Our values",
     "items": [
       {
-        "icon": "heart",
-        "title": "Accessible",
-        "description": "Free, open, and available to everyone regardless of location, background, or experience level. No paywalls, no gatekeeping."
+        "icon": "lock-open",
+        "title": "Open",
+        "description": "Knowledge should circulate freely. Everything here is open-source and free from commercial interests."
       },
       {
         "icon": "book",
         "title": "Authentic",
-        "description": "Rooted in traditional teachings from the Mysore lineage while being welcoming and approachable to complete beginners."
+        "description": "We honour the Mysore lineage by sharing the practice as close to how it's taught in Mysore as possible, while welcoming beginners where they are."
       },
       {
         "icon": "users",
         "title": "Community-driven",
-        "description": "Built by and for the global Ashtanga community. Anyone can contribute content, translations, or improvements."
+        "description": "This project belongs to the community. It grows through contributions, translations, feedback, and the lived experience of practitioners everywhere."
       }
     ]
   },

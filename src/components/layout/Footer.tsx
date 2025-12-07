@@ -22,6 +22,16 @@ export default function Footer() {
             <ul className="flex items-center gap-6">
               <li>
                 <a
+                  href={siteConfig.forms.shalaSubmission}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-body text-sm transition-opacity hover:opacity-80"
+                >
+                  {t('footer.submitShala')}
+                </a>
+              </li>
+              <li>
+                <a
                   href={siteConfig.links.github}
                   target="_blank"
                   rel="noopener noreferrer"

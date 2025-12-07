@@ -164,7 +164,7 @@
   "findShala": {
     "title": "Find a shala",
     "text": "The best way to learn Ashtanga is with a teacher in person. Look for shalas that offer Mysore-style classes.",
-    "comingSoon": "We're building a global directory. Coming soon.",
+    "comingSoon": "Global directory in progress. Help by submitting your shala.",
     "tip": {
       "title": "In the meantime",
       "textParts": {
@@ -186,13 +186,13 @@
       },
       {
         "q": "What if I can't do a pose?",
-        "a": "Every pose has modifications. Your teacher will adapt the practice to you."
+        "a": "Every pose has modifications. Your teacher will adapt the practice to you and, with practice, you'll build strength and flexibility over time."
       },
       {
         "q": "How often should I practice?",
         "id": "practice-frequency",
         "aParts": {
-          "before": "Traditionally 6 days a week, resting on",
+          "before": "Traditionally, ashtangis practice 6 days a week, resting on",
           "after": ". You can see benefits from practicing 2-3 times a week."
         }
       },

@@ -21,6 +21,7 @@ import {
   SectionNav,
 } from '../components/common';
 import { useSEO } from '../hooks';
+import { siteConfig } from '../config/site';
 
 export default function GettingStarted() {
   const { t } = useTranslation('gettingStarted');
@@ -446,7 +447,7 @@ export default function GettingStarted() {
               </p>
               <Button
                 as="a"
-                href="https://forms.gle/c6iprH8YBpktKkYD7"
+                href={siteConfig.forms.shalaSubmission}
                 target="_blank"
                 rel="noopener noreferrer"
                 size="sm"
@@ -499,7 +500,7 @@ export default function GettingStarted() {
                       <>
                         {item.aParts.before}{' '}
                         {item.id === 'practice-frequency' && (
-                          <GlossaryTooltip term="Moon Days">moon day</GlossaryTooltip>
+                          <GlossaryTooltip term="Moon Days">moon days</GlossaryTooltip>
                         )}
                         {item.id === 'skip-ahead' && (
                           <GlossaryTooltip term="Gatekeeper Pose">gatekeeper poses</GlossaryTooltip>
