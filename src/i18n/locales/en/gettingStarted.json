@@ -41,7 +41,7 @@
     "tristhana": {
       "title": "The Tristhana method",
       "items": [
-        { "label": "Breath", "term": "Ujjayi", "suffix": "pranayama", "description": "steady, audible breathing" },
+        { "label": "Breath", "term": "Pranayama", "description": "steady, audible breathing" },
         { "label": "Posture", "term": "Asana", "description": "the physical shapes" },
         { "label": "Gaze", "term": "Drishti", "description": "focal points for attention" }
       ]
