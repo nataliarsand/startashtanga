@@ -1,9 +1,8 @@
 import { useTranslation } from 'react-i18next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart } from '@fortawesome/free-solid-svg-icons';
+import { faHeart, faMapLocationDot, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { siteConfig } from '../../config/site';
-import { DonateButton } from '../common';
 
 export default function Footer() {
   const { t } = useTranslation('common');
@@ -25,8 +24,9 @@ export default function Footer() {
                   href={siteConfig.forms.shalaSubmission}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-body text-sm transition-opacity hover:opacity-80"
+                  className="text-body flex items-center gap-2 text-sm transition-opacity hover:opacity-80"
                 >
+                  <FontAwesomeIcon icon={faMapLocationDot} className="h-4 w-4" />
                   {t('footer.submitShala')}
                 </a>
               </li>
@@ -38,7 +38,7 @@ export default function Footer() {
                   className="text-body flex items-center gap-2 text-sm transition-opacity hover:opacity-80"
                 >
                   <FontAwesomeIcon icon={faGithub} className="h-4 w-4" />
-                  {t('footer.github')}
+                  {t('footer.contribute')}
                 </a>
               </li>
               <li>
@@ -46,13 +46,11 @@ export default function Footer() {
                   href={siteConfig.contact.formUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-body text-sm transition-opacity hover:opacity-80"
+                  className="text-body flex items-center gap-2 text-sm transition-opacity hover:opacity-80"
                 >
+                  <FontAwesomeIcon icon={faEnvelope} className="h-4 w-4" />
                   {t('footer.contact')}
                 </a>
-              </li>
-              <li>
-                <DonateButton size="sm" />
               </li>
             </ul>
           </nav>

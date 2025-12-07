@@ -9,11 +9,10 @@
   },
   "footer": {
     "tagline": "A free, open-source resource for the global Ashtanga community.",
-    "contribute": "Contribute",
     "submitShala": "Submit a shala",
-    "github": "GitHub",
-    "contact": "Contact",
-    "madeWithLove": "Made with love by the community",
+    "contribute": "Contribute on GitHub",
+    "contact": "Get in touch",
+    "madeWithLove": "Made with love for and by the community",
     "openSource": "Open source"
   },
   "language": "Language",
