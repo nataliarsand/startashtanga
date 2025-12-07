@@ -231,7 +231,7 @@ We'd love help translating Start Ashtanga to more languages!
 
 - **General questions**: Open a GitHub Discussion
 - **Bug reports**: Open a GitHub Issue
-- **Security issues**: Email hello@startashtanga.com directly
+- **Security issues**: Email namaste@startashtanga.com directly
 
 ---
 
