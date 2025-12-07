@@ -4,7 +4,7 @@
  */
 export const siteConfig = {
   contact: {
-    email: import.meta.env.VITE_CONTACT_EMAIL || 'hello@startashtanga.com',
+    email: import.meta.env.VITE_CONTACT_EMAIL || 'namaste@startashtanga.com',
     formUrl: import.meta.env.VITE_CONTACT_FORM_URL || 'https://forms.gle/a7FjzNYMpbRF8YyFA',
   },
   links: {
