@@ -388,8 +388,8 @@
   .bg-emphasis { background-color: #4F3130; }          /* Strong emphasis background */
   .bg-accent { background-color: #AA5042; }            /* Accent/CTA background */
   .bg-info { background-color: #2D6478; }              /* Info/tip accent background */
-  .bg-info-subtle { background-color: #f8fcfd; }       /* Info/tip subtle background */
-  .bg-warning-subtle { background-color: #fdf8f7; }    /* Warning subtle background */
+  .bg-info-subtle { background-color: #dceef3; }       /* Info/tip subtle background */
+  .bg-warning-subtle { background-color: #dceef3; }    /* Warning subtle background */
 
   /* Text colors - semantic naming */
   .text-heading { color: #4F3130; }                    /* Headings and strong text */
