@@ -138,7 +138,6 @@ export default function Contributing() {
                       href={siteConfig.forms.shalaSubmission}
                       target="_blank"
                       rel="noopener noreferrer"
-                      trackingName="contribute_share_shala"
                     >
                       <FontAwesomeIcon icon={faMapLocationDot} className="mr-2 h-4 w-4" />
                       {t('shala.button')}
@@ -205,7 +204,6 @@ export default function Contributing() {
                       target="_blank"
                       rel="noopener noreferrer"
                       size="sm"
-                      trackingName="contribute_github"
                     >
                       <FontAwesomeIcon icon={faGithub} className="mr-2 h-4 w-4" />
                       {t('technical.githubButton')}
@@ -217,7 +215,6 @@ export default function Contributing() {
                       rel="noopener noreferrer"
                       variant="outline"
                       size="sm"
-                      trackingName="contribute_guide"
                     >
                       {t('technical.guideButton')}
                     </Button>

@@ -150,7 +150,7 @@ export default function Home() {
             {t('cta.description')}
           </p>
           <div className="mt-8">
-            <Button as="link" to="/getting-started" size="lg" trackingName="home_cta_getting_started">
+            <Button as="link" to="/getting-started" size="lg">
               {t('cta.buttonText')}
             </Button>
           </div>

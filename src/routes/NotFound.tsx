@@ -34,7 +34,7 @@ export default function NotFound() {
       </p>
 
       <div className="mt-8">
-        <Button as="link" to="/" size="lg" trackingName="404_back_home">
+        <Button as="link" to="/" size="lg">
           <FontAwesomeIcon icon={faArrowLeft} className="mr-2 h-4 w-4" />
           Back to Home
         </Button>

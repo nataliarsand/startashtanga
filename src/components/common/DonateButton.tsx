@@ -20,7 +20,6 @@ export default function DonateButton({ size = 'md' }: DonateButtonProps) {
       rel="noopener noreferrer"
       variant="donate"
       size={size}
-      trackingName="donate"
     >
       <FontAwesomeIcon icon={faHeart} className="mr-2 h-4 w-4" />
       Donate

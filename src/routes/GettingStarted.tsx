@@ -452,7 +452,6 @@ export default function GettingStarted() {
                 rel="noopener noreferrer"
                 size="sm"
                 className="mt-4"
-                trackingName="getting_started_submit_shala"
               >
                 <FontAwesomeIcon icon={faMapLocationDot} className="mr-2 h-3 w-3" />
                 Submit a shala
@@ -526,7 +525,7 @@ export default function GettingStarted() {
           </h2>
           <p className="mx-auto mt-3 max-w-md text-white/80">{t('cta.text')}</p>
           <div className="mt-8">
-            <Button as="link" to="/about" variant="secondary" size="lg" trackingName="getting_started_cta_about">
+            <Button as="link" to="/about" variant="secondary" size="lg">
               Learn about this project
             </Button>
           </div>

@@ -63,7 +63,6 @@ function ShalasComingSoon() {
               rel="noopener noreferrer"
               variant="secondary"
               size="lg"
-              trackingName="shalas_coming_soon_submit"
             >
               <FontAwesomeIcon icon={faMapLocationDot} className="mr-2 h-4 w-4" />
               {t('comingSoon.button')}
@@ -207,7 +206,6 @@ function ShalasDirectory() {
               rel="noopener noreferrer"
               variant="secondary"
               size="lg"
-              trackingName="shalas_cta_submit"
             >
               <FontAwesomeIcon icon={faMapLocationDot} className="mr-2 h-4 w-4" />
               {t('cta.button')}
