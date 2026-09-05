@@ -15,7 +15,7 @@ import { useSEO } from '../hooks';
 import { siteConfig } from '../config/site';
 
 // Set to true to show the full directory, false for coming soon page
-const SHOW_DIRECTORY = false;
+const SHOW_DIRECTORY = true;
 
 // Calculate distance between two coordinates in km (Haversine formula)
 function getDistance(
