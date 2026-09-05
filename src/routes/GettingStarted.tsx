@@ -11,6 +11,7 @@ import {
   faUser,
   faClock,
   faOm,
+  faArrowRight,
 } from '@fortawesome/free-solid-svg-icons';
 import {
   Button,
@@ -450,28 +451,35 @@ export default function GettingStarted() {
             </h2>
             <p className="text-body mt-4">{t('findShala.text')}</p>
 
-            <ContentCard variant="placeholder" className="mt-6 text-center">
+            <ContentCard variant="featured" className="mt-6 text-center">
               <FontAwesomeIcon
                 icon={faLocationDot}
                 className="text-accent h-8 w-8"
               />
-              <p className="text-body mt-3 font-medium">
-                {t('findShala.comingSoon')}
-              </p>
-              <Button
-                as="a"
-                href={siteConfig.forms.shalaSubmission}
-                target="_blank"
-                rel="noopener noreferrer"
-                size="sm"
-                className="mt-4"
-              >
-                <FontAwesomeIcon
-                  icon={faMapLocationDot}
-                  className="mr-2 h-3 w-3"
-                />
-                {t('findShala.submitButton')}
-              </Button>
+              <p className="text-body mt-3">{t('findShala.directoryText')}</p>
+              <div className="mt-4 flex flex-wrap items-center justify-center gap-3">
+                <Button as="link" to="/shalas" size="sm">
+                  {t('findShala.directoryButton')}
+                  <FontAwesomeIcon
+                    icon={faArrowRight}
+                    className="ml-2 h-3 w-3"
+                  />
+                </Button>
+                <Button
+                  as="a"
+                  href={siteConfig.forms.shalaSubmission}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  variant="outline"
+                  size="sm"
+                >
+                  <FontAwesomeIcon
+                    icon={faMapLocationDot}
+                    className="mr-2 h-3 w-3"
+                  />
+                  {t('findShala.submitButton')}
+                </Button>
+              </div>
             </ContentCard>
 
             <ContentCard variant="tip" className="mt-6 p-5">

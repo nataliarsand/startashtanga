@@ -185,15 +185,16 @@
   "findShala": {
     "title": "Find a shala",
     "text": "The best way to learn Ashtanga is with a teacher in person. Look for shalas that offer Mysore-style classes.",
-    "comingSoon": "Global directory in progress. Help by submitting your shala.",
     "tip": {
-      "title": "In the meantime",
+      "title": "When choosing a shala",
       "textParts": {
         "before": "Search \"Mysore yoga\" + your city, or check for",
         "after": "teachers near you."
       }
     },
-    "submitButton": "Submit a shala"
+    "submitButton": "Submit a shala",
+    "directoryText": "Browse our directory of Mysore programs around the world, with teachers and class types for each shala.",
+    "directoryButton": "Browse the directory"
   },
   "faq": {
     "title": "Common questions",

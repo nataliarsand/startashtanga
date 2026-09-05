@@ -14,12 +14,6 @@
     "sortedByDistance": "Sorted by distance",
     "distance": "~{{km}} km away"
   },
-  "comingSoon": {
-    "title": "Shala Directory",
-    "subtitle": "Know a Mysore program? Help us map it.",
-    "note": "We'll launch once we have enough shalas to represent the global community fairly.",
-    "button": "Submit a shala"
-  },
   "cta": {
     "title": "Know a shala?",
     "text": "Help us grow this directory, or tell us when something here is out of date.",

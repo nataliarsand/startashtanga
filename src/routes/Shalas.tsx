@@ -21,9 +21,6 @@ import { shalas } from '../data/shalas';
 import { distanceKm } from '../lib/geo';
 import type { Shala, Coordinates } from '../types/shala';
 
-// Set to true to show the full directory, false for the coming-soon page
-const SHOW_DIRECTORY = true;
-
 const HIGHLIGHT_MS = 2000;
 
 function SubmitShalaButton({ label }: { label: string }) {
@@ -42,32 +39,6 @@ function SubmitShalaButton({ label }: { label: string }) {
   );
 }
 
-function ShalasComingSoon() {
-  const { t } = useTranslation('shalas');
-
-  useSEO({ page: 'shalas' });
-
-  return (
-    <>
-      <PageHero
-        title={t('comingSoon.title')}
-        subtitle={t('comingSoon.subtitle')}
-      />
-
-      <section className="gradient-cta py-16 sm:py-20">
-        <div className="container-main text-center">
-          <p className="mx-auto max-w-3xl leading-relaxed text-white/80">
-            {t('comingSoon.note')}
-          </p>
-          <div className="mt-8">
-            <SubmitShalaButton label={t('comingSoon.button')} />
-          </div>
-        </div>
-      </section>
-    </>
-  );
-}
-
 function matchesQuery(shala: Shala, query: string) {
   return (
     shala.name.toLowerCase().includes(query) ||
@@ -77,7 +48,7 @@ function matchesQuery(shala: Shala, query: string) {
   );
 }
 
-function ShalasDirectory() {
+export default function Shalas() {
   const { t } = useTranslation('shalas');
   const [searchQuery, setSearchQuery] = useState('');
   const [userLocation, setUserLocation] = useState<Coordinates | null>(null);
@@ -192,8 +163,4 @@ function ShalasDirectory() {
       </section>
     </>
   );
-}
-
-export default function Shalas() {
-  return SHOW_DIRECTORY ? <ShalasDirectory /> : <ShalasComingSoon />;
 }

@@ -13,6 +13,7 @@ export default function Header() {
     { to: '/getting-started', label: t('gettingStarted') },
     { to: '/primary-series', label: t('primarySeries') },
     { to: '/glossary', label: t('glossary') },
+    { to: '/shalas', label: t('shalaDirectory') },
     { to: '/about', label: t('about') },
     { to: '/contribute', label: t('contribute') },
   ];

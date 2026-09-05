@@ -30,7 +30,6 @@ export default function Home() {
       icon: faLocationDot,
       label: t('quickActions.findClass.label'),
       description: t('quickActions.findClass.description'),
-      comingSoon: true,
     },
     {
       to: '/about',
@@ -90,15 +89,8 @@ export default function Home() {
               <Link
                 key={action.to}
                 to={action.to}
-                className={`group relative rounded-2xl bg-white/10 p-6 text-left backdrop-blur-sm transition-all hover:bg-white/20 ${
-                  action.comingSoon ? 'pointer-events-none opacity-50' : ''
-                }`}
+                className="group relative rounded-2xl bg-white/10 p-6 text-left backdrop-blur-sm transition-all hover:bg-white/20"
               >
-                {action.comingSoon && (
-                  <span className="absolute top-3 right-3 rounded-full bg-white/20 px-2 py-0.5 text-xs font-medium text-white">
-                    {t('quickActions.soon')}
-                  </span>
-                )}
                 <FontAwesomeIcon
                   icon={action.icon}
                   className="h-6 w-6 text-white"
