@@ -23,13 +23,7 @@
     "address": "Anjeliersstraat 35, 1015 NC Amsterdam, Netherlands",
     "teachers": [
       {
-        "name": "Anup Pachai"
-      },
-      {
         "name": "Claudia Pradella"
-      },
-      {
-        "name": "Lidewij Severins"
       }
     ],
     "practices": ["mysore", "led-primary"],
