@@ -6,6 +6,10 @@ import {
   faAward,
 } from '@fortawesome/free-solid-svg-icons';
 import type { Shala, TeacherLevel } from '../../types/shala';
+import {
+  practiceGlossaryTerm,
+  teacherLevelGlossaryTerm,
+} from '../../data/shalaGlossary';
 import ContentCard from './ContentCard';
 import GlossaryTooltip from './GlossaryTooltip';
 
@@ -13,43 +17,14 @@ interface ShalaCardProps {
   shala: Shala;
 }
 
-// Glossary entries (by term) that explain each practice and level
-const practiceGlossaryTerm: Partial<
-  Record<Shala['practices'][number], string>
-> = {
-  mysore: 'Mysore style',
-  'led-primary': 'Led Class',
-  'led-intermediate': 'Intermediate Series',
-  pranayama: 'Pranayama',
-  chanting: 'Mantra',
-  meditation: 'Dhyana',
-  conference: 'Conference',
-};
-
 const teacherLevelBadge: Record<
   TeacherLevel,
-  { icon: typeof faAward; glossaryTerm: string; className: string }
+  { icon: typeof faAward; className: string }
 > = {
-  certified: {
-    icon: faCertificate,
-    glossaryTerm: 'Certified',
-    className: 'text-amber-500',
-  },
-  'authorized-2': {
-    icon: faAward,
-    glossaryTerm: 'Authorised',
-    className: 'text-accent',
-  },
-  'authorized-1': {
-    icon: faAward,
-    glossaryTerm: 'Authorised',
-    className: 'text-accent',
-  },
-  authorized: {
-    icon: faAward,
-    glossaryTerm: 'Authorised',
-    className: 'text-accent',
-  },
+  certified: { icon: faCertificate, className: 'text-amber-500' },
+  'authorized-2': { icon: faAward, className: 'text-accent' },
+  'authorized-1': { icon: faAward, className: 'text-accent' },
+  authorized: { icon: faAward, className: 'text-accent' },
 };
 
 const externalLinkClass =
@@ -87,7 +62,9 @@ export default function ShalaCard({ shala }: ShalaCardProps) {
                     className="text-body flex items-center gap-1.5 text-sm"
                   >
                     {badge ? (
-                      <GlossaryTooltip term={badge.glossaryTerm}>
+                      <GlossaryTooltip
+                        term={teacherLevelGlossaryTerm[teacher.level!]}
+                      >
                         <FontAwesomeIcon
                           icon={badge.icon}
                           className={`h-3.5 w-3.5 flex-shrink-0 ${badge.className}`}

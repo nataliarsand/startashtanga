@@ -79,7 +79,7 @@ export default function Home() {
           </h1>
           <p className="mx-auto mt-4 max-w-5xl text-lg text-white/80 sm:text-xl">
             {t('hero.subtitleParts.before')}{' '}
-            <GlossaryTooltip term="Mysore">Mysore-style</GlossaryTooltip>{' '}
+            <GlossaryTooltip term="Mysore Style">Mysore-style</GlossaryTooltip>{' '}
             {t('hero.subtitleParts.after')}
           </p>
 
