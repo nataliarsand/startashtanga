@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
+import { useTranslation } from 'react-i18next';
 import Button from './Button';
 
 interface DonateButtonProps {
@@ -7,6 +8,7 @@ interface DonateButtonProps {
 }
 
 export default function DonateButton({ size = 'md' }: DonateButtonProps) {
+  const { t } = useTranslation('common');
   // TODO: Unhide when ready to accept donations
   const isHidden = true;
 
@@ -22,7 +24,7 @@ export default function DonateButton({ size = 'md' }: DonateButtonProps) {
       size={size}
     >
       <FontAwesomeIcon icon={faHeart} className="mr-2 h-4 w-4" />
-      Donate
+      {t('donate')}
     </Button>
   );
 }

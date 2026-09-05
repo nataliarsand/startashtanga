@@ -2,12 +2,7 @@ import { useState, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { PageHero, SearchInput } from '../components/common';
 import { useSEO } from '../hooks';
-
-interface GlossaryTerm {
-  term: string;
-  sanskrit?: string;
-  definition: string;
-}
+import type { GlossaryTerm } from '../types/glossary';
 
 export default function Glossary() {
   const { t } = useTranslation('glossary');
@@ -44,7 +39,7 @@ export default function Glossary() {
         <div className="container-main max-w-3xl">
           {filteredTerms.length === 0 ? (
             <p className="text-body text-center">
-              No terms found matching "{searchQuery}"
+              {t('results.none', { query: searchQuery })}
             </p>
           ) : (
             <div className="space-y-4">
@@ -75,9 +70,8 @@ export default function Glossary() {
 
           {/* Term count */}
           <p className="text-subtle mt-8 text-center text-sm">
-            {filteredTerms.length}{' '}
-            {filteredTerms.length === 1 ? 'term' : 'terms'}
-            {searchQuery && ` matching "${searchQuery}"`}
+            {t('results.count', { count: filteredTerms.length })}
+            {searchQuery && ` ${t('results.matching', { query: searchQuery })}`}
           </p>
         </div>
       </div>

@@ -128,7 +128,7 @@ export default function PrimarySeries() {
             {pose.sides && (
               <span className="text-accent flex items-center gap-1 text-xs">
                 <FontAwesomeIcon icon={faRightLeft} className="h-3 w-3" />
-                <span className="hidden sm:inline">Both sides</span>
+                <span className="hidden sm:inline">{t('poses.bothSides')}</span>
               </span>
             )}
             {pose.repetitions && (
@@ -151,7 +151,7 @@ export default function PrimarySeries() {
     <div className="grid gap-6 md:grid-cols-3">
       <ContentCard>
         <h4 className="text-heading mb-3 text-sm font-semibold tracking-wide uppercase">
-          Sanskrit
+          {t('mantra.sanskrit')}
         </h4>
         <div className="space-y-1 text-lg leading-relaxed">
           {sanskrit.map((line, i) => (
@@ -163,7 +163,7 @@ export default function PrimarySeries() {
       </ContentCard>
       <ContentCard>
         <h4 className="text-heading mb-3 text-sm font-semibold tracking-wide uppercase">
-          Transliteration
+          {t('mantra.transliteration')}
         </h4>
         <div className="space-y-1 leading-relaxed">
           {transliteration.map((line, i) => (
@@ -175,7 +175,7 @@ export default function PrimarySeries() {
       </ContentCard>
       <ContentCard>
         <h4 className="text-heading mb-3 text-sm font-semibold tracking-wide uppercase">
-          Translation
+          {t('mantra.translation')}
         </h4>
         <div className="space-y-1 leading-relaxed">
           {translation.map((line, i) => (

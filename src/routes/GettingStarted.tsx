@@ -175,7 +175,7 @@ export default function GettingStarted() {
                     />
                     <span>
                       {item.label} (<GlossaryTooltip term={item.term} />
-                      {item.suffix && ` ${item.suffix}`}) — {item.description}
+                      {item.suffix && ` ${item.suffix}`}): {item.description}
                     </span>
                   </li>
                 ))}
@@ -470,7 +470,7 @@ export default function GettingStarted() {
                   icon={faMapLocationDot}
                   className="mr-2 h-3 w-3"
                 />
-                Submit a shala
+                {t('findShala.submitButton')}
               </Button>
             </ContentCard>
 
@@ -545,7 +545,7 @@ export default function GettingStarted() {
           </p>
           <div className="mt-8">
             <Button as="link" to="/about" variant="secondary" size="lg">
-              Learn about this project
+              {t('cta.button')}
             </Button>
           </div>
         </div>

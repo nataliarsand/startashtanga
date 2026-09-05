@@ -19,7 +19,7 @@ export default function Footer() {
           <p className="text-body text-sm">{t('footer.tagline')}</p>
 
           {/* Footer links */}
-          <nav aria-label="Footer navigation">
+          <nav aria-label={t('a11y.footerNavigation')}>
             <ul className="flex items-center gap-6">
               <li>
                 <a

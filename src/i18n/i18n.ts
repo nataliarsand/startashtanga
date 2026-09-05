@@ -13,6 +13,7 @@ import glossaryEn from './locales/en/glossary.json';
 import primarySeriesEn from './locales/en/primarySeries.json';
 import seoEn from './locales/en/seo.json';
 import shalasEn from './locales/en/shalas.json';
+import notFoundEn from './locales/en/notFound.json';
 
 // Define available languages
 export const languages = [
@@ -36,6 +37,7 @@ const resources = {
     primarySeries: primarySeriesEn,
     seo: seoEn,
     shalas: shalasEn,
+    notFound: notFoundEn,
   },
   // Add new language resources here, e.g.:
   // 'pt-BR': {

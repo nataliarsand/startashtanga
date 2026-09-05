@@ -1,3 +1,4 @@
+import { lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Layout } from './components/layout';
 import { ScrollToTop } from './components/common';
@@ -9,8 +10,10 @@ import {
   Glossary,
   NotFound,
   PrimarySeries,
-  Shalas,
 } from './routes';
+
+// Leaflet is only needed here, so the map bundle loads on demand
+const Shalas = lazy(() => import('./routes/Shalas'));
 
 export default function App() {
   return (
@@ -24,7 +27,14 @@ export default function App() {
           <Route path="glossary" element={<Glossary />} />
           <Route path="about" element={<About />} />
           <Route path="contribute" element={<Contributing />} />
-          <Route path="shalas" element={<Shalas />} />
+          <Route
+            path="shalas"
+            element={
+              <Suspense fallback={null}>
+                <Shalas />
+              </Suspense>
+            }
+          />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>

@@ -140,7 +140,7 @@
     {
       "term": "Sadhana",
       "sanskrit": "साधना",
-      "definition": "Spiritual practice or discipline. Your daily yoga practice is your sadhana—a dedicated effort toward self-realisation."
+      "definition": "Spiritual practice or discipline. Your daily yoga practice is your sadhana, a dedicated effort toward self-realisation."
     },
     {
       "term": "Karma",
@@ -225,5 +225,14 @@
       "term": "Conference",
       "definition": "A gathering where a teacher shares wisdom and guidance on yoga philosophy and practice. R. Sharath Jois's Sunday conferences in Mysore were renowned for this format, where he would speak on the deeper aspects of yoga, ethics (Yamas and Niyamas), dedication, and the path of practice, offering vital guidance to students on their Ashtanga journey."
     }
-  ]
+  ],
+  "results": {
+    "none": "No terms found matching \"{{query}}\"",
+    "count_one": "{{count}} term",
+    "count_other": "{{count}} terms",
+    "matching": "matching \"{{query}}\""
+  },
+  "tooltip": {
+    "viewInGlossary": "View in glossary →"
+  }
 }

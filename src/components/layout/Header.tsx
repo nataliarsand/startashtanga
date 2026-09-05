@@ -5,7 +5,7 @@ import LanguageSwitcher from '../common/LanguageSwitcher';
 import { siteConfig } from '../../config/site';
 
 export default function Header() {
-  const { t } = useTranslation('nav');
+  const { t } = useTranslation(['nav', 'common']);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navLinks = [
@@ -21,7 +21,7 @@ export default function Header() {
     <header className="border-line border-b bg-white">
       <nav
         className="container-main flex items-center justify-between py-4"
-        aria-label="Main navigation"
+        aria-label={t('common:a11y.mainNavigation')}
       >
         {/* Logo / Site name */}
         <Link
@@ -61,7 +61,11 @@ export default function Header() {
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-expanded={mobileMenuOpen}
           aria-controls="mobile-menu"
-          aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
+          aria-label={
+            mobileMenuOpen
+              ? t('common:a11y.closeMenu')
+              : t('common:a11y.openMenu')
+          }
         >
           {mobileMenuOpen ? (
             <svg

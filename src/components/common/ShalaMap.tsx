@@ -8,13 +8,14 @@ import {
   faLocationCrosshairs,
   faSpinner,
 } from '@fortawesome/free-solid-svg-icons';
-import type { ShalaData } from './ShalaCard';
+import { useTranslation } from 'react-i18next';
+import type { Shala, Coordinates } from '../../types/shala';
 import 'leaflet/dist/leaflet.css';
 
 interface ShalaMapProps {
-  shalas: ShalaData[];
-  onShalaSelect?: (shala: ShalaData) => void;
-  onNearMe?: (coords: { lat: number; lng: number }) => void;
+  shalas: Shala[];
+  onShalaSelect?: (shala: Shala) => void;
+  onNearMe?: (coords: Coordinates) => void;
   className?: string;
 }
 
@@ -54,8 +55,8 @@ function FitBounds({
   shalas,
   userLocation,
 }: {
-  shalas: ShalaData[];
-  userLocation: { lat: number; lng: number } | null;
+  shalas: Shala[];
+  userLocation: Coordinates | null;
 }) {
   const map = useMap();
 
@@ -75,11 +76,7 @@ function FitBounds({
 }
 
 // Component to fly to user location
-function FlyToLocation({
-  location,
-}: {
-  location: { lat: number; lng: number } | null;
-}) {
+function FlyToLocation({ location }: { location: Coordinates | null }) {
   const map = useMap();
 
   useEffect(() => {
@@ -113,17 +110,15 @@ export default function ShalaMap({
   onNearMe,
   className = '',
 }: ShalaMapProps) {
+  const { t } = useTranslation('shalas');
   const [isExpanded, setIsExpanded] = useState(false);
-  const [userLocation, setUserLocation] = useState<{
-    lat: number;
-    lng: number;
-  } | null>(null);
+  const [userLocation, setUserLocation] = useState<Coordinates | null>(null);
   const [isLocating, setIsLocating] = useState(false);
   const [locationError, setLocationError] = useState<string | null>(null);
 
   const handleNearMe = () => {
     if (!navigator.geolocation) {
-      setLocationError('Geolocation is not supported by your browser');
+      setLocationError(t('map.errors.unsupported'));
       return;
     }
 
@@ -144,16 +139,16 @@ export default function ShalaMap({
         setIsLocating(false);
         switch (error.code) {
           case error.PERMISSION_DENIED:
-            setLocationError('Location permission denied');
+            setLocationError(t('map.errors.denied'));
             break;
           case error.POSITION_UNAVAILABLE:
-            setLocationError('Location unavailable');
+            setLocationError(t('map.errors.unavailable'));
             break;
           case error.TIMEOUT:
-            setLocationError('Location request timed out');
+            setLocationError(t('map.errors.timeout'));
             break;
           default:
-            setLocationError('Unable to get location');
+            setLocationError(t('map.errors.unknown'));
         }
       },
       { enableHighAccuracy: true, timeout: 10000, maximumAge: 0 }
@@ -208,7 +203,7 @@ export default function ShalaMap({
             position={[userLocation.lat, userLocation.lng]}
             icon={userIcon}
           >
-            <Popup>Your location</Popup>
+            <Popup>{t('map.yourLocation')}</Popup>
           </Marker>
         )}
       </MapContainer>
@@ -226,25 +221,25 @@ export default function ShalaMap({
             onClick={handleNearMe}
             disabled={isLocating}
             className="text-heading focus:ring-accent flex items-center gap-2 rounded-full bg-white/95 px-4 py-2 text-sm font-medium shadow-md transition-all hover:bg-white hover:shadow-lg focus:ring-2 focus:ring-offset-2 focus:outline-none disabled:opacity-50"
-            aria-label="Find shalas near me"
+            aria-label={t('map.findNearMe')}
           >
             <FontAwesomeIcon
               icon={isLocating ? faSpinner : faLocationCrosshairs}
               className={`h-4 w-4 ${isLocating ? 'animate-spin' : ''}`}
             />
-            Near me
+            {t('map.nearMe')}
           </button>
 
           <button
             onClick={() => setIsExpanded(!isExpanded)}
             className="text-heading focus:ring-accent flex items-center gap-2 rounded-full bg-white/95 px-4 py-2 text-sm font-medium shadow-md transition-all hover:bg-white hover:shadow-lg focus:ring-2 focus:ring-offset-2 focus:outline-none"
-            aria-label={isExpanded ? 'Collapse map' : 'Expand map'}
+            aria-label={isExpanded ? t('map.collapseMap') : t('map.expandMap')}
           >
             <FontAwesomeIcon
               icon={isExpanded ? faCompress : faExpand}
               className="h-4 w-4"
             />
-            {isExpanded ? 'Collapse' : 'Expand'}
+            {isExpanded ? t('map.collapse') : t('map.expand')}
           </button>
         </div>
       </div>

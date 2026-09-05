@@ -33,10 +33,14 @@
           "hasTerm": true,
           "before": "",
           "term": "Primary Series",
-          "after": " — detoxifies and aligns the body"
+          "after": ": detoxifies and aligns the body"
         },
-        { "text": "Intermediate Series — purifies the nervous system" },
-        { "text": "Advanced Series — integrates strength and grace" }
+        {
+          "text": "Intermediate Series: purifies the nervous system"
+        },
+        {
+          "text": "Advanced Series: integrates strength and grace"
+        }
       ],
       "noteParts": {
         "before": "Most practitioners spend years in the",
@@ -95,7 +99,7 @@
   },
   "firstClass": {
     "title": "Your first Mysore class",
-    "intro": "Walking into a Mysore room for the first time can feel intimidating. The room will likely be warm, humid, and filled with the sound of breath—this is normal. Here's exactly what to expect.",
+    "intro": "Walking into a Mysore room for the first time can feel intimidating. The room will likely be warm, humid, and filled with the sound of breath. This is normal. Here's exactly what to expect.",
     "classSchedule": {
       "title": "When do classes start?",
       "textParts": {
@@ -188,7 +192,8 @@
         "before": "Search \"Mysore yoga\" + your city, or check for",
         "after": "teachers near you."
       }
-    }
+    },
+    "submitButton": "Submit a shala"
   },
   "faq": {
     "title": "Common questions",
@@ -241,6 +246,7 @@
   },
   "cta": {
     "title": "Ready to start?",
-    "text": "Find a Mysore class near you and just show up. Everyone was a beginner once."
+    "text": "Find a Mysore class near you and just show up. Everyone was a beginner once.",
+    "button": "Learn about this project"
   }
 }

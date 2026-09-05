@@ -6,5 +6,12 @@
     "contact": "Get in touch",
     "madeWithLove": "Made with love for and by the community"
   },
-  "language": "Language"
+  "language": "Language",
+  "donate": "Donate",
+  "a11y": {
+    "mainNavigation": "Main navigation",
+    "footerNavigation": "Footer navigation",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  }
 }

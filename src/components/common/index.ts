@@ -10,6 +10,3 @@ export { default as ChecklistItem } from './ChecklistItem';
 export { default as SectionNav } from './SectionNav';
 export { default as ScrollToTop } from './ScrollToTop';
 export { default as SearchInput } from './SearchInput';
-export { default as ShalaMap } from './ShalaMap';
-export { default as ShalaCard } from './ShalaCard';
-export type { ShalaData, Teacher, PracticeOption } from './ShalaCard';

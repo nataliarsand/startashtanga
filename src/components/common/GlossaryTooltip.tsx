@@ -1,12 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-
-interface GlossaryTerm {
-  term: string;
-  sanskrit?: string;
-  definition: string;
-}
+import type { GlossaryTerm } from '../../types/glossary';
 
 interface GlossaryTooltipProps {
   term: string;
@@ -211,7 +206,7 @@ export default function GlossaryTooltip({
               to="/glossary"
               className="text-link-on-dark mt-2 inline-block text-xs transition-opacity hover:opacity-80 focus:underline focus:outline-none"
             >
-              View in glossary →
+              {t('tooltip.viewInGlossary')}
             </Link>
           </div>
         </div>

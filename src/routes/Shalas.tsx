@@ -1,4 +1,4 @@
-import { useState, useMemo, useRef } from 'react';
+import { useState, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapLocationDot, faUsers } from '@fortawesome/free-solid-svg-icons';
@@ -7,37 +7,37 @@ import {
   PageHero,
   ContentCard,
   SearchInput,
-  ShalaMap,
-  ShalaCard,
 } from '../components/common';
-import type { ShalaData } from '../components/common';
+// Imported directly (not via the barrel) so Leaflet stays out of the main bundle
+import ShalaMap from '../components/common/ShalaMap';
+import ShalaCard from '../components/common/ShalaCard';
 import { useSEO } from '../hooks';
 import { siteConfig } from '../config/site';
+import { shalas } from '../data/shalas';
+import { distanceKm } from '../lib/geo';
+import type { Shala, Coordinates } from '../types/shala';
 
-// Set to true to show the full directory, false for coming soon page
+// Set to true to show the full directory, false for the coming-soon page
 const SHOW_DIRECTORY = true;
 
-// Calculate distance between two coordinates in km (Haversine formula)
-function getDistance(
-  lat1: number,
-  lng1: number,
-  lat2: number,
-  lng2: number
-): number {
-  const R = 6371; // Earth's radius in km
-  const dLat = ((lat2 - lat1) * Math.PI) / 180;
-  const dLng = ((lng2 - lng1) * Math.PI) / 180;
-  const a =
-    Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-    Math.cos((lat1 * Math.PI) / 180) *
-      Math.cos((lat2 * Math.PI) / 180) *
-      Math.sin(dLng / 2) *
-      Math.sin(dLng / 2);
-  const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-  return R * c;
+const HIGHLIGHT_MS = 2000;
+
+function SubmitShalaButton({ label }: { label: string }) {
+  return (
+    <Button
+      as="a"
+      href={siteConfig.forms.shalaSubmission}
+      target="_blank"
+      rel="noopener noreferrer"
+      variant="secondary"
+      size="lg"
+    >
+      <FontAwesomeIcon icon={faMapLocationDot} className="mr-2 h-4 w-4" />
+      {label}
+    </Button>
+  );
 }
 
-// Coming Soon version of the page
 function ShalasComingSoon() {
   const { t } = useTranslation('shalas');
 
@@ -56,20 +56,7 @@ function ShalasComingSoon() {
             {t('comingSoon.note')}
           </p>
           <div className="mt-8">
-            <Button
-              as="a"
-              href={siteConfig.forms.shalaSubmission}
-              target="_blank"
-              rel="noopener noreferrer"
-              variant="secondary"
-              size="lg"
-            >
-              <FontAwesomeIcon
-                icon={faMapLocationDot}
-                className="mr-2 h-4 w-4"
-              />
-              {t('comingSoon.button')}
-            </Button>
+            <SubmitShalaButton label={t('comingSoon.button')} />
           </div>
         </div>
       </section>
@@ -77,85 +64,47 @@ function ShalasComingSoon() {
   );
 }
 
-// Full directory version of the page
+function matchesQuery(shala: Shala, query: string) {
+  return (
+    shala.name.toLowerCase().includes(query) ||
+    shala.city.toLowerCase().includes(query) ||
+    shala.country.toLowerCase().includes(query) ||
+    shala.teachers.some((teacher) => teacher.name.toLowerCase().includes(query))
+  );
+}
+
 function ShalasDirectory() {
   const { t } = useTranslation('shalas');
   const [searchQuery, setSearchQuery] = useState('');
-  const [userLocation, setUserLocation] = useState<{
-    lat: number;
-    lng: number;
-  } | null>(null);
-  const shalaListRef = useRef<HTMLDivElement>(null);
+  const [userLocation, setUserLocation] = useState<Coordinates | null>(null);
 
   useSEO({ page: 'shalas' });
 
-  const shalas = t('shalas', { returnObjects: true }) as ShalaData[];
+  const results = useMemo(() => {
+    const query = searchQuery.trim().toLowerCase();
+    const matched = query
+      ? shalas.filter((shala) => matchesQuery(shala, query))
+      : shalas;
 
-  const filteredShalas = useMemo(() => {
-    let result = shalas;
-
-    // Filter by search query
-    if (searchQuery.trim()) {
-      const query = searchQuery.toLowerCase();
-      result = result.filter(
-        (shala) =>
-          shala.name.toLowerCase().includes(query) ||
-          shala.city.toLowerCase().includes(query) ||
-          shala.country.toLowerCase().includes(query) ||
-          shala.teachers.some((teacher) =>
-            teacher.name.toLowerCase().includes(query)
-          )
-      );
-    }
-
-    // Sort by distance if user location is available
-    if (userLocation) {
-      result = [...result].sort((a, b) => {
-        const distA = getDistance(
-          userLocation.lat,
-          userLocation.lng,
-          a.lat,
-          a.lng
-        );
-        const distB = getDistance(
-          userLocation.lat,
-          userLocation.lng,
-          b.lat,
-          b.lng
-        );
-        return distA - distB;
-      });
-    }
-
-    return result;
-  }, [shalas, searchQuery, userLocation]);
-
-  // Calculate distances for display
-  const shalasWithDistance = useMemo(() => {
-    if (!userLocation)
-      return filteredShalas.map((s) => ({ ...s, distance: null }));
-    return filteredShalas.map((shala) => ({
-      ...shala,
-      distance: Math.round(
-        getDistance(userLocation.lat, userLocation.lng, shala.lat, shala.lng)
-      ),
+    const withDistance = matched.map((shala) => ({
+      shala,
+      distanceKm: userLocation ? distanceKm(userLocation, shala) : null,
     }));
-  }, [filteredShalas, userLocation]);
 
-  const handleNearMe = (coords: { lat: number; lng: number }) => {
-    setUserLocation(coords);
-  };
-
-  const handleShalaSelect = (shala: ShalaData) => {
-    // Scroll to the shala card
-    const element = document.getElementById(`shala-${shala.id}`);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      element.classList.add('shala-highlight');
-      setTimeout(() => {
-        element.classList.remove('shala-highlight');
-      }, 2000);
+    if (userLocation) {
+      withDistance.sort((a, b) => (a.distanceKm ?? 0) - (b.distanceKm ?? 0));
     }
+    return withDistance;
+  }, [searchQuery, userLocation]);
+
+  const visibleShalas = useMemo(() => results.map((r) => r.shala), [results]);
+
+  const handleShalaSelect = (shala: Shala) => {
+    const element = document.getElementById(`shala-${shala.id}`);
+    if (!element) return;
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    element.classList.add('shala-highlight');
+    setTimeout(() => element.classList.remove('shala-highlight'), HIGHLIGHT_MS);
   };
 
   return (
@@ -169,24 +118,21 @@ function ShalasDirectory() {
         />
       </PageHero>
 
-      {/* Map */}
       <ShalaMap
-        shalas={filteredShalas}
+        shalas={visibleShalas}
         onShalaSelect={handleShalaSelect}
-        onNearMe={handleNearMe}
+        onNearMe={setUserLocation}
       />
 
-      {/* Shala List */}
-      <div ref={shalaListRef} className="bg-white py-8 sm:py-12">
+      <div className="bg-white py-8 sm:py-12">
         <div className="container-main max-w-4xl">
-          {/* Results count */}
           <p className="text-subtle mb-6 text-sm">
-            {t('results.count', { count: filteredShalas.length })}
-            {searchQuery && ` for "${searchQuery}"`}
-            {userLocation && ' · Sorted by distance'}
+            {t('results.count', { count: results.length })}
+            {searchQuery && ` ${t('results.forQuery', { query: searchQuery })}`}
+            {userLocation && ` · ${t('results.sortedByDistance')}`}
           </p>
 
-          {filteredShalas.length === 0 ? (
+          {results.length === 0 ? (
             <ContentCard>
               <p className="text-body py-8 text-center">
                 {t('results.noResults')}
@@ -194,16 +140,18 @@ function ShalasDirectory() {
             </ContentCard>
           ) : (
             <div className="columns-1 gap-4 sm:columns-2">
-              {shalasWithDistance.map((shala) => (
+              {results.map(({ shala, distanceKm: km }) => (
                 <div
                   key={shala.id}
                   id={`shala-${shala.id}`}
                   className="mb-4 break-inside-avoid transition-all duration-300"
                 >
                   <ShalaCard shala={shala} />
-                  {shala.distance !== null && (
+                  {km !== null && (
                     <p className="text-subtle mt-1 text-right text-xs">
-                      ~{shala.distance.toLocaleString()} km away
+                      {t('results.distance', {
+                        km: Math.round(km).toLocaleString(),
+                      })}
                     </p>
                   )}
                 </div>
@@ -213,7 +161,6 @@ function ShalasDirectory() {
         </div>
       </div>
 
-      {/* CTA */}
       <section className="gradient-cta py-16">
         <div className="container-main text-center">
           <FontAwesomeIcon icon={faUsers} className="h-10 w-10 text-white/80" />
@@ -224,20 +171,7 @@ function ShalasDirectory() {
             {t('cta.text')}
           </p>
           <div className="mt-8">
-            <Button
-              as="a"
-              href={siteConfig.forms.shalaSubmission}
-              target="_blank"
-              rel="noopener noreferrer"
-              variant="secondary"
-              size="lg"
-            >
-              <FontAwesomeIcon
-                icon={faMapLocationDot}
-                className="mr-2 h-4 w-4"
-              />
-              {t('cta.button')}
-            </Button>
+            <SubmitShalaButton label={t('cta.button')} />
           </div>
         </div>
       </section>

@@ -26,7 +26,7 @@ export default function Home() {
       description: t('quickActions.start.description'),
     },
     {
-      to: '/shala-directory',
+      to: '/shalas',
       icon: faLocationDot,
       label: t('quickActions.findClass.label'),
       description: t('quickActions.findClass.description'),
@@ -96,7 +96,7 @@ export default function Home() {
               >
                 {action.comingSoon && (
                   <span className="absolute top-3 right-3 rounded-full bg-white/20 px-2 py-0.5 text-xs font-medium text-white">
-                    Soon
+                    {t('quickActions.soon')}
                   </span>
                 )}
                 <FontAwesomeIcon

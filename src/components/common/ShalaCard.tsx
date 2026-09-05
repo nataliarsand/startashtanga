@@ -1,123 +1,91 @@
+import { useTranslation } from 'react-i18next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faArrowUpRightFromSquare,
   faCertificate,
   faAward,
 } from '@fortawesome/free-solid-svg-icons';
+import type { Shala, TeacherLevel } from '../../types/shala';
 import ContentCard from './ContentCard';
 import GlossaryTooltip from './GlossaryTooltip';
 
-export interface Teacher {
-  name: string;
-  level?: 'certified' | 'authorized-2' | 'authorized-1';
-}
-
-export type PracticeOption =
-  | 'mysore'
-  | 'led-primary'
-  | 'led-intermediate'
-  | 'pranayama'
-  | 'chanting'
-  | 'meditation'
-  | 'conference'
-  | 'philosophy'
-  | 'online';
-
-export interface ShalaData {
-  id: string;
-  name: string;
-  city: string;
-  country: string;
-  address: string;
-  teachers: Teacher[];
-  practices: PracticeOption[];
-  website: string;
-  lat: number;
-  lng: number;
-}
-
 interface ShalaCardProps {
-  shala: ShalaData;
+  shala: Shala;
 }
 
-const practiceLabels: Record<
-  PracticeOption,
-  { label: string; tooltip?: string }
+// Glossary entries (by term) that explain each practice and level
+const practiceGlossaryTerm: Partial<
+  Record<Shala['practices'][number], string>
 > = {
-  mysore: { label: 'Mysore', tooltip: 'Mysore style' },
-  'led-primary': { label: 'Led Primary', tooltip: 'Led Class' },
-  'led-intermediate': {
-    label: 'Led Intermediate',
-    tooltip: 'Intermediate Series',
-  },
-  pranayama: { label: 'Pranayama', tooltip: 'Pranayama' },
-  chanting: { label: 'Chanting', tooltip: 'Mantra' },
-  meditation: { label: 'Meditation', tooltip: 'Dhyana' },
-  conference: { label: 'Conference', tooltip: 'Conference' },
-  philosophy: { label: 'Philosophy' },
-  online: { label: 'Online' },
+  mysore: 'Mysore style',
+  'led-primary': 'Led Class',
+  'led-intermediate': 'Intermediate Series',
+  pranayama: 'Pranayama',
+  chanting: 'Mantra',
+  meditation: 'Dhyana',
+  conference: 'Conference',
 };
 
-export default function ShalaCard({ shala }: ShalaCardProps) {
-  const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(shala.address)}`;
+const teacherLevelBadge: Record<
+  TeacherLevel,
+  { icon: typeof faAward; glossaryTerm: string; className: string }
+> = {
+  certified: {
+    icon: faCertificate,
+    glossaryTerm: 'Certified',
+    className: 'text-amber-500',
+  },
+  'authorized-2': {
+    icon: faAward,
+    glossaryTerm: 'Authorised',
+    className: 'text-accent',
+  },
+  'authorized-1': {
+    icon: faAward,
+    glossaryTerm: 'Authorised',
+    className: 'text-accent',
+  },
+};
 
-  const getTeacherIcon = (level?: Teacher['level']) => {
-    switch (level) {
-      case 'certified':
-        return {
-          icon: faCertificate,
-          tooltip: 'Certified',
-          className: 'text-amber-500',
-        };
-      case 'authorized-2':
-      case 'authorized-1':
-        return {
-          icon: faAward,
-          tooltip: 'Authorised',
-          className: 'text-accent',
-        };
-      default:
-        return null;
-    }
-  };
+const externalLinkClass =
+  'text-accent hover:text-accent/80 inline-flex items-center gap-1 text-sm font-medium transition-colors';
+
+export default function ShalaCard({ shala }: ShalaCardProps) {
+  const { t } = useTranslation('shalas');
+  const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(shala.address)}`;
 
   return (
     <ContentCard className="flex flex-col !p-0">
-      {/* Main content */}
       <div className="p-6">
-        {/* Header */}
-        <div>
-          <h3 className="text-heading text-lg leading-tight font-semibold">
-            {shala.name}
-          </h3>
-          <p className="text-subtle mt-1 text-sm">
-            {shala.city}, {shala.country}
-          </p>
-        </div>
+        <h3 className="text-heading text-lg leading-tight font-semibold">
+          {shala.name}
+        </h3>
+        <p className="text-subtle mt-1 text-sm">
+          {shala.city}, {shala.country}
+        </p>
 
-        {/* Divider */}
         <hr className="border-line my-4" />
 
-        {/* Two columns: Teachers and Practices */}
         <div className="grid grid-cols-2 gap-6">
-          {/* Teachers */}
           <div>
             <p className="text-subtle mb-2 text-xs font-medium tracking-wide uppercase">
-              Teachers
+              {t('list.teachers')}
             </p>
             <ul className="space-y-1.5">
-              {shala.teachers.map((teacher, index) => {
-                const iconData = getTeacherIcon(teacher.level);
+              {shala.teachers.map((teacher) => {
+                const badge = teacher.level
+                  ? teacherLevelBadge[teacher.level]
+                  : null;
                 return (
                   <li
-                    key={index}
+                    key={teacher.name}
                     className="text-body flex items-center gap-1.5 text-sm"
                   >
-                    {iconData ? (
-                      <GlossaryTooltip term={iconData.tooltip}>
+                    {badge ? (
+                      <GlossaryTooltip term={badge.glossaryTerm}>
                         <FontAwesomeIcon
-                          icon={iconData.icon}
-                          className={`h-3.5 w-3.5 flex-shrink-0 ${iconData.className}`}
+                          icon={badge.icon}
+                          className={`h-3.5 w-3.5 flex-shrink-0 ${badge.className}`}
                         />
                       </GlossaryTooltip>
                     ) : (
@@ -130,21 +98,23 @@ export default function ShalaCard({ shala }: ShalaCardProps) {
             </ul>
           </div>
 
-          {/* Practices */}
           <div>
             <p className="text-subtle mb-2 text-xs font-medium tracking-wide uppercase">
-              Classes
+              {t('list.classes')}
             </p>
             <div className="flex flex-wrap gap-1.5">
               {shala.practices.map((practice) => {
-                const { label, tooltip } = practiceLabels[practice];
+                const label = t(`practices.${practice}`);
+                const glossaryTerm = practiceGlossaryTerm[practice];
                 return (
                   <span
                     key={practice}
                     className="bg-surface-alt text-body inline-block rounded-full px-2.5 py-0.5 text-xs"
                   >
-                    {tooltip ? (
-                      <GlossaryTooltip term={tooltip}>{label}</GlossaryTooltip>
+                    {glossaryTerm ? (
+                      <GlossaryTooltip term={glossaryTerm}>
+                        {label}
+                      </GlossaryTooltip>
                     ) : (
                       label
                     )}
@@ -156,15 +126,14 @@ export default function ShalaCard({ shala }: ShalaCardProps) {
         </div>
       </div>
 
-      {/* Footer links */}
       <div className="bg-surface-alt mt-auto flex items-center justify-between px-6 py-3">
         <a
           href={googleMapsUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-accent hover:text-accent/80 inline-flex items-center gap-1 text-sm font-medium transition-colors"
+          className={externalLinkClass}
         >
-          Directions
+          {t('list.directions')}
           <FontAwesomeIcon
             icon={faArrowUpRightFromSquare}
             className="h-3 w-3"
@@ -174,9 +143,9 @@ export default function ShalaCard({ shala }: ShalaCardProps) {
           href={shala.website}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-accent hover:text-accent/80 inline-flex items-center gap-1 text-sm font-medium transition-colors"
+          className={externalLinkClass}
         >
-          Website
+          {t('list.website')}
           <FontAwesomeIcon
             icon={faArrowUpRightFromSquare}
             className="h-3 w-3"

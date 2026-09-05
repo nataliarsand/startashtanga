@@ -1,7 +1,7 @@
 {
   "hero": {
     "title": "The Primary Series",
-    "subtitle": "Yoga Chikitsa — The complete sequence of the first series"
+    "subtitle": "Yoga Chikitsa, the complete sequence of the first series"
   },
   "nav": {
     "openingMantra": "Opening Mantra",
@@ -61,7 +61,7 @@
   },
   "suryaNamaskara": {
     "title": "Surya Namaskara",
-    "subtitle": "Sun Salutations — The opening sequence",
+    "subtitle": "Sun Salutations, the opening sequence",
     "description": "Each practice begins with Sun Salutations to warm the body and establish the breath-movement connection.",
     "groups": [
       {
@@ -373,7 +373,11 @@
     "title": "Seated Sequence",
     "subtitle": "The heart of the Primary Series: forward folds, twists, and hip openers",
     "poses": [
-      { "name": "Dandasana", "sanskrit": "दण्डासन", "meaning": "Staff pose" },
+      {
+        "name": "Dandasana",
+        "sanskrit": "दण्डासन",
+        "meaning": "Staff pose"
+      },
       {
         "name": "Paschimottanasana A",
         "sanskrit": "पश्चिमोत्तानासन",
@@ -555,7 +559,11 @@
         "sanskrit": "सालम्ब सर्वाङ्गासन",
         "meaning": "Supported shoulderstand"
       },
-      { "name": "Halasana", "sanskrit": "हलासन", "meaning": "Plough pose" },
+      {
+        "name": "Halasana",
+        "sanskrit": "हलासन",
+        "meaning": "Plough pose"
+      },
       {
         "name": "Karnapidasana",
         "sanskrit": "कर्णपीडासन",
@@ -566,8 +574,16 @@
         "sanskrit": "ऊर्ध्व पद्मासन",
         "meaning": "Upward lotus pose"
       },
-      { "name": "Pindasana", "sanskrit": "पिण्डासन", "meaning": "Embryo pose" },
-      { "name": "Matsyasana", "sanskrit": "मत्स्यासन", "meaning": "Fish pose" },
+      {
+        "name": "Pindasana",
+        "sanskrit": "पिण्डासन",
+        "meaning": "Embryo pose"
+      },
+      {
+        "name": "Matsyasana",
+        "sanskrit": "मत्स्यासन",
+        "meaning": "Fish pose"
+      },
       {
         "name": "Uttana Padasana",
         "sanskrit": "उत्तान पादासन",
@@ -598,7 +614,11 @@
         "sanskrit": "योग मुद्रा",
         "meaning": "Yoga seal"
       },
-      { "name": "Padmasana", "sanskrit": "पद्मासन", "meaning": "Lotus pose" },
+      {
+        "name": "Padmasana",
+        "sanskrit": "पद्मासन",
+        "meaning": "Lotus pose"
+      },
       {
         "name": "Nādi Śodhana",
         "sanskrit": "नाड़ी शोधन",
@@ -610,7 +630,11 @@
         "sanskrit": "उत्प्लुथि",
         "meaning": "Sprung up (10 breaths)"
       },
-      { "name": "Rest", "sanskrit": "", "meaning": "Final rest" }
+      {
+        "name": "Rest",
+        "sanskrit": "",
+        "meaning": "Final rest"
+      }
     ]
   },
   "closingMantra": {
@@ -640,5 +664,13 @@
       "May all the beings in all the worlds be happy.",
       "Om peace, peace, peace"
     ]
+  },
+  "mantra": {
+    "sanskrit": "Sanskrit",
+    "transliteration": "Transliteration",
+    "translation": "Translation"
+  },
+  "poses": {
+    "bothSides": "Both sides"
   }
 }

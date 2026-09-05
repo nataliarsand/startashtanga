@@ -9,7 +9,10 @@
   "results": {
     "count_one": "{{count}} shala found",
     "count_other": "{{count}} shalas found",
-    "noResults": "No shalas found matching your search"
+    "noResults": "No shalas found matching your search",
+    "forQuery": "for \"{{query}}\"",
+    "sortedByDistance": "Sorted by distance",
+    "distance": "~{{km}} km away"
   },
   "comingSoon": {
     "title": "Shala Directory",
@@ -17,295 +20,46 @@
     "note": "We'll launch once we have enough shalas to represent the global community fairly.",
     "button": "Submit a shala"
   },
-  "shalas": [
-    {
-      "id": "ashtanga-yoga-room-amsterdam",
-      "name": "Ashtanga Yoga ROOM Amsterdam",
-      "city": "Amsterdam",
-      "country": "Netherlands",
-      "address": "Evertsenstraat 4-8, 1056EC Amsterdam, Netherlands",
-      "teachers": [{ "name": "Tina Rum" }],
-      "practices": [
-        "mysore",
-        "led-primary",
-        "pranayama",
-        "conference",
-        "meditation"
-      ],
-      "website": "https://www.ashtangayogaroomamsterdam.com/",
-      "lat": 52.3676,
-      "lng": 4.8545
-    },
-    {
-      "id": "yoga-circle-amsterdam",
-      "name": "Yoga Circle",
-      "city": "Amsterdam",
-      "country": "Netherlands",
-      "address": "De Clercqstraat 66-68, Amsterdam, Netherlands",
-      "teachers": [
-        { "name": "Simona Benvenuti" },
-        { "name": "Lidewij Severins" }
-      ],
-      "practices": ["mysore", "led-primary", "meditation"],
-      "website": "https://yogacircle.nl/",
-      "lat": 52.3762,
-      "lng": 4.8722
-    },
-    {
-      "id": "yoga-den-amsterdam",
-      "name": "Yoga Den Amsterdam",
-      "city": "Amsterdam",
-      "country": "Netherlands",
-      "address": "Zeilstraat 34H, 1075 SJ Amsterdam, Netherlands",
-      "teachers": [
-        { "name": "Nick", "level": "authorized-2" },
-        { "name": "Nino" }
-      ],
-      "practices": ["mysore", "led-primary", "pranayama"],
-      "website": "https://www.yogaden.nl/",
-      "lat": 52.3526,
-      "lng": 4.8686
-    },
-    {
-      "id": "the-breathing-space-amsterdam",
-      "name": "The Breathing Space",
-      "city": "Amsterdam",
-      "country": "Netherlands",
-      "address": "Van Kinsbergenstraat 50H, 1057PS Amsterdam, Netherlands",
-      "teachers": [{ "name": "Lana Beex" }, { "name": "Sya Hoeke" }],
-      "practices": ["mysore", "led-primary", "meditation"],
-      "website": "https://www.thebreathingspace.nl/",
-      "lat": 52.3738,
-      "lng": 4.8546
-    },
-    {
-      "id": "ashtanga-yoga-center-carlsbad",
-      "name": "Ashtanga Yoga Center",
-      "city": "Carlsbad",
-      "country": "United States",
-      "address": "1905 Calle Barcelona #218, Carlsbad, CA 92009, USA",
-      "teachers": [{ "name": "Tim Miller", "level": "certified" }],
-      "practices": ["mysore", "led-primary", "online"],
-      "website": "https://www.ashtangayogacenter.com/",
-      "lat": 33.1581,
-      "lng": -117.3506
-    },
-    {
-      "id": "miami-yoga-garage",
-      "name": "Miami Yoga Garage",
-      "city": "Miami",
-      "country": "United States",
-      "address": "1940 NW Miami Ct, Miami, FL 33136, USA",
-      "teachers": [
-        { "name": "Kino MacGregor", "level": "certified" },
-        { "name": "Tim Feldmann", "level": "certified" }
-      ],
-      "practices": ["mysore", "led-primary", "led-intermediate", "online"],
-      "website": "https://miamilifecenter.com/",
-      "lat": 25.7998,
-      "lng": -80.1969
-    },
-    {
-      "id": "ashtanga-yoga-centre-toronto",
-      "name": "Ashtanga Yoga Centre of Toronto",
-      "city": "Toronto",
-      "country": "Canada",
-      "address": "3300 Yonge Street, Unit 204, Toronto, ON M4N 2L6, Canada",
-      "teachers": [
-        { "name": "David Robson", "level": "certified" },
-        { "name": "Jelena Vesic", "level": "authorized-2" }
-      ],
-      "practices": ["mysore", "led-primary", "online"],
-      "website": "https://www.ashtangatoronto.com/",
-      "lat": 43.7257,
-      "lng": -79.3978
-    },
-    {
-      "id": "kpjayi-mysore",
-      "name": "K. Pattabhi Jois Ashtanga Yoga Shala",
-      "city": "Mysore",
-      "country": "India",
-      "address": "#235, 8th Cross, 3rd Stage, Gokulam, Mysore 570002, India",
-      "teachers": [
-        { "name": "Saraswathi Jois", "level": "certified" },
-        { "name": "Sharmila Mahesh" }
-      ],
-      "practices": [
-        "mysore",
-        "led-primary",
-        "pranayama",
-        "chanting",
-        "conference"
-      ],
-      "website": "https://www.kpjayshala.com/",
-      "lat": 12.3252,
-      "lng": 76.6371
-    },
-    {
-      "id": "ashtanga-yoga-paris",
-      "name": "Ashtanga Yoga Paris",
-      "city": "Paris",
-      "country": "France",
-      "address": "40 Avenue de la République, 75011 Paris, France",
-      "teachers": [
-        { "name": "Linda Munro", "level": "certified" },
-        { "name": "Gérald Disse", "level": "certified" }
-      ],
-      "practices": ["mysore", "led-primary", "pranayama", "philosophy"],
-      "website": "https://www.ashtangayogaparis.fr/",
-      "lat": 48.8649,
-      "lng": 2.3788
-    },
-    {
-      "id": "astanga-yoga-london",
-      "name": "Astanga Yoga London",
-      "city": "London",
-      "country": "United Kingdom",
-      "address": "Dharma Shala, 92-94 Drummond Street, London NW1 2HN, UK",
-      "teachers": [{ "name": "Hamish Hendry", "level": "certified" }],
-      "practices": ["mysore", "led-primary"],
-      "website": "https://www.astangayogalondon.com/",
-      "lat": 51.5269,
-      "lng": -0.1336
-    },
-    {
-      "id": "stillpoint-yoga-london",
-      "name": "Stillpoint Yoga London",
-      "city": "London",
-      "country": "United Kingdom",
-      "address": "Room AR1, West Wing, Guy's Campus, St Thomas St, London SE1 9TL, UK",
-      "teachers": [{ "name": "Scott Johnson" }, { "name": "Ozge Karabiyik" }],
-      "practices": ["mysore", "led-primary", "online"],
-      "website": "https://stillpoint.yoga/",
-      "lat": 51.5045,
-      "lng": -0.0875
-    },
-    {
-      "id": "sharmilas-shala-bangalore",
-      "name": "Sharmila's Ashtanga Yoga Shala",
-      "city": "Bangalore",
-      "country": "India",
-      "address": "#194, 38th Cross, 5th Block, Jayanagar, Bangalore 560041, India",
-      "teachers": [{ "name": "Sharmila Mahesh" }],
-      "practices": ["mysore", "led-primary"],
-      "website": "https://kpjayshalabangalore.com/",
-      "lat": 12.9279,
-      "lng": 77.5817
-    },
-    {
-      "id": "ashtanga-yoga-rio",
-      "name": "Ashtanga Yoga Rio",
-      "city": "Rio de Janeiro",
-      "country": "Brazil",
-      "address": "Rua das Acácias, 108 - Gávea, Rio de Janeiro, RJ, Brazil",
-      "teachers": [{ "name": "Dany Sá", "level": "authorized-2" }],
-      "practices": ["mysore", "led-primary"],
-      "website": "https://danysa.com/",
-      "lat": -22.9818,
-      "lng": -43.2271
-    },
-    {
-      "id": "samatva-yoga-floripa",
-      "name": "Samatva Yoga",
-      "city": "Florianópolis",
-      "country": "Brazil",
-      "address": "Rua Afonso Luiz Borba, 400 - Lagoa da Conceição, Florianópolis, SC 88062-040, Brazil",
-      "teachers": [{ "name": "Ana Claudia Lopes", "level": "authorized-2" }],
-      "practices": ["mysore", "led-primary", "online"],
-      "website": "https://www.instagram.com/ashtangayogafloripa/",
-      "lat": -27.5969,
-      "lng": -48.4331
-    },
-    {
-      "id": "ashtanga-yoga-porto-alegre",
-      "name": "Ashtanga Yoga Porto Alegre",
-      "city": "Porto Alegre",
-      "country": "Brazil",
-      "address": "Av. Sen. Tarso Dutra, 565 - Petrópolis, Porto Alegre, RS, Brazil",
-      "teachers": [{ "name": "Laura Miguel", "level": "authorized-2" }],
-      "practices": ["mysore", "led-primary"],
-      "website": "https://www.ashtangayogaportoalegre.com.br/",
-      "lat": -30.0277,
-      "lng": -51.1959
-    },
-    {
-      "id": "yoga-shala-byron-bay",
-      "name": "Yoga Shala Byron Bay",
-      "city": "Byron Bay",
-      "country": "Australia",
-      "address": "Byron Bay, NSW, Australia",
-      "teachers": [{ "name": "Dena Kingsberg", "level": "certified" }],
-      "practices": ["mysore", "led-primary", "pranayama"],
-      "website": "https://www.dena.net.au/",
-      "lat": -28.6474,
-      "lng": 153.602
-    },
-    {
-      "id": "ashtanga-yoga-bali-ubud",
-      "name": "Ashtanga Yoga Bali Research Center",
-      "city": "Ubud",
-      "country": "Indonesia",
-      "address": "Jl. Raya Pejeng Kawan No.45, Pejeng Kaja, Ubud, Bali, Indonesia",
-      "teachers": [{ "name": "Prem" }, { "name": "Radha" }],
-      "practices": ["mysore", "led-primary", "pranayama", "philosophy"],
-      "website": "https://www.ashtangayogabali.com/",
-      "lat": -8.5069,
-      "lng": 115.2993
-    },
-    {
-      "id": "astanga-yoga-studio-copenhagen",
-      "name": "Astanga Yoga Studio Copenhagen",
-      "city": "Copenhagen",
-      "country": "Denmark",
-      "address": "Fensmarksgade/Tagensvej, Copenhagen, Denmark",
-      "teachers": [{ "name": "Eskil Schilling", "level": "authorized-2" }],
-      "practices": ["mysore", "led-primary"],
-      "website": "https://astangastudio.dk/",
-      "lat": 55.6994,
-      "lng": 12.5533
-    },
-    {
-      "id": "ashtanga-yoga-shala-barcelona",
-      "name": "Ashtanga Yoga Shala Barcelona",
-      "city": "Barcelona",
-      "country": "Spain",
-      "address": "Paseo Isabel II, 14, 1º 1º, 08003 Barcelona, Spain",
-      "teachers": [{ "name": "Elena Figarola", "level": "authorized-2" }],
-      "practices": ["mysore", "led-primary"],
-      "website": "https://ashtangayogabcn.com/",
-      "lat": 41.3825,
-      "lng": 2.1812
-    },
-    {
-      "id": "ashtanga-yoga-school-milan",
-      "name": "Scuola di Ashtanga Yoga Milano",
-      "city": "Milan",
-      "country": "Italy",
-      "address": "Viale Caldara 9, 20122 Milano, Italy",
-      "teachers": [{ "name": "Lino Miele", "level": "certified" }],
-      "practices": ["mysore", "led-primary", "pranayama"],
-      "website": "https://www.astangamilano.it/",
-      "lat": 45.453,
-      "lng": 9.2088
-    },
-    {
-      "id": "iyc-tokyo",
-      "name": "IYC International Yoga Center",
-      "city": "Tokyo",
-      "country": "Japan",
-      "address": "5-47-3 Jingumae, Shibuya-ku, Tokyo, Japan",
-      "teachers": [
-        { "name": "Momo (Michiko Konishi)", "level": "authorized-2" }
-      ],
-      "practices": ["mysore", "led-primary"],
-      "website": "https://www.iyc.jp/",
-      "lat": 35.6654,
-      "lng": 139.7075
-    }
-  ],
   "cta": {
     "title": "Know a shala?",
     "text": "Help us grow this directory.",
     "button": "Submit a shala"
+  },
+  "list": {
+    "teachers": "Teachers",
+    "classes": "Classes",
+    "directions": "Directions",
+    "website": "Website"
+  },
+  "practices": {
+    "mysore": "Mysore",
+    "led-primary": "Led Primary",
+    "led-intermediate": "Led Intermediate",
+    "pranayama": "Pranayama",
+    "chanting": "Chanting",
+    "meditation": "Meditation",
+    "conference": "Conference",
+    "philosophy": "Philosophy",
+    "online": "Online"
+  },
+  "teacherLevels": {
+    "certified": "Certified",
+    "authorized": "Authorised"
+  },
+  "map": {
+    "nearMe": "Near me",
+    "findNearMe": "Find shalas near me",
+    "expand": "Expand",
+    "collapse": "Collapse",
+    "expandMap": "Expand map",
+    "collapseMap": "Collapse map",
+    "yourLocation": "Your location",
+    "errors": {
+      "unsupported": "Geolocation is not supported by your browser",
+      "denied": "Location permission denied",
+      "unavailable": "Location unavailable",
+      "timeout": "Location request timed out",
+      "unknown": "Unable to get location"
+    }
   }
 }
