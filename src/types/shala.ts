@@ -12,10 +12,12 @@ export const PRACTICE_OPTIONS = [
 
 export type PracticeOption = (typeof PRACTICE_OPTIONS)[number];
 
+// 'authorized' covers authorisations given by Pattabhi Jois before levels existed
 export const TEACHER_LEVELS = [
   'certified',
   'authorized-2',
   'authorized-1',
+  'authorized',
 ] as const;
 
 export type TeacherLevel = (typeof TEACHER_LEVELS)[number];

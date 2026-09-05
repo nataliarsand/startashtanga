@@ -174,7 +174,8 @@
     "address": "40 Avenue de la République, 75011 Paris, France",
     "teachers": [
       {
-        "name": "Gérald Disse"
+        "name": "Gérald Disse",
+        "level": "authorized"
       },
       {
         "name": "Linda Munro"
@@ -273,23 +274,6 @@
     "website": "https://samatvayoga.com.br/",
     "lat": -27.5969,
     "lng": -48.4331
-  },
-  {
-    "id": "ashtanga-yoga-porto-alegre",
-    "name": "Ashtanga Yoga Porto Alegre",
-    "city": "Porto Alegre",
-    "country": "Brazil",
-    "address": "Av. Sen. Tarso Dutra, 565 - Petrópolis, Porto Alegre, RS, Brazil",
-    "teachers": [
-      {
-        "name": "Laura Miguel",
-        "level": "authorized-2"
-      }
-    ],
-    "practices": ["mysore", "led-primary"],
-    "website": "https://www.instagram.com/ashtangayogaportoalegre/",
-    "lat": -30.0277,
-    "lng": -51.1959
   },
   {
     "id": "yoga-shala-byron-bay",

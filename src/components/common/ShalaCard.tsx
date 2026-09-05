@@ -45,6 +45,11 @@ const teacherLevelBadge: Record<
     glossaryTerm: 'Authorised',
     className: 'text-accent',
   },
+  authorized: {
+    icon: faAward,
+    glossaryTerm: 'Authorised',
+    className: 'text-accent',
+  },
 };
 
 const externalLinkClass =
