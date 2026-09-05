@@ -61,7 +61,7 @@ export default function About() {
           </section>
 
           {/* Divider */}
-          <hr className="border-default my-12" />
+          <hr className="border-line my-12" />
 
           {/* Approach */}
           <section id="approach">
@@ -74,7 +74,7 @@ export default function About() {
           </section>
 
           {/* Divider */}
-          <hr className="border-default my-12" />
+          <hr className="border-line my-12" />
 
           {/* Values */}
           <section id="values">
@@ -105,7 +105,7 @@ export default function About() {
           </section>
 
           {/* Divider */}
-          <hr className="border-default my-12" />
+          <hr className="border-line my-12" />
 
           {/* Support */}
           <section id="support">
@@ -122,7 +122,7 @@ export default function About() {
           </section>
 
           {/* Divider */}
-          <hr className="border-default my-12" />
+          <hr className="border-line my-12" />
 
           {/* Contact */}
           <section id="contact">
@@ -152,7 +152,9 @@ export default function About() {
           <h2 className="mt-4 text-2xl font-bold text-white sm:text-3xl">
             {t('cta.title')}
           </h2>
-          <p className="mx-auto mt-3 max-w-md text-white/80">{t('cta.text')}</p>
+          <p className="mx-auto mt-3 max-w-3xl text-white/80">
+            {t('cta.text')}
+          </p>
           <div className="mt-8">
             <Button as="link" to="/contribute" variant="secondary" size="lg">
               {t('cta.button')}

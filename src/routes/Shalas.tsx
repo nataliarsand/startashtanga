@@ -51,8 +51,8 @@ function ShalasComingSoon() {
       />
 
       <section className="gradient-cta py-16 sm:py-20">
-        <div className="container-main max-w-2xl text-center">
-          <p className="mx-auto max-w-md leading-relaxed text-white/80">
+        <div className="container-main text-center">
+          <p className="mx-auto max-w-3xl leading-relaxed text-white/80">
             {t('comingSoon.note')}
           </p>
           <div className="mt-8">
@@ -165,7 +165,7 @@ function ShalasDirectory() {
           value={searchQuery}
           onChange={setSearchQuery}
           placeholder={t('search.placeholder')}
-          className="mx-auto mt-8 max-w-md"
+          className="mx-auto mt-8 max-w-3xl"
         />
       </PageHero>
 
@@ -220,7 +220,9 @@ function ShalasDirectory() {
           <h2 className="mt-4 text-2xl font-bold text-white sm:text-3xl">
             {t('cta.title')}
           </h2>
-          <p className="mx-auto mt-3 max-w-md text-white/80">{t('cta.text')}</p>
+          <p className="mx-auto mt-3 max-w-3xl text-white/80">
+            {t('cta.text')}
+          </p>
           <div className="mt-8">
             <Button
               as="a"

@@ -17,7 +17,7 @@ export default function NotFound() {
 
       <p className="text-body mt-4 text-xl">This page has gone to Mysore</p>
 
-      <p className="text-subtle mt-2 max-w-md">
+      <p className="text-subtle mt-2 max-w-3xl">
         Like a challenging asana, this page seems to be beyond our current
         practice. Perhaps it's time to return to the beginning of the sequence.
       </p>

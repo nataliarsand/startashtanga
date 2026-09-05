@@ -40,7 +40,7 @@ const variantStyles: Record<ButtonVariant, string> = {
   primary: 'bg-accent text-white hover:opacity-90',
   secondary: 'bg-surface text-heading hover:opacity-90',
   outline:
-    'bg-transparent text-heading border-2 border-default hover:border-accent',
+    'bg-transparent text-heading border-2 border-line hover:border-accent',
   info: 'bg-info text-white hover:opacity-90',
   donate: 'bg-accent text-white hover:opacity-90',
 };

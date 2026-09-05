@@ -18,10 +18,10 @@ interface ShalaMapProps {
   className?: string;
 }
 
-// Custom shala pin SVG (terracotta/accent color)
+// Pin colours come from .shala-marker / .user-marker in globals.css
 const shalaPinSvg = `
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 36" width="24" height="36">
-  <path d="M12 0C5.4 0 0 5.4 0 12c0 7.2 12 24 12 24s12-16.8 12-24c0-6.6-5.4-12-12-12z" fill="#AA5042"/>
+  <path d="M12 0C5.4 0 0 5.4 0 12c0 7.2 12 24 12 24s12-16.8 12-24c0-6.6-5.4-12-12-12z" fill="currentColor"/>
   <circle cx="12" cy="12" r="5" fill="white"/>
 </svg>
 `;
@@ -34,10 +34,9 @@ const shalaIcon = new DivIcon({
   popupAnchor: [0, -36],
 });
 
-// User location dot (blue)
 const userPinSvg = `
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-  <circle cx="12" cy="12" r="10" fill="#2563eb" stroke="white" stroke-width="3"/>
+  <circle cx="12" cy="12" r="10" fill="currentColor" stroke="white" stroke-width="3"/>
   <circle cx="12" cy="12" r="4" fill="white"/>
 </svg>
 `;
@@ -167,39 +166,11 @@ export default function ShalaMap({
         isExpanded ? 'h-[70vh]' : 'h-48 md:h-56'
       } ${className}`}
     >
-      {/* Custom styles for Leaflet */}
-      <style>{`
-        .shala-map .leaflet-container:focus {
-          outline: none;
-        }
-        .shala-map .leaflet-marker-icon:focus,
-        .shala-map .leaflet-marker-shadow:focus {
-          outline: none;
-        }
-        .shala-map .shala-marker,
-        .shala-map .user-marker {
-          background: transparent;
-          border: none;
-        }
-        .shala-map .shala-marker:focus,
-        .shala-map .user-marker:focus {
-          outline: none;
-        }
-        .shala-map .leaflet-popup-content-wrapper {
-          border-radius: 12px;
-          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-        }
-        .shala-map .leaflet-popup-tip {
-          box-shadow: none;
-        }
-      `}</style>
-
       <MapContainer
         center={[20, 10]}
         zoom={2}
         scrollWheelZoom={true}
         className="h-full w-full"
-        style={{ background: '#e8e4d9' }}
       >
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

@@ -184,7 +184,7 @@ export default function GettingStarted() {
           </section>
 
           {/* Divider */}
-          <hr className="border-default my-12" />
+          <hr className="border-line my-12" />
 
           {/* Led vs Mysore */}
           <section id="led-vs-mysore">
@@ -294,7 +294,7 @@ export default function GettingStarted() {
           </section>
 
           {/* Divider */}
-          <hr className="border-default my-12" />
+          <hr className="border-line my-12" />
 
           {/* First Class */}
           <section id="first-class">
@@ -366,7 +366,7 @@ export default function GettingStarted() {
             </div>
 
             {/* Opening Mantra */}
-            <div className="bg-info-subtle border-info mt-8 flex gap-4 rounded-2xl border-l-4 p-5">
+            <div className="bg-info-subtle border-info-light mt-8 flex gap-4 rounded-2xl border-l-4 p-5">
               <FontAwesomeIcon
                 icon={faOm}
                 className="text-info mt-0.5 h-5 w-5 flex-shrink-0"
@@ -393,7 +393,7 @@ export default function GettingStarted() {
           </section>
 
           {/* Divider */}
-          <hr className="border-default my-12" />
+          <hr className="border-line my-12" />
 
           {/* What to Bring */}
           <section id="what-to-bring">
@@ -441,7 +441,7 @@ export default function GettingStarted() {
           </section>
 
           {/* Divider */}
-          <hr className="border-default my-12" />
+          <hr className="border-line my-12" />
 
           {/* Find a Shala */}
           <section id="find-shala">
@@ -489,7 +489,7 @@ export default function GettingStarted() {
           </section>
 
           {/* Divider */}
-          <hr className="border-default my-12" />
+          <hr className="border-line my-12" />
 
           {/* FAQ */}
           <section id="faq">
@@ -540,7 +540,9 @@ export default function GettingStarted() {
           <h2 className="text-2xl font-bold text-white sm:text-3xl">
             {t('cta.title')}
           </h2>
-          <p className="mx-auto mt-3 max-w-md text-white/80">{t('cta.text')}</p>
+          <p className="mx-auto mt-3 max-w-3xl text-white/80">
+            {t('cta.text')}
+          </p>
           <div className="mt-8">
             <Button as="link" to="/about" variant="secondary" size="lg">
               Learn about this project

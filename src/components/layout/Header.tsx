@@ -18,7 +18,7 @@ export default function Header() {
   ];
 
   return (
-    <header className="border-default border-b bg-white">
+    <header className="border-line border-b bg-white">
       <nav
         className="container-main flex items-center justify-between py-4"
         aria-label="Main navigation"
@@ -99,7 +99,7 @@ export default function Header() {
 
       {/* Mobile menu */}
       {mobileMenuOpen && (
-        <div id="mobile-menu" className="border-default border-t md:hidden">
+        <div id="mobile-menu" className="border-line border-t md:hidden">
           <ul className="container-main space-y-1 py-4">
             {navLinks.map((link) => (
               <li key={link.to}>

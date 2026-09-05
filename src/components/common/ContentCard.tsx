@@ -16,11 +16,11 @@ interface ContentCardProps {
 const variantStyles: Record<ContentCardVariant, string> = {
   default: 'bg-surface',
   secondary: 'bg-white',
-  highlight: 'bg-surface border-2 border-default',
+  highlight: 'bg-surface border-2 border-line',
   featured: 'bg-white border-2 border-accent',
-  tip: 'bg-info-subtle border-2 border-info',
+  tip: 'bg-info-subtle border-2 border-info-light',
   warning: 'bg-warning-subtle border-2 border-accent',
-  placeholder: 'bg-surface border-2 border-dashed border-default',
+  placeholder: 'bg-surface border-2 border-dashed border-line',
 };
 
 export default function ContentCard({

@@ -15,7 +15,7 @@ const variantStyles: Record<
   { borderClass: string; bgClass: string; iconClass: string }
 > = {
   info: {
-    borderClass: 'border-info',
+    borderClass: 'border-info-light',
     bgClass: 'bg-info-subtle',
     iconClass: 'text-info',
   },
@@ -25,7 +25,7 @@ const variantStyles: Record<
     iconClass: 'text-accent',
   },
   tip: {
-    borderClass: 'border-info',
+    borderClass: 'border-info-light',
     bgClass: 'bg-info-subtle',
     iconClass: 'text-info',
   },

@@ -89,8 +89,8 @@ export default function PrimarySeries() {
             pose.gatekeeper
               ? 'border-accent border-l-4'
               : pose.pranayama
-                ? 'border-info border-l-4'
-                : 'border-default'
+                ? 'border-info-light border-l-4'
+                : 'border-line'
           }`}
         >
           <div className="min-w-0 flex-1">
@@ -220,7 +220,7 @@ export default function PrimarySeries() {
             </div>
           </section>
 
-          <hr className="border-default my-12" />
+          <hr className="border-line my-12" />
 
           {/* Surya Namaskara */}
           <section id="surya-namaskara">
@@ -252,7 +252,7 @@ export default function PrimarySeries() {
             </div>
           </section>
 
-          <hr className="border-default my-12" />
+          <hr className="border-line my-12" />
 
           {/* Fundamentals */}
           <section id="fundamentals">
@@ -263,7 +263,7 @@ export default function PrimarySeries() {
             <div className="mt-6">{renderPoseList(fundamentalsPoses)}</div>
           </section>
 
-          <hr className="border-default my-12" />
+          <hr className="border-line my-12" />
 
           {/* Standing */}
           <section id="standing">
@@ -274,7 +274,7 @@ export default function PrimarySeries() {
             <div className="mt-6">{renderPoseList(standingPoses)}</div>
           </section>
 
-          <hr className="border-default my-12" />
+          <hr className="border-line my-12" />
 
           {/* Seated */}
           <section id="seated">
@@ -285,7 +285,7 @@ export default function PrimarySeries() {
             <div className="mt-6">{renderPoseList(seatedPoses)}</div>
           </section>
 
-          <hr className="border-default my-12" />
+          <hr className="border-line my-12" />
 
           {/* Finishing */}
           <section id="finishing">
@@ -296,7 +296,7 @@ export default function PrimarySeries() {
             <div className="mt-6">{renderPoseList(finishingPoses)}</div>
           </section>
 
-          <hr className="border-default my-12" />
+          <hr className="border-line my-12" />
 
           {/* Closing Mantra */}
           <section id="closing-mantra">

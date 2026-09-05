@@ -76,7 +76,7 @@ export default function Contributing() {
           </section>
 
           {/* Divider */}
-          <hr className="border-default my-12" />
+          <hr className="border-line my-12" />
 
           {/* Ways to contribute */}
           <section id="ways">
@@ -109,7 +109,7 @@ export default function Contributing() {
           </section>
 
           {/* Divider */}
-          <hr className="border-default my-12" />
+          <hr className="border-line my-12" />
 
           {/* Share your shala */}
           <section id="shala">
@@ -151,7 +151,7 @@ export default function Contributing() {
           </section>
 
           {/* Divider */}
-          <hr className="border-default my-12" />
+          <hr className="border-line my-12" />
 
           {/* Help wanted */}
           <section id="wanted">
@@ -172,7 +172,7 @@ export default function Contributing() {
           </section>
 
           {/* Divider */}
-          <hr className="border-default my-12" />
+          <hr className="border-line my-12" />
 
           {/* Technical / For developers */}
           <section id="technical">
@@ -245,7 +245,9 @@ export default function Contributing() {
           <h2 className="mt-4 text-2xl font-bold text-white sm:text-3xl">
             {t('cta.title')}
           </h2>
-          <p className="mx-auto mt-3 max-w-md text-white/80">{t('cta.text')}</p>
+          <p className="mx-auto mt-3 max-w-3xl text-white/80">
+            {t('cta.text')}
+          </p>
           <div className="mt-8">
             <Button
               as="a"

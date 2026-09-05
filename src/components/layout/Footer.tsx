@@ -12,7 +12,7 @@ export default function Footer() {
   const { t } = useTranslation('common');
 
   return (
-    <footer className="border-default bg-surface border-t">
+    <footer className="border-line bg-surface border-t">
       <div className="container-main py-8">
         <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
           {/* Tagline */}
@@ -62,7 +62,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom line */}
-        <div className="border-default mt-6 border-t pt-6 text-center">
+        <div className="border-line mt-6 border-t pt-6 text-center">
           <p className="text-subtle flex items-center justify-center gap-1 text-xs">
             {t('footer.madeWithLove')}{' '}
             <FontAwesomeIcon icon={faHeart} className="h-3 w-3 text-red-400" />

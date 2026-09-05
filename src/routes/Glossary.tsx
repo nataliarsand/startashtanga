@@ -35,7 +35,7 @@ export default function Glossary() {
           value={searchQuery}
           onChange={setSearchQuery}
           placeholder={t('search.placeholder')}
-          className="mx-auto mt-8 max-w-md"
+          className="mx-auto mt-8 max-w-3xl"
         />
       </PageHero>
 

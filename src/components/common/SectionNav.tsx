@@ -9,7 +9,7 @@ interface SectionNavProps {
 
 export default function SectionNav({ items }: SectionNavProps) {
   return (
-    <nav className="mx-auto mt-8 flex max-w-2xl flex-wrap justify-center gap-2">
+    <nav className="mx-auto mt-8 flex flex-wrap justify-center gap-2">
       {items.map((item) => (
         <a
           key={item.id}

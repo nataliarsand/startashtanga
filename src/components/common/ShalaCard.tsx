@@ -96,7 +96,7 @@ export default function ShalaCard({ shala }: ShalaCardProps) {
         </div>
 
         {/* Divider */}
-        <hr className="border-default my-4" />
+        <hr className="border-line my-4" />
 
         {/* Two columns: Teachers and Practices */}
         <div className="grid grid-cols-2 gap-6">

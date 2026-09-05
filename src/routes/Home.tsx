@@ -78,7 +78,7 @@ export default function Home() {
           <h1 className="mt-6 text-4xl font-bold tracking-tight text-white sm:text-6xl">
             {t('hero.title')}
           </h1>
-          <p className="mx-auto mt-4 max-w-lg text-lg text-white/80 sm:text-xl">
+          <p className="mx-auto mt-4 max-w-5xl text-lg text-white/80 sm:text-xl">
             {t('hero.subtitleParts.before')}{' '}
             <GlossaryTooltip term="Mysore">Mysore-style</GlossaryTooltip>{' '}
             {t('hero.subtitleParts.after')}
@@ -146,7 +146,7 @@ export default function Home() {
           <h2 className="text-heading text-2xl font-bold sm:text-3xl">
             {t('cta.title')}
           </h2>
-          <p className="text-body mx-auto mt-3 max-w-md">
+          <p className="text-body mx-auto mt-3 max-w-3xl">
             {t('cta.description')}
           </p>
           <div className="mt-8">
