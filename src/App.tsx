@@ -15,9 +15,10 @@ import {
 // Leaflet is only needed here, so the map bundle loads on demand
 const Shalas = lazy(() => import('./routes/Shalas'));
 
-export default function App() {
+/** Route table without a router, so tests can mount it in a MemoryRouter. */
+export function AppRoutes() {
   return (
-    <BrowserRouter>
+    <>
       <ScrollToTop />
       <Routes>
         <Route element={<Layout />}>
@@ -38,6 +39,14 @@ export default function App() {
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
+    </>
+  );
+}
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <AppRoutes />
     </BrowserRouter>
   );
 }

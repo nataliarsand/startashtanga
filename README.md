@@ -27,13 +27,33 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
 
 ## Development
 
-**Tech:** React, TypeScript, Vite, Tailwind CSS, i18next
+**Tech:** React 19, TypeScript, Vite, Tailwind CSS v4, i18next, React Leaflet. Static site deployed to Cloudflare Pages.
+
+Requires Node 20.19+ (see `.nvmrc`).
 
 ```bash
 git clone https://github.com/nataliarsand/startashtanga.git
 cd startashtanga
 npm install
 npm run dev
+```
+
+| Command | What it does |
+| --- | --- |
+| `npm run dev` | Start the dev server |
+| `npm run check` | Lint, format check, typecheck and tests (what CI runs) |
+| `npm run build` | Production build into `dist/` |
+| `npm run format` | Format with Prettier |
+
+```
+src/
+  components/   Reusable UI (common/) and page chrome (layout/)
+  routes/       One file per page
+  data/         Shala directory (shalas.json) and its validation test
+  i18n/         i18next setup and locales/<lang>/*.json
+  styles/       globals.css: design tokens and base styles
+  config/       Site name, URL and external links
+  hooks/ lib/ types/
 ```
 
 ---

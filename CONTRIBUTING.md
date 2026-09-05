@@ -11,6 +11,7 @@ Thank you for your interest in contributing to Start Ashtanga! This project is b
 - [Pull Request Process](#pull-request-process)
 - [Style Guidelines](#style-guidelines)
 - [Adding Translations](#adding-translations)
+- [Adding a Shala](#adding-a-shala)
 - [Questions?](#questions)
 
 ## Code of Conduct
@@ -40,14 +41,14 @@ This project follows our [Code of Conduct](CODE_OF_CONDUCT.md). By participating
 - Report bugs via GitHub Issues
 - Suggest features or improvements
 - Help answer questions from other contributors
-- Add your local shala to the directory (coming soon)
+- Add your local shala to the directory (see [Adding a Shala](#adding-a-shala))
 
 ## Getting Started
 
 ### Prerequisites
 
-- Node.js 18+
-- npm 9+
+- Node.js 20.19+ (`.nvmrc` pins it; `nvm use` if you have nvm)
+- npm 10+
 - Git
 
 ### Setup
@@ -70,17 +71,12 @@ This project follows our [Code of Conduct](CODE_OF_CONDUCT.md). By participating
    npm install
    ```
 
-5. **Set up environment variables**
-   ```bash
-   cp .env.example .env
-   ```
-
-6. **Start the development server**
+5. **Start the development server**
    ```bash
    npm run dev
    ```
 
-The site will be available at `http://localhost:5173`.
+The site will be available at `http://localhost:5173`. No `.env` file is needed; `src/config/site.ts` has defaults for everything in `.env.example`.
 
 ## Development Workflow
 
@@ -111,24 +107,13 @@ Use descriptive branch names:
 
 ### Running Quality Checks
 
-Before submitting, run these commands:
+Before submitting, run the same checks CI runs:
 
 ```bash
-# Check for lint errors
-npm run lint
-
-# Auto-fix lint issues
-npm run lint:fix
-
-# Format code
-npm run format
-
-# Type check
-npm run typecheck
-
-# Build to check for errors
-npm run build
+npm run check
 ```
+
+That runs lint, the Prettier check, the type check and the tests. `npm run format` and `npm run lint:fix` fix most complaints automatically. `npm run build` confirms the production build.
 
 ## Pull Request Process
 
@@ -172,7 +157,7 @@ npm run build
 ### CSS/Styling
 
 - Use **Tailwind CSS** utility classes
-- Use design tokens from `src/styles/globals.css`
+- Colours come from the semantic tokens in `src/styles/globals.css` (`bg-surface`, `text-heading`, `text-body`, `text-subtle`, `text-accent`, `border-line`, `bg-info-subtle` and so on). Never write a hex value or a palette name in a component; if a role is missing, add a token.
 - Avoid inline `style={{}}` props - use Tailwind classes instead
 - Follow mobile-first responsive design
 
@@ -218,7 +203,9 @@ We'd love help translating Start Ashtanga to more languages!
    };
    ```
 
-5. Test the language switcher works correctly
+5. Run `npm test` - `src/i18n/locales.test.ts` fails if any key is missing or extra compared to English
+
+6. Test the language switcher works correctly
 
 ### Translation Guidelines
 
@@ -226,6 +213,14 @@ We'd love help translating Start Ashtanga to more languages!
 - Preserve any HTML tags or variables (e.g., `{{count}}`)
 - Sanskrit terms should generally remain in Sanskrit
 - Add the native name of the language in `nativeName`
+
+## Adding a Shala
+
+The directory lives in `src/data/shalas.json`. Non-developers can use the [submission form](https://forms.gle/c6iprH8YBpktKkYD7); if you are comfortable with a pull request:
+
+1. Append an entry to `src/data/shalas.json` following the existing shape (`id` is lowercase-with-dashes and unique, `practices` uses the values listed in `src/types/shala.ts`, `lat`/`lng` are decimal degrees)
+2. Run `npm test` - `src/data/shalas.test.ts` validates every entry
+3. Open a PR with the shala's website so a maintainer can verify it
 
 ## Questions?
 
