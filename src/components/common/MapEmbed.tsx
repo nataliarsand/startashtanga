@@ -31,7 +31,7 @@ export default function MapEmbed({
       />
       <button
         onClick={() => setIsExpanded(!isExpanded)}
-        className="bg-white/90 text-heading hover:bg-white absolute bottom-4 right-4 flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium shadow-md transition-all hover:shadow-lg"
+        className="text-heading absolute right-4 bottom-4 flex items-center gap-2 rounded-lg bg-white/90 px-3 py-2 text-sm font-medium shadow-md transition-all hover:bg-white hover:shadow-lg"
         aria-label={isExpanded ? 'Collapse map' : 'Expand map'}
       >
         <FontAwesomeIcon

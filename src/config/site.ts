@@ -5,13 +5,19 @@
 export const siteConfig = {
   contact: {
     email: import.meta.env.VITE_CONTACT_EMAIL || 'namaste@startashtanga.com',
-    formUrl: import.meta.env.VITE_CONTACT_FORM_URL || 'https://forms.gle/a7FjzNYMpbRF8YyFA',
+    formUrl:
+      import.meta.env.VITE_CONTACT_FORM_URL ||
+      'https://forms.gle/a7FjzNYMpbRF8YyFA',
   },
   forms: {
-    shalaSubmission: import.meta.env.VITE_SHALA_FORM_URL || 'https://forms.gle/c6iprH8YBpktKkYD7',
+    shalaSubmission:
+      import.meta.env.VITE_SHALA_FORM_URL ||
+      'https://forms.gle/c6iprH8YBpktKkYD7',
   },
   links: {
-    github: import.meta.env.VITE_GITHUB_URL || 'https://github.com/nataliarsand/startashtanga',
+    github:
+      import.meta.env.VITE_GITHUB_URL ||
+      'https://github.com/nataliarsand/startashtanga',
   },
   url: import.meta.env.VITE_SITE_URL || 'https://www.startashtanga.org',
 } as const;

@@ -1,6 +1,10 @@
 import { useTranslation } from 'react-i18next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart, faMapLocationDot, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import {
+  faHeart,
+  faMapLocationDot,
+  faEnvelope,
+} from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { siteConfig } from '../../config/site';
 
@@ -12,9 +16,7 @@ export default function Footer() {
       <div className="container-main py-8">
         <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
           {/* Tagline */}
-          <p className="text-body text-sm">
-            {t('footer.tagline')}
-          </p>
+          <p className="text-body text-sm">{t('footer.tagline')}</p>
 
           {/* Footer links */}
           <nav aria-label="Footer navigation">
@@ -26,7 +28,10 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="text-body flex items-center gap-2 text-sm transition-opacity hover:opacity-80"
                 >
-                  <FontAwesomeIcon icon={faMapLocationDot} className="h-4 w-4" />
+                  <FontAwesomeIcon
+                    icon={faMapLocationDot}
+                    className="h-4 w-4"
+                  />
                   {t('footer.submitShala')}
                 </a>
               </li>

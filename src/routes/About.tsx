@@ -6,7 +6,13 @@ import {
   faUsers,
   faArrowRight,
 } from '@fortawesome/free-solid-svg-icons';
-import { Button, PageHero, ContentCard, SectionNav, DonateButton } from '../components/common';
+import {
+  Button,
+  PageHero,
+  ContentCard,
+  SectionNav,
+  DonateButton,
+} from '../components/common';
 import { siteConfig } from '../config/site';
 import { useSEO } from '../hooks';
 
@@ -37,10 +43,7 @@ export default function About() {
 
   return (
     <>
-      <PageHero
-        title={t('hero.title')}
-        subtitle={t('hero.subtitle')}
-      >
+      <PageHero title={t('hero.title')} subtitle={t('hero.subtitle')}>
         <SectionNav items={navItems} />
       </PageHero>
 
@@ -93,9 +96,7 @@ export default function About() {
                       <h3 className="text-heading text-lg font-semibold">
                         {value.title}
                       </h3>
-                      <p className="text-body mt-1">
-                        {value.description}
-                      </p>
+                      <p className="text-body mt-1">{value.description}</p>
                     </div>
                   </div>
                 </ContentCard>
@@ -128,9 +129,7 @@ export default function About() {
             <h2 className="text-heading text-2xl font-bold sm:text-3xl">
               {t('contact.title')}
             </h2>
-            <p className="text-body mt-4">
-              {t('contact.text')}
-            </p>
+            <p className="text-body mt-4">{t('contact.text')}</p>
 
             <div className="mt-6">
               <Button

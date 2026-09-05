@@ -32,8 +32,13 @@ export default tseslint.config(
       'no-console': 'warn',
       '@typescript-eslint/no-unused-vars': [
         'error',
-        { argsIgnorePattern: '^_' },
+        { argsIgnorePattern: '^_', ignoreRestSiblings: true },
       ],
     },
+  },
+  {
+    // Test helpers export render utilities alongside a provider component
+    files: ['src/test/**'],
+    rules: { 'react-refresh/only-export-components': 'off' },
   }
 );

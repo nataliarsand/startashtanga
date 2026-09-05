@@ -63,7 +63,7 @@ export default function Home() {
       {/* Hero */}
       <section className="gradient-hero relative overflow-hidden py-24 sm:py-32">
         {/* Mandala decoration */}
-        <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/4 opacity-10 sm:translate-x-1/3">
+        <div className="absolute top-1/2 right-0 translate-x-1/4 -translate-y-1/2 opacity-10 sm:translate-x-1/3">
           <img
             src="/om-mandala.png"
             alt=""
@@ -95,7 +95,7 @@ export default function Home() {
                 }`}
               >
                 {action.comingSoon && (
-                  <span className="absolute right-3 top-3 rounded-full bg-white/20 px-2 py-0.5 text-xs font-medium text-white">
+                  <span className="absolute top-3 right-3 rounded-full bg-white/20 px-2 py-0.5 text-xs font-medium text-white">
                     Soon
                   </span>
                 )}
@@ -125,7 +125,7 @@ export default function Home() {
           <div className="grid gap-12 sm:grid-cols-3 sm:gap-8">
             {features.map((feature, index) => (
               <div key={index} className="relative pl-14">
-                <div className="bg-accent absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-xl text-white">
+                <div className="bg-accent absolute top-0 left-0 flex h-10 w-10 items-center justify-center rounded-xl text-white">
                   <FontAwesomeIcon icon={feature.icon} className="h-5 w-5" />
                 </div>
                 <h3 className="text-heading text-lg font-semibold">

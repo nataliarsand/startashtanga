@@ -1,7 +1,16 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Layout } from './components/layout';
 import { ScrollToTop } from './components/common';
-import { Home, About, Contributing, GettingStarted, Glossary, NotFound, PrimarySeries, Shalas } from './routes';
+import {
+  Home,
+  About,
+  Contributing,
+  GettingStarted,
+  Glossary,
+  NotFound,
+  PrimarySeries,
+  Shalas,
+} from './routes';
 
 export default function App() {
   return (

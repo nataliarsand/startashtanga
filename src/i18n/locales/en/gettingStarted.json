@@ -29,7 +29,12 @@
     "sequences": {
       "title": "The sequences",
       "items": [
-        { "hasTerm": true, "before": "", "term": "Primary Series", "after": " — detoxifies and aligns the body" },
+        {
+          "hasTerm": true,
+          "before": "",
+          "term": "Primary Series",
+          "after": " — detoxifies and aligns the body"
+        },
         { "text": "Intermediate Series — purifies the nervous system" },
         { "text": "Advanced Series — integrates strength and grace" }
       ],
@@ -41,9 +46,21 @@
     "tristhana": {
       "title": "The Tristhana method",
       "items": [
-        { "label": "Breath", "term": "Pranayama", "description": "steady, audible breathing" },
-        { "label": "Posture", "term": "Asana", "description": "the physical shapes" },
-        { "label": "Gaze", "term": "Drishti", "description": "focal points for attention" }
+        {
+          "label": "Breath",
+          "term": "Pranayama",
+          "description": "steady, audible breathing"
+        },
+        {
+          "label": "Posture",
+          "term": "Asana",
+          "description": "the physical shapes"
+        },
+        {
+          "label": "Gaze",
+          "term": "Drishti",
+          "description": "focal points for attention"
+        }
       ]
     }
   },

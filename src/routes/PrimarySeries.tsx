@@ -1,6 +1,10 @@
 import { useTranslation } from 'react-i18next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faRepeat, faRightLeft, faCircleInfo } from '@fortawesome/free-solid-svg-icons';
+import {
+  faRepeat,
+  faRightLeft,
+  faCircleInfo,
+} from '@fortawesome/free-solid-svg-icons';
 import {
   Badge,
   PageHero,
@@ -44,19 +48,37 @@ export default function PrimarySeries() {
     { id: 'closing-mantra', label: t('nav.closingMantra') },
   ];
 
-  const suryaGroups = t('suryaNamaskara.groups', { returnObjects: true }) as SuryaGroup[];
-  const fundamentalsPoses = t('fundamentals.poses', { returnObjects: true }) as Pose[];
+  const suryaGroups = t('suryaNamaskara.groups', {
+    returnObjects: true,
+  }) as SuryaGroup[];
+  const fundamentalsPoses = t('fundamentals.poses', {
+    returnObjects: true,
+  }) as Pose[];
   const standingPoses = t('standing.poses', { returnObjects: true }) as Pose[];
   const seatedPoses = t('seated.poses', { returnObjects: true }) as Pose[];
-  const finishingPoses = t('finishing.poses', { returnObjects: true }) as Pose[];
+  const finishingPoses = t('finishing.poses', {
+    returnObjects: true,
+  }) as Pose[];
 
-  const openingSanskrit = t('openingMantra.sanskrit', { returnObjects: true }) as string[];
-  const openingTransliteration = t('openingMantra.transliteration', { returnObjects: true }) as string[];
-  const openingTranslation = t('openingMantra.translation', { returnObjects: true }) as string[];
+  const openingSanskrit = t('openingMantra.sanskrit', {
+    returnObjects: true,
+  }) as string[];
+  const openingTransliteration = t('openingMantra.transliteration', {
+    returnObjects: true,
+  }) as string[];
+  const openingTranslation = t('openingMantra.translation', {
+    returnObjects: true,
+  }) as string[];
 
-  const closingSanskrit = t('closingMantra.sanskrit', { returnObjects: true }) as string[];
-  const closingTransliteration = t('closingMantra.transliteration', { returnObjects: true }) as string[];
-  const closingTranslation = t('closingMantra.translation', { returnObjects: true }) as string[];
+  const closingSanskrit = t('closingMantra.sanskrit', {
+    returnObjects: true,
+  }) as string[];
+  const closingTransliteration = t('closingMantra.transliteration', {
+    returnObjects: true,
+  }) as string[];
+  const closingTranslation = t('closingMantra.translation', {
+    returnObjects: true,
+  }) as string[];
 
   const renderPoseList = (poses: Pose[]) => (
     <div className="space-y-2">
@@ -64,24 +86,35 @@ export default function PrimarySeries() {
         <div
           key={index}
           className={`flex items-center justify-between rounded-lg border bg-white p-3 ${
-            pose.gatekeeper ? 'border-accent border-l-4' : pose.pranayama ? 'border-info border-l-4' : 'border-default'
+            pose.gatekeeper
+              ? 'border-accent border-l-4'
+              : pose.pranayama
+                ? 'border-info border-l-4'
+                : 'border-default'
           }`}
         >
           <div className="min-w-0 flex-1">
             <p className="text-heading font-medium">
               {pose.pranayama ? (
-                <GlossaryTooltip term="Nādi Śodhana">{pose.name}</GlossaryTooltip>
+                <GlossaryTooltip term="Nādi Śodhana">
+                  {pose.name}
+                </GlossaryTooltip>
               ) : (
                 pose.name
               )}
               {pose.gatekeeper && (
                 <span className="text-accent ml-2 text-xs font-normal">
-                  (<GlossaryTooltip term="Gatekeeper Pose">gatekeeper</GlossaryTooltip>)
+                  (
+                  <GlossaryTooltip term="Gatekeeper Pose">
+                    gatekeeper
+                  </GlossaryTooltip>
+                  )
                 </span>
               )}
               {pose.pranayama && (
                 <span className="text-info ml-2 text-xs font-normal">
-                  (<GlossaryTooltip term="Pranayama">pranayama</GlossaryTooltip>)
+                  (<GlossaryTooltip term="Pranayama">pranayama</GlossaryTooltip>
+                  )
                 </span>
               )}
             </p>
@@ -91,9 +124,7 @@ export default function PrimarySeries() {
             </p>
           </div>
           <div className="flex items-center gap-3">
-            {pose.count && (
-              <Badge>{pose.count}</Badge>
-            )}
+            {pose.count && <Badge>{pose.count}</Badge>}
             {pose.sides && (
               <span className="text-accent flex items-center gap-1 text-xs">
                 <FontAwesomeIcon icon={faRightLeft} className="h-3 w-3" />
@@ -119,7 +150,7 @@ export default function PrimarySeries() {
   ) => (
     <div className="grid gap-6 md:grid-cols-3">
       <ContentCard>
-        <h4 className="text-heading mb-3 text-sm font-semibold uppercase tracking-wide">
+        <h4 className="text-heading mb-3 text-sm font-semibold tracking-wide uppercase">
           Sanskrit
         </h4>
         <div className="space-y-1 text-lg leading-relaxed">
@@ -131,7 +162,7 @@ export default function PrimarySeries() {
         </div>
       </ContentCard>
       <ContentCard>
-        <h4 className="text-heading mb-3 text-sm font-semibold uppercase tracking-wide">
+        <h4 className="text-heading mb-3 text-sm font-semibold tracking-wide uppercase">
           Transliteration
         </h4>
         <div className="space-y-1 leading-relaxed">
@@ -143,7 +174,7 @@ export default function PrimarySeries() {
         </div>
       </ContentCard>
       <ContentCard>
-        <h4 className="text-heading mb-3 text-sm font-semibold uppercase tracking-wide">
+        <h4 className="text-heading mb-3 text-sm font-semibold tracking-wide uppercase">
           Translation
         </h4>
         <div className="space-y-1 leading-relaxed">
@@ -166,7 +197,11 @@ export default function PrimarySeries() {
       <div className="bg-white py-16 sm:py-20">
         <div className="container-main max-w-4xl">
           {/* Intro */}
-          <CalloutBox icon={faCircleInfo} title={t('intro.title')} variant="info">
+          <CalloutBox
+            icon={faCircleInfo}
+            title={t('intro.title')}
+            variant="info"
+          >
             <p>{t('intro.text')}</p>
           </CalloutBox>
 
@@ -177,7 +212,11 @@ export default function PrimarySeries() {
             </h2>
             <p className="text-body mt-2">{t('openingMantra.subtitle')}</p>
             <div className="mt-6">
-              {renderMantra(openingSanskrit, openingTransliteration, openingTranslation)}
+              {renderMantra(
+                openingSanskrit,
+                openingTransliteration,
+                openingTranslation
+              )}
             </div>
           </section>
 
@@ -189,14 +228,18 @@ export default function PrimarySeries() {
               {t('suryaNamaskara.title')}
             </h2>
             <p className="text-body mt-2">{t('suryaNamaskara.subtitle')}</p>
-            <p className="text-subtle mt-1 text-sm">{t('suryaNamaskara.description')}</p>
+            <p className="text-subtle mt-1 text-sm">
+              {t('suryaNamaskara.description')}
+            </p>
 
             <div className="mt-8 space-y-8">
               {suryaGroups.map((group, index) => (
                 <ContentCard key={index}>
                   <div className="mb-4 flex items-center justify-between">
                     <div>
-                      <h3 className="text-heading text-lg font-semibold">{group.name}</h3>
+                      <h3 className="text-heading text-lg font-semibold">
+                        {group.name}
+                      </h3>
                       <p className="text-accent text-sm">{group.sanskrit}</p>
                     </div>
                     <span className="bg-accent rounded-full px-3 py-1 text-xs font-medium text-white">
@@ -262,7 +305,11 @@ export default function PrimarySeries() {
             </h2>
             <p className="text-body mt-2">{t('closingMantra.subtitle')}</p>
             <div className="mt-6">
-              {renderMantra(closingSanskrit, closingTransliteration, closingTranslation)}
+              {renderMantra(
+                closingSanskrit,
+                closingTransliteration,
+                closingTranslation
+              )}
             </div>
           </section>
         </div>

@@ -16,42 +16,42 @@
    * Warm, earthy palette inspired by traditional yoga aesthetics
    * Base colors: #F5EDDF, #753742, #90CBDC, #AA5042, #4F3130
    */
-  --color-primary-50: 245 237 223;  /* #F5EDDF - warm cream */
+  --color-primary-50: 245 237 223; /* #F5EDDF - warm cream */
   --color-primary-100: 238 226 206; /* #EEE2CE - light sand */
   --color-primary-200: 220 200 175; /* #DCC8AF - sand */
   --color-primary-300: 190 160 140; /* #BEA08C - warm tan */
   --color-primary-400: 150 115 105; /* #967369 - muted terracotta */
-  --color-primary-500: 117 55 66;   /* #753742 - burgundy */
-  --color-primary-600: 100 50 58;   /* #64323A - deep burgundy */
-  --color-primary-700: 85 45 50;    /* #552D32 - dark burgundy */
-  --color-primary-800: 70 42 44;    /* #462A2C - darker brown */
-  --color-primary-900: 79 49 48;    /* #4F3130 - deep brown */
-  --color-primary-950: 45 28 28;    /* #2D1C1C - near black */
+  --color-primary-500: 117 55 66; /* #753742 - burgundy */
+  --color-primary-600: 100 50 58; /* #64323A - deep burgundy */
+  --color-primary-700: 85 45 50; /* #552D32 - dark burgundy */
+  --color-primary-800: 70 42 44; /* #462A2C - darker brown */
+  --color-primary-900: 79 49 48; /* #4F3130 - deep brown */
+  --color-primary-950: 45 28 28; /* #2D1C1C - near black */
 
   /* Accent color - terracotta for CTAs and highlights */
-  --color-accent-500: 170 80 66;    /* #AA5042 - terracotta */
-  --color-accent-600: 150 65 52;    /* #964134 - deep terracotta */
-  --color-accent-700: 130 55 45;    /* #82372D - dark terracotta */
+  --color-accent-500: 170 80 66; /* #AA5042 - terracotta */
+  --color-accent-600: 150 65 52; /* #964134 - deep terracotta */
+  --color-accent-700: 130 55 45; /* #82372D - dark terracotta */
 
   /* Info/secondary accent - for tips, highlights, and informational elements */
-  --color-info-light: 160 215 230;  /* #A0D7E6 - light */
-  --color-info-base: 144 203 220;   /* #90CBDC - base */
-  --color-info-muted: 115 175 195;  /* #73AFC3 - muted */
-  --color-info-dark: 45 100 120;    /* #2D6478 - dark (accessible) */
+  --color-info-light: 160 215 230; /* #A0D7E6 - light */
+  --color-info-base: 144 203 220; /* #90CBDC - base */
+  --color-info-muted: 115 175 195; /* #73AFC3 - muted */
+  --color-info-dark: 45 100 120; /* #2D6478 - dark (accessible) */
 
   /* Semantic status colors */
-  --color-success: 34 197 94;       /* #22c55e */
-  --color-warning: 234 179 8;       /* #eab308 */
-  --color-error: 170 80 66;         /* #AA5042 */
+  --color-success: 34 197 94; /* #22c55e */
+  --color-warning: 234 179 8; /* #eab308 */
+  --color-error: 170 80 66; /* #AA5042 */
 
   /* Background colors */
-  --color-bg-base: 255 253 250;     /* #FFFDF9 - warm white */
-  --color-bg-subtle: 245 237 223;   /* #F5EDDF - cream */
-  --color-bg-muted: 238 226 206;    /* #EEE2CE - light sand */
+  --color-bg-base: 255 253 250; /* #FFFDF9 - warm white */
+  --color-bg-subtle: 245 237 223; /* #F5EDDF - cream */
+  --color-bg-muted: 238 226 206; /* #EEE2CE - light sand */
 
   /* Text colors */
-  --color-text-base: 79 49 48;      /* #4F3130 - deep brown */
-  --color-text-muted: 117 55 66;    /* #753742 - burgundy */
+  --color-text-base: 79 49 48; /* #4F3130 - deep brown */
+  --color-text-muted: 117 55 66; /* #753742 - burgundy */
   --color-text-subtle: 150 115 105; /* #967369 - muted terracotta */
   --color-text-inverted: 245 237 223; /* #F5EDDF - cream */
 
@@ -383,36 +383,72 @@
   }
 
   /* Background colors - semantic naming */
-  .bg-surface { background-color: #F5EDDF; }           /* Main surface/card background */
-  .bg-surface-alt { background-color: #EEE2CE; }       /* Alternative surface */
-  .bg-emphasis { background-color: #4F3130; }          /* Strong emphasis background */
-  .bg-accent { background-color: #AA5042; }            /* Accent/CTA background */
-  .bg-info { background-color: #2D6478; }              /* Info/tip accent background */
-  .bg-info-subtle { background-color: #dceef3; }       /* Info/tip subtle background */
-  .bg-warning-subtle { background-color: #dceef3; }    /* Warning subtle background */
+  .bg-surface {
+    background-color: #f5eddf;
+  } /* Main surface/card background */
+  .bg-surface-alt {
+    background-color: #eee2ce;
+  } /* Alternative surface */
+  .bg-emphasis {
+    background-color: #4f3130;
+  } /* Strong emphasis background */
+  .bg-accent {
+    background-color: #aa5042;
+  } /* Accent/CTA background */
+  .bg-info {
+    background-color: #2d6478;
+  } /* Info/tip accent background */
+  .bg-info-subtle {
+    background-color: #dceef3;
+  } /* Info/tip subtle background */
+  .bg-warning-subtle {
+    background-color: #dceef3;
+  } /* Warning subtle background */
 
   /* Text colors - semantic naming */
-  .text-heading { color: #4F3130; }                    /* Headings and strong text */
-  .text-body { color: #753742; }                       /* Body text */
-  .text-subtle { color: #967369; }                     /* Subtle/muted text */
-  .text-accent { color: #AA5042; }                     /* Accent text */
-  .text-info { color: #2D6478; }                       /* Info/tip text */
-  .text-on-dark { color: #F5EDDF; }                    /* Text on dark backgrounds */
-  .text-link-on-dark { color: #90CBDC; }               /* Links on dark backgrounds */
+  .text-heading {
+    color: #4f3130;
+  } /* Headings and strong text */
+  .text-body {
+    color: #753742;
+  } /* Body text */
+  .text-subtle {
+    color: #967369;
+  } /* Subtle/muted text */
+  .text-accent {
+    color: #aa5042;
+  } /* Accent text */
+  .text-info {
+    color: #2d6478;
+  } /* Info/tip text */
+  .text-on-dark {
+    color: #f5eddf;
+  } /* Text on dark backgrounds */
+  .text-link-on-dark {
+    color: #90cbdc;
+  } /* Links on dark backgrounds */
 
   /* Border colors - semantic naming */
-  .border-default { border-color: #DCC8AF; }           /* Default borders */
-  .border-subtle { border-color: #EEE2CE; }            /* Subtle borders */
-  .border-accent { border-color: #AA5042; }            /* Accent borders */
-  .border-info { border-color: #90CBDC; }              /* Info/tip borders */
+  .border-default {
+    border-color: #dcc8af;
+  } /* Default borders */
+  .border-subtle {
+    border-color: #eee2ce;
+  } /* Subtle borders */
+  .border-accent {
+    border-color: #aa5042;
+  } /* Accent borders */
+  .border-info {
+    border-color: #90cbdc;
+  } /* Info/tip borders */
 
   /* Gradients */
   .gradient-hero {
-    background: linear-gradient(135deg, #AA5042 0%, #753742 50%, #4F3130 100%);
+    background: linear-gradient(135deg, #aa5042 0%, #753742 50%, #4f3130 100%);
   }
 
   .gradient-cta {
-    background: linear-gradient(135deg, #AA5042 0%, #753742 100%);
+    background: linear-gradient(135deg, #aa5042 0%, #753742 100%);
   }
 }
 

@@ -1,10 +1,10 @@
 type ContentCardVariant =
-  | 'default'      // Basic content container (cream bg)
-  | 'secondary'    // Alternative content (white bg)
-  | 'highlight'    // Emphasized content (cream bg + border)
-  | 'featured'     // Special/promoted content (white bg + accent border)
-  | 'tip'          // Tips and helpful info (light blue bg + border)
-  | 'warning'      // Important warnings (light red bg + border)
+  | 'default' // Basic content container (cream bg)
+  | 'secondary' // Alternative content (white bg)
+  | 'highlight' // Emphasized content (cream bg + border)
+  | 'featured' // Special/promoted content (white bg + accent border)
+  | 'tip' // Tips and helpful info (light blue bg + border)
+  | 'warning' // Important warnings (light red bg + border)
   | 'placeholder'; // Coming soon / empty state (dashed border)
 
 interface ContentCardProps {
@@ -26,7 +26,7 @@ const variantStyles: Record<ContentCardVariant, string> = {
 export default function ContentCard({
   children,
   className = '',
-  variant = 'default'
+  variant = 'default',
 }: ContentCardProps) {
   return (
     <div className={`rounded-2xl p-6 ${variantStyles[variant]} ${className}`}>

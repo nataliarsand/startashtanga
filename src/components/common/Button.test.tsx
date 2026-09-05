@@ -6,7 +6,9 @@ import Button from './Button';
 describe('Button', () => {
   it('renders button with text', () => {
     render(<Button>Click me</Button>);
-    expect(screen.getByRole('button', { name: /click me/i })).toBeInTheDocument();
+    expect(
+      screen.getByRole('button', { name: /click me/i })
+    ).toBeInTheDocument();
   });
 
   it('handles click events', async () => {
@@ -39,13 +41,26 @@ describe('Button', () => {
   });
 
   it('renders as a link when as="link"', () => {
-    render(<Button as="link" to="/test">Link Button</Button>);
-    expect(screen.getByRole('link', { name: /link button/i })).toHaveAttribute('href', '/test');
+    render(
+      <Button as="link" to="/test">
+        Link Button
+      </Button>
+    );
+    expect(screen.getByRole('link', { name: /link button/i })).toHaveAttribute(
+      'href',
+      '/test'
+    );
   });
 
   it('renders as an anchor when as="a"', () => {
-    render(<Button as="a" href="https://example.com">External Link</Button>);
-    expect(screen.getByRole('link', { name: /external link/i })).toHaveAttribute('href', 'https://example.com');
+    render(
+      <Button as="a" href="https://example.com">
+        External Link
+      </Button>
+    );
+    expect(
+      screen.getByRole('link', { name: /external link/i })
+    ).toHaveAttribute('href', 'https://example.com');
   });
 
   it('applies custom className', () => {

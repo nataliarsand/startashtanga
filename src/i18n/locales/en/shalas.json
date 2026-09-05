@@ -24,10 +24,14 @@
       "city": "Amsterdam",
       "country": "Netherlands",
       "address": "Evertsenstraat 4-8, 1056EC Amsterdam, Netherlands",
-      "teachers": [
-        { "name": "Tina Rum" }
+      "teachers": [{ "name": "Tina Rum" }],
+      "practices": [
+        "mysore",
+        "led-primary",
+        "pranayama",
+        "conference",
+        "meditation"
       ],
-      "practices": ["mysore", "led-primary", "pranayama", "conference", "meditation"],
       "website": "https://www.ashtangayogaroomamsterdam.com/",
       "lat": 52.3676,
       "lng": 4.8545
@@ -68,10 +72,7 @@
       "city": "Amsterdam",
       "country": "Netherlands",
       "address": "Van Kinsbergenstraat 50H, 1057PS Amsterdam, Netherlands",
-      "teachers": [
-        { "name": "Lana Beex" },
-        { "name": "Sya Hoeke" }
-      ],
+      "teachers": [{ "name": "Lana Beex" }, { "name": "Sya Hoeke" }],
       "practices": ["mysore", "led-primary", "meditation"],
       "website": "https://www.thebreathingspace.nl/",
       "lat": 52.3738,
@@ -83,9 +84,7 @@
       "city": "Carlsbad",
       "country": "United States",
       "address": "1905 Calle Barcelona #218, Carlsbad, CA 92009, USA",
-      "teachers": [
-        { "name": "Tim Miller", "level": "certified" }
-      ],
+      "teachers": [{ "name": "Tim Miller", "level": "certified" }],
       "practices": ["mysore", "led-primary", "online"],
       "website": "https://www.ashtangayogacenter.com/",
       "lat": 33.1581,
@@ -131,7 +130,13 @@
         { "name": "Saraswathi Jois", "level": "certified" },
         { "name": "Sharmila Mahesh" }
       ],
-      "practices": ["mysore", "led-primary", "pranayama", "chanting", "conference"],
+      "practices": [
+        "mysore",
+        "led-primary",
+        "pranayama",
+        "chanting",
+        "conference"
+      ],
       "website": "https://www.kpjayshala.com/",
       "lat": 12.3252,
       "lng": 76.6371
@@ -157,9 +162,7 @@
       "city": "London",
       "country": "United Kingdom",
       "address": "Dharma Shala, 92-94 Drummond Street, London NW1 2HN, UK",
-      "teachers": [
-        { "name": "Hamish Hendry", "level": "certified" }
-      ],
+      "teachers": [{ "name": "Hamish Hendry", "level": "certified" }],
       "practices": ["mysore", "led-primary"],
       "website": "https://www.astangayogalondon.com/",
       "lat": 51.5269,
@@ -171,10 +174,7 @@
       "city": "London",
       "country": "United Kingdom",
       "address": "Room AR1, West Wing, Guy's Campus, St Thomas St, London SE1 9TL, UK",
-      "teachers": [
-        { "name": "Scott Johnson" },
-        { "name": "Ozge Karabiyik" }
-      ],
+      "teachers": [{ "name": "Scott Johnson" }, { "name": "Ozge Karabiyik" }],
       "practices": ["mysore", "led-primary", "online"],
       "website": "https://stillpoint.yoga/",
       "lat": 51.5045,
@@ -186,9 +186,7 @@
       "city": "Bangalore",
       "country": "India",
       "address": "#194, 38th Cross, 5th Block, Jayanagar, Bangalore 560041, India",
-      "teachers": [
-        { "name": "Sharmila Mahesh" }
-      ],
+      "teachers": [{ "name": "Sharmila Mahesh" }],
       "practices": ["mysore", "led-primary"],
       "website": "https://kpjayshalabangalore.com/",
       "lat": 12.9279,
@@ -200,9 +198,7 @@
       "city": "Rio de Janeiro",
       "country": "Brazil",
       "address": "Rua das Acácias, 108 - Gávea, Rio de Janeiro, RJ, Brazil",
-      "teachers": [
-        { "name": "Dany Sá", "level": "authorized-2" }
-      ],
+      "teachers": [{ "name": "Dany Sá", "level": "authorized-2" }],
       "practices": ["mysore", "led-primary"],
       "website": "https://danysa.com/",
       "lat": -22.9818,
@@ -214,9 +210,7 @@
       "city": "Florianópolis",
       "country": "Brazil",
       "address": "Rua Afonso Luiz Borba, 400 - Lagoa da Conceição, Florianópolis, SC 88062-040, Brazil",
-      "teachers": [
-        { "name": "Ana Claudia Lopes", "level": "authorized-2" }
-      ],
+      "teachers": [{ "name": "Ana Claudia Lopes", "level": "authorized-2" }],
       "practices": ["mysore", "led-primary", "online"],
       "website": "https://www.instagram.com/ashtangayogafloripa/",
       "lat": -27.5969,
@@ -228,9 +222,7 @@
       "city": "Porto Alegre",
       "country": "Brazil",
       "address": "Av. Sen. Tarso Dutra, 565 - Petrópolis, Porto Alegre, RS, Brazil",
-      "teachers": [
-        { "name": "Laura Miguel", "level": "authorized-2" }
-      ],
+      "teachers": [{ "name": "Laura Miguel", "level": "authorized-2" }],
       "practices": ["mysore", "led-primary"],
       "website": "https://www.ashtangayogaportoalegre.com.br/",
       "lat": -30.0277,
@@ -242,13 +234,11 @@
       "city": "Byron Bay",
       "country": "Australia",
       "address": "Byron Bay, NSW, Australia",
-      "teachers": [
-        { "name": "Dena Kingsberg", "level": "certified" }
-      ],
+      "teachers": [{ "name": "Dena Kingsberg", "level": "certified" }],
       "practices": ["mysore", "led-primary", "pranayama"],
       "website": "https://www.dena.net.au/",
       "lat": -28.6474,
-      "lng": 153.6020
+      "lng": 153.602
     },
     {
       "id": "ashtanga-yoga-bali-ubud",
@@ -256,10 +246,7 @@
       "city": "Ubud",
       "country": "Indonesia",
       "address": "Jl. Raya Pejeng Kawan No.45, Pejeng Kaja, Ubud, Bali, Indonesia",
-      "teachers": [
-        { "name": "Prem" },
-        { "name": "Radha" }
-      ],
+      "teachers": [{ "name": "Prem" }, { "name": "Radha" }],
       "practices": ["mysore", "led-primary", "pranayama", "philosophy"],
       "website": "https://www.ashtangayogabali.com/",
       "lat": -8.5069,
@@ -271,9 +258,7 @@
       "city": "Copenhagen",
       "country": "Denmark",
       "address": "Fensmarksgade/Tagensvej, Copenhagen, Denmark",
-      "teachers": [
-        { "name": "Eskil Schilling", "level": "authorized-2" }
-      ],
+      "teachers": [{ "name": "Eskil Schilling", "level": "authorized-2" }],
       "practices": ["mysore", "led-primary"],
       "website": "https://astangastudio.dk/",
       "lat": 55.6994,
@@ -285,9 +270,7 @@
       "city": "Barcelona",
       "country": "Spain",
       "address": "Paseo Isabel II, 14, 1º 1º, 08003 Barcelona, Spain",
-      "teachers": [
-        { "name": "Elena Figarola", "level": "authorized-2" }
-      ],
+      "teachers": [{ "name": "Elena Figarola", "level": "authorized-2" }],
       "practices": ["mysore", "led-primary"],
       "website": "https://ashtangayogabcn.com/",
       "lat": 41.3825,
@@ -299,12 +282,10 @@
       "city": "Milan",
       "country": "Italy",
       "address": "Viale Caldara 9, 20122 Milano, Italy",
-      "teachers": [
-        { "name": "Lino Miele", "level": "certified" }
-      ],
+      "teachers": [{ "name": "Lino Miele", "level": "certified" }],
       "practices": ["mysore", "led-primary", "pranayama"],
       "website": "https://www.astangamilano.it/",
-      "lat": 45.4530,
+      "lat": 45.453,
       "lng": 9.2088
     },
     {

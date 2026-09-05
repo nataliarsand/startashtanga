@@ -10,8 +10,7 @@ interface BaseButtonProps {
 }
 
 interface ButtonAsButtonProps
-  extends BaseButtonProps,
-    ComponentPropsWithoutRef<'button'> {
+  extends BaseButtonProps, ComponentPropsWithoutRef<'button'> {
   as?: 'button';
   to?: never;
   href?: never;
@@ -26,19 +25,22 @@ interface ButtonAsLinkProps extends BaseButtonProps {
 }
 
 interface ButtonAsAnchorProps
-  extends BaseButtonProps,
-    ComponentPropsWithoutRef<'a'> {
+  extends BaseButtonProps, ComponentPropsWithoutRef<'a'> {
   as: 'a';
   href: string;
   to?: never;
 }
 
-type ButtonProps = ButtonAsButtonProps | ButtonAsLinkProps | ButtonAsAnchorProps;
+type ButtonProps =
+  | ButtonAsButtonProps
+  | ButtonAsLinkProps
+  | ButtonAsAnchorProps;
 
 const variantStyles: Record<ButtonVariant, string> = {
   primary: 'bg-accent text-white hover:opacity-90',
   secondary: 'bg-surface text-heading hover:opacity-90',
-  outline: 'bg-transparent text-heading border-2 border-default hover:border-accent',
+  outline:
+    'bg-transparent text-heading border-2 border-default hover:border-accent',
   info: 'bg-info text-white hover:opacity-90',
   donate: 'bg-accent text-white hover:opacity-90',
 };
@@ -62,7 +64,6 @@ export default function Button({
 
   if (props.as === 'link') {
     const { as: _as, to, children, ...rest } = props;
-    void _as;
     return (
       <Link to={to} className={combinedClassName} {...rest}>
         {children}
@@ -72,11 +73,9 @@ export default function Button({
 
   if (props.as === 'a') {
     const { as: _as, href, ...rest } = props;
-    void _as;
     return <a href={href} className={combinedClassName} {...rest} />;
   }
 
   const { as: _as, ...rest } = props;
-  void _as;
   return <button className={combinedClassName} {...rest} />;
 }

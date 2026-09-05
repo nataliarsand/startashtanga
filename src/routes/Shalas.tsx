@@ -64,7 +64,10 @@ function ShalasComingSoon() {
               variant="secondary"
               size="lg"
             >
-              <FontAwesomeIcon icon={faMapLocationDot} className="mr-2 h-4 w-4" />
+              <FontAwesomeIcon
+                icon={faMapLocationDot}
+                className="mr-2 h-4 w-4"
+              />
               {t('comingSoon.button')}
             </Button>
           </div>
@@ -78,7 +81,10 @@ function ShalasComingSoon() {
 function ShalasDirectory() {
   const { t } = useTranslation('shalas');
   const [searchQuery, setSearchQuery] = useState('');
-  const [userLocation, setUserLocation] = useState<{ lat: number; lng: number } | null>(null);
+  const [userLocation, setUserLocation] = useState<{
+    lat: number;
+    lng: number;
+  } | null>(null);
   const shalaListRef = useRef<HTMLDivElement>(null);
 
   useSEO({ page: 'shalas' });
@@ -105,8 +111,18 @@ function ShalasDirectory() {
     // Sort by distance if user location is available
     if (userLocation) {
       result = [...result].sort((a, b) => {
-        const distA = getDistance(userLocation.lat, userLocation.lng, a.lat, a.lng);
-        const distB = getDistance(userLocation.lat, userLocation.lng, b.lat, b.lng);
+        const distA = getDistance(
+          userLocation.lat,
+          userLocation.lng,
+          a.lat,
+          a.lng
+        );
+        const distB = getDistance(
+          userLocation.lat,
+          userLocation.lng,
+          b.lat,
+          b.lng
+        );
         return distA - distB;
       });
     }
@@ -116,10 +132,13 @@ function ShalasDirectory() {
 
   // Calculate distances for display
   const shalasWithDistance = useMemo(() => {
-    if (!userLocation) return filteredShalas.map((s) => ({ ...s, distance: null }));
+    if (!userLocation)
+      return filteredShalas.map((s) => ({ ...s, distance: null }));
     return filteredShalas.map((shala) => ({
       ...shala,
-      distance: Math.round(getDistance(userLocation.lat, userLocation.lng, shala.lat, shala.lng)),
+      distance: Math.round(
+        getDistance(userLocation.lat, userLocation.lng, shala.lat, shala.lng)
+      ),
     }));
   }, [filteredShalas, userLocation]);
 
@@ -176,7 +195,11 @@ function ShalasDirectory() {
           ) : (
             <div className="columns-1 gap-4 sm:columns-2">
               {shalasWithDistance.map((shala) => (
-                <div key={shala.id} id={`shala-${shala.id}`} className="mb-4 break-inside-avoid transition-all duration-300">
+                <div
+                  key={shala.id}
+                  id={`shala-${shala.id}`}
+                  className="mb-4 break-inside-avoid transition-all duration-300"
+                >
                   <ShalaCard shala={shala} />
                   {shala.distance !== null && (
                     <p className="text-subtle mt-1 text-right text-xs">
@@ -207,7 +230,10 @@ function ShalasDirectory() {
               variant="secondary"
               size="lg"
             >
-              <FontAwesomeIcon icon={faMapLocationDot} className="mr-2 h-4 w-4" />
+              <FontAwesomeIcon
+                icon={faMapLocationDot}
+                className="mr-2 h-4 w-4"
+              />
               {t('cta.button')}
             </Button>
           </div>

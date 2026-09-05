@@ -10,7 +10,10 @@ interface CalloutBoxProps {
   variant?: CalloutVariant;
 }
 
-const variantStyles: Record<CalloutVariant, { borderClass: string; bgClass: string; iconClass: string }> = {
+const variantStyles: Record<
+  CalloutVariant,
+  { borderClass: string; bgClass: string; iconClass: string }
+> = {
   info: {
     borderClass: 'border-info',
     bgClass: 'bg-info-subtle',
@@ -32,7 +35,7 @@ export default function CalloutBox({
   icon,
   title,
   children,
-  variant = 'info'
+  variant = 'info',
 }: CalloutBoxProps) {
   const styles = variantStyles[variant];
 
@@ -45,14 +48,8 @@ export default function CalloutBox({
         className={`mt-0.5 h-5 w-5 flex-shrink-0 ${styles.iconClass}`}
       />
       <div>
-        {title && (
-          <h4 className="text-heading font-semibold">
-            {title}
-          </h4>
-        )}
-        <div className={`text-body ${title ? 'mt-1' : ''}`}>
-          {children}
-        </div>
+        {title && <h4 className="text-heading font-semibold">{title}</h4>}
+        <div className={`text-body ${title ? 'mt-1' : ''}`}>{children}</div>
       </div>
     </div>
   );

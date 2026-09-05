@@ -2,7 +2,14 @@ import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 
 interface SEOProps {
-  page: 'home' | 'gettingStarted' | 'primarySeries' | 'glossary' | 'about' | 'contributing' | 'shalas';
+  page:
+    | 'home'
+    | 'gettingStarted'
+    | 'primarySeries'
+    | 'glossary'
+    | 'about'
+    | 'contributing'
+    | 'shalas';
   canonical?: string;
   ogType?: 'website' | 'article';
 }
@@ -10,7 +17,11 @@ interface SEOProps {
 const SITE_NAME = 'Start Ashtanga';
 const BASE_URL = 'https://www.startashtanga.org';
 
-export default function useSEO({ page, canonical, ogType = 'website' }: SEOProps) {
+export default function useSEO({
+  page,
+  canonical,
+  ogType = 'website',
+}: SEOProps) {
   const { t } = useTranslation('seo');
   const title = t(`${page}.title`);
   const description = t(`${page}.description`);
@@ -27,7 +38,9 @@ export default function useSEO({ page, canonical, ogType = 'website' }: SEOProps
     }
 
     // Canonical URL
-    let canonicalLink = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
+    let canonicalLink = document.querySelector(
+      'link[rel="canonical"]'
+    ) as HTMLLinkElement;
     if (!canonicalLink) {
       canonicalLink = document.createElement('link');
       canonicalLink.rel = 'canonical';
@@ -37,7 +50,9 @@ export default function useSEO({ page, canonical, ogType = 'website' }: SEOProps
 
     // Open Graph tags
     const setMetaProperty = (property: string, content: string) => {
-      let meta = document.querySelector(`meta[property="${property}"]`) as HTMLMetaElement;
+      let meta = document.querySelector(
+        `meta[property="${property}"]`
+      ) as HTMLMetaElement;
       if (!meta) {
         meta = document.createElement('meta');
         meta.setAttribute('property', property);
@@ -49,12 +64,17 @@ export default function useSEO({ page, canonical, ogType = 'website' }: SEOProps
     setMetaProperty('og:title', fullTitle);
     setMetaProperty('og:description', description);
     setMetaProperty('og:type', ogType);
-    setMetaProperty('og:url', canonical || `${BASE_URL}${window.location.pathname}`);
+    setMetaProperty(
+      'og:url',
+      canonical || `${BASE_URL}${window.location.pathname}`
+    );
     setMetaProperty('og:site_name', SITE_NAME);
 
     // Twitter Card tags
     const setMetaName = (name: string, content: string) => {
-      let meta = document.querySelector(`meta[name="${name}"]`) as HTMLMetaElement;
+      let meta = document.querySelector(
+        `meta[name="${name}"]`
+      ) as HTMLMetaElement;
       if (!meta) {
         meta = document.createElement('meta');
         meta.name = name;

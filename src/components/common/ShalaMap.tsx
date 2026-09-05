@@ -51,7 +51,13 @@ const userIcon = new DivIcon({
 });
 
 // Component to fit bounds to all markers
-function FitBounds({ shalas, userLocation }: { shalas: ShalaData[]; userLocation: { lat: number; lng: number } | null }) {
+function FitBounds({
+  shalas,
+  userLocation,
+}: {
+  shalas: ShalaData[];
+  userLocation: { lat: number; lng: number } | null;
+}) {
   const map = useMap();
 
   useEffect(() => {
@@ -70,7 +76,11 @@ function FitBounds({ shalas, userLocation }: { shalas: ShalaData[]; userLocation
 }
 
 // Component to fly to user location
-function FlyToLocation({ location }: { location: { lat: number; lng: number } | null }) {
+function FlyToLocation({
+  location,
+}: {
+  location: { lat: number; lng: number } | null;
+}) {
   const map = useMap();
 
   useEffect(() => {
@@ -105,7 +115,10 @@ export default function ShalaMap({
   className = '',
 }: ShalaMapProps) {
   const [isExpanded, setIsExpanded] = useState(false);
-  const [userLocation, setUserLocation] = useState<{ lat: number; lng: number } | null>(null);
+  const [userLocation, setUserLocation] = useState<{
+    lat: number;
+    lng: number;
+  } | null>(null);
   const [isLocating, setIsLocating] = useState(false);
   const [locationError, setLocationError] = useState<string | null>(null);
 
@@ -220,14 +233,17 @@ export default function ShalaMap({
 
         {/* User location marker */}
         {userLocation && (
-          <Marker position={[userLocation.lat, userLocation.lng]} icon={userIcon}>
+          <Marker
+            position={[userLocation.lat, userLocation.lng]}
+            icon={userIcon}
+          >
             <Popup>Your location</Popup>
           </Marker>
         )}
       </MapContainer>
 
       {/* Controls */}
-      <div className="absolute bottom-4 right-4 z-[1000] flex flex-col gap-2">
+      <div className="absolute right-4 bottom-4 z-[1000] flex flex-col gap-2">
         {locationError && (
           <div className="rounded-lg bg-red-100 px-3 py-2 text-xs text-red-700 shadow-md">
             {locationError}
@@ -238,7 +254,7 @@ export default function ShalaMap({
           <button
             onClick={handleNearMe}
             disabled={isLocating}
-            className="text-heading flex items-center gap-2 rounded-full bg-white/95 px-4 py-2 text-sm font-medium shadow-md transition-all hover:bg-white hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 disabled:opacity-50"
+            className="text-heading focus:ring-accent flex items-center gap-2 rounded-full bg-white/95 px-4 py-2 text-sm font-medium shadow-md transition-all hover:bg-white hover:shadow-lg focus:ring-2 focus:ring-offset-2 focus:outline-none disabled:opacity-50"
             aria-label="Find shalas near me"
           >
             <FontAwesomeIcon
@@ -250,7 +266,7 @@ export default function ShalaMap({
 
           <button
             onClick={() => setIsExpanded(!isExpanded)}
-            className="text-heading flex items-center gap-2 rounded-full bg-white/95 px-4 py-2 text-sm font-medium shadow-md transition-all hover:bg-white hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2"
+            className="text-heading focus:ring-accent flex items-center gap-2 rounded-full bg-white/95 px-4 py-2 text-sm font-medium shadow-md transition-all hover:bg-white hover:shadow-lg focus:ring-2 focus:ring-offset-2 focus:outline-none"
             aria-label={isExpanded ? 'Collapse map' : 'Expand map'}
           >
             <FontAwesomeIcon

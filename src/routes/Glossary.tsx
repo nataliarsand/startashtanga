@@ -75,7 +75,8 @@ export default function Glossary() {
 
           {/* Term count */}
           <p className="text-subtle mt-8 text-center text-sm">
-            {filteredTerms.length} {filteredTerms.length === 1 ? 'term' : 'terms'}
+            {filteredTerms.length}{' '}
+            {filteredTerms.length === 1 ? 'term' : 'terms'}
             {searchQuery && ` matching "${searchQuery}"`}
           </p>
         </div>

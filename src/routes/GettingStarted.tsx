@@ -84,7 +84,12 @@ export default function GettingStarted() {
 
   const faqItems = t('faq.items', {
     returnObjects: true,
-  }) as Array<{ q: string; a?: string; id?: string; aParts?: { before: string; after: string } }>;
+  }) as Array<{
+    q: string;
+    a?: string;
+    id?: string;
+    aParts?: { before: string; after: string };
+  }>;
 
   return (
     <>
@@ -102,12 +107,17 @@ export default function GettingStarted() {
             </h2>
             <p className="text-body mt-4 text-lg leading-relaxed">
               {t('ashtanga.introParts.before')}{' '}
-              <GlossaryTooltip term="Mysore" />{t('ashtanga.introParts.after')}
+              <GlossaryTooltip term="Mysore" />
+              {t('ashtanga.introParts.after')}
             </p>
 
             {/* Eight Limbs */}
             <div className="mt-8">
-              <CalloutBox icon={faLightbulb} title={t('ashtanga.eightLimbs.title')} variant="info">
+              <CalloutBox
+                icon={faLightbulb}
+                title={t('ashtanga.eightLimbs.title')}
+                variant="info"
+              >
                 <p>
                   {t('ashtanga.eightLimbs.textParts.before')}{' '}
                   <GlossaryTooltip term="Sanskrit" />
@@ -191,7 +201,10 @@ export default function GettingStarted() {
               <ContentCard>
                 <div className="flex items-center gap-3">
                   <div className="bg-accent flex h-10 w-10 items-center justify-center rounded-full">
-                    <FontAwesomeIcon icon={faUsers} className="h-5 w-5 text-white" />
+                    <FontAwesomeIcon
+                      icon={faUsers}
+                      className="h-5 w-5 text-white"
+                    />
                   </div>
                   <h3 className="text-heading text-lg font-semibold">
                     {t('ledVsMysore.led.title')}
@@ -215,7 +228,9 @@ export default function GettingStarted() {
                     />
                     <span>
                       {t('ledVsMysore.led.vinyasaCountPoint.before')}{' '}
-                      <GlossaryTooltip term="Vinyasa Count">vinyasa count</GlossaryTooltip>
+                      <GlossaryTooltip term="Vinyasa Count">
+                        vinyasa count
+                      </GlossaryTooltip>
                     </span>
                   </li>
                   {ledPoints.slice(1).map((point, index) => (
@@ -237,7 +252,10 @@ export default function GettingStarted() {
               <ContentCard variant="featured">
                 <div className="flex items-center gap-3">
                   <div className="bg-accent flex h-10 w-10 items-center justify-center rounded-full">
-                    <FontAwesomeIcon icon={faUser} className="h-5 w-5 text-white" />
+                    <FontAwesomeIcon
+                      icon={faUser}
+                      className="h-5 w-5 text-white"
+                    />
                   </div>
                   <h3 className="text-heading text-lg font-semibold">
                     {t('ledVsMysore.mysore.title')}
@@ -265,7 +283,11 @@ export default function GettingStarted() {
 
             {/* Recommendation */}
             <div className="mt-6">
-              <CalloutBox icon={faLightbulb} title={t('ledVsMysore.recommendation.title')} variant="tip">
+              <CalloutBox
+                icon={faLightbulb}
+                title={t('ledVsMysore.recommendation.title')}
+                variant="tip"
+              >
                 <p>{t('ledVsMysore.recommendation.text')}</p>
               </CalloutBox>
             </div>
@@ -279,9 +301,7 @@ export default function GettingStarted() {
             <h2 className="text-heading text-2xl font-bold sm:text-3xl">
               {t('firstClass.title')}
             </h2>
-            <p className="text-body mt-4">
-              {t('firstClass.intro')}
-            </p>
+            <p className="text-body mt-4">{t('firstClass.intro')}</p>
 
             {/* Class Schedule */}
             <div className="bg-surface mt-8 rounded-2xl p-6">
@@ -318,7 +338,9 @@ export default function GettingStarted() {
                       {step.titleParts ? (
                         <>
                           {step.titleParts.before}{' '}
-                          <GlossaryTooltip term="Vinyasa">vinyasas</GlossaryTooltip>
+                          <GlossaryTooltip term="Vinyasa">
+                            vinyasas
+                          </GlossaryTooltip>
                           {step.titleParts.after}
                         </>
                       ) : (
@@ -329,7 +351,9 @@ export default function GettingStarted() {
                       {step.textParts ? (
                         <>
                           {step.textParts.before}{' '}
-                          <GlossaryTooltip term="Surya Namaskara">Sun Salutations</GlossaryTooltip>{' '}
+                          <GlossaryTooltip term="Surya Namaskara">
+                            Sun Salutations
+                          </GlossaryTooltip>{' '}
                           {step.textParts.after}
                         </>
                       ) : (
@@ -364,9 +388,7 @@ export default function GettingStarted() {
               <h4 className="text-heading font-semibold">
                 {t('firstClass.duration.title')}
               </h4>
-              <p className="text-body mt-1">
-                {t('firstClass.duration.text')}
-              </p>
+              <p className="text-body mt-1">{t('firstClass.duration.text')}</p>
             </div>
           </section>
 
@@ -381,16 +403,9 @@ export default function GettingStarted() {
 
             <div className="mt-6 grid gap-4 sm:grid-cols-2">
               {whatToBringItems.map((item, index) => (
-                <div
-                  key={index}
-                  className="bg-surface rounded-xl p-4"
-                >
-                  <p className="text-heading font-semibold">
-                    {item.item}
-                  </p>
-                  <p className="text-body mt-1 text-sm">
-                    {item.note}
-                  </p>
+                <div key={index} className="bg-surface rounded-xl p-4">
+                  <p className="text-heading font-semibold">{item.item}</p>
+                  <p className="text-body mt-1 text-sm">{item.note}</p>
                 </div>
               ))}
             </div>
@@ -433,9 +448,7 @@ export default function GettingStarted() {
             <h2 className="text-heading text-2xl font-bold sm:text-3xl">
               {t('findShala.title')}
             </h2>
-            <p className="text-body mt-4">
-              {t('findShala.text')}
-            </p>
+            <p className="text-body mt-4">{t('findShala.text')}</p>
 
             <ContentCard variant="placeholder" className="mt-6 text-center">
               <FontAwesomeIcon
@@ -453,7 +466,10 @@ export default function GettingStarted() {
                 size="sm"
                 className="mt-4"
               >
-                <FontAwesomeIcon icon={faMapLocationDot} className="mr-2 h-3 w-3" />
+                <FontAwesomeIcon
+                  icon={faMapLocationDot}
+                  className="mr-2 h-3 w-3"
+                />
                 Submit a shala
               </Button>
             </ContentCard>
@@ -465,8 +481,8 @@ export default function GettingStarted() {
               <p className="text-body mt-1">
                 {t('findShala.tip.textParts.before')}{' '}
                 <GlossaryTooltip term="KPJAYI" />/<GlossaryTooltip term="SYC" />{' '}
-                <GlossaryTooltip term="Authorised">authorised</GlossaryTooltip> or{' '}
-                <GlossaryTooltip term="Certified">certified</GlossaryTooltip>{' '}
+                <GlossaryTooltip term="Authorised">authorised</GlossaryTooltip>{' '}
+                or <GlossaryTooltip term="Certified">certified</GlossaryTooltip>{' '}
                 {t('findShala.tip.textParts.after')}
               </p>
             </ContentCard>
@@ -483,10 +499,7 @@ export default function GettingStarted() {
 
             <div className="mt-6 space-y-4">
               {faqItems.map((item, index) => (
-                <details
-                  key={index}
-                  className="bg-surface group rounded-xl"
-                >
+                <details key={index} className="bg-surface group rounded-xl">
                   <summary className="text-heading flex cursor-pointer items-center justify-between p-4 font-semibold">
                     {item.q}
                     <FontAwesomeIcon
@@ -499,10 +512,14 @@ export default function GettingStarted() {
                       <>
                         {item.aParts.before}{' '}
                         {item.id === 'practice-frequency' && (
-                          <GlossaryTooltip term="Moon Days">moon days</GlossaryTooltip>
+                          <GlossaryTooltip term="Moon Days">
+                            moon days
+                          </GlossaryTooltip>
                         )}
                         {item.id === 'skip-ahead' && (
-                          <GlossaryTooltip term="Gatekeeper Pose">gatekeeper poses</GlossaryTooltip>
+                          <GlossaryTooltip term="Gatekeeper Pose">
+                            gatekeeper poses
+                          </GlossaryTooltip>
                         )}{' '}
                         {item.aParts.after}
                       </>

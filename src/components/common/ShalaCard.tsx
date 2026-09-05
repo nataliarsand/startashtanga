@@ -40,10 +40,16 @@ interface ShalaCardProps {
   shala: ShalaData;
 }
 
-const practiceLabels: Record<PracticeOption, { label: string; tooltip?: string }> = {
+const practiceLabels: Record<
+  PracticeOption,
+  { label: string; tooltip?: string }
+> = {
   mysore: { label: 'Mysore', tooltip: 'Mysore style' },
   'led-primary': { label: 'Led Primary', tooltip: 'Led Class' },
-  'led-intermediate': { label: 'Led Intermediate', tooltip: 'Intermediate Series' },
+  'led-intermediate': {
+    label: 'Led Intermediate',
+    tooltip: 'Intermediate Series',
+  },
   pranayama: { label: 'Pranayama', tooltip: 'Pranayama' },
   chanting: { label: 'Chanting', tooltip: 'Mantra' },
   meditation: { label: 'Meditation', tooltip: 'Dhyana' },
@@ -81,7 +87,7 @@ export default function ShalaCard({ shala }: ShalaCardProps) {
       <div className="p-6">
         {/* Header */}
         <div>
-          <h3 className="text-heading text-lg font-semibold leading-tight">
+          <h3 className="text-heading text-lg leading-tight font-semibold">
             {shala.name}
           </h3>
           <p className="text-subtle mt-1 text-sm">
@@ -96,7 +102,7 @@ export default function ShalaCard({ shala }: ShalaCardProps) {
         <div className="grid grid-cols-2 gap-6">
           {/* Teachers */}
           <div>
-            <p className="text-subtle mb-2 text-xs font-medium uppercase tracking-wide">
+            <p className="text-subtle mb-2 text-xs font-medium tracking-wide uppercase">
               Teachers
             </p>
             <ul className="space-y-1.5">
@@ -126,7 +132,7 @@ export default function ShalaCard({ shala }: ShalaCardProps) {
 
           {/* Practices */}
           <div>
-            <p className="text-subtle mb-2 text-xs font-medium uppercase tracking-wide">
+            <p className="text-subtle mb-2 text-xs font-medium tracking-wide uppercase">
               Classes
             </p>
             <div className="flex flex-wrap gap-1.5">

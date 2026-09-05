@@ -11,7 +11,13 @@ import {
   faCode,
 } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import { Button, PageHero, ContentCard, ChecklistItem, SectionNav } from '../components/common';
+import {
+  Button,
+  PageHero,
+  ContentCard,
+  ChecklistItem,
+  SectionNav,
+} from '../components/common';
 import { siteConfig } from '../config/site';
 import { useSEO } from '../hooks';
 
@@ -52,10 +58,7 @@ export default function Contributing() {
 
   return (
     <>
-      <PageHero
-        title={t('hero.title')}
-        subtitle={t('hero.subtitle')}
-      >
+      <PageHero title={t('hero.title')} subtitle={t('hero.subtitle')}>
         <SectionNav items={navItems} />
       </PageHero>
 
@@ -113,9 +116,7 @@ export default function Contributing() {
             <h2 className="text-heading text-2xl font-bold sm:text-3xl">
               {t('shala.title')}
             </h2>
-            <p className="text-body mt-4 leading-relaxed">
-              {t('shala.text')}
-            </p>
+            <p className="text-body mt-4 leading-relaxed">{t('shala.text')}</p>
 
             <ContentCard variant="featured" className="mt-6">
               <div className="flex items-start gap-4">
@@ -126,9 +127,7 @@ export default function Contributing() {
                   />
                 </div>
                 <div className="flex-1">
-                  <p className="text-body">
-                    {t('shala.note')}
-                  </p>
+                  <p className="text-body">{t('shala.note')}</p>
                   <p className="text-subtle mt-3 text-sm italic">
                     {t('shala.coming')}
                   </p>
@@ -139,7 +138,10 @@ export default function Contributing() {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <FontAwesomeIcon icon={faMapLocationDot} className="mr-2 h-4 w-4" />
+                      <FontAwesomeIcon
+                        icon={faMapLocationDot}
+                        className="mr-2 h-4 w-4"
+                      />
                       {t('shala.button')}
                     </Button>
                   </div>
@@ -156,9 +158,7 @@ export default function Contributing() {
             <h2 className="text-heading text-2xl font-bold sm:text-3xl">
               {t('wanted.title')}
             </h2>
-            <p className="text-body mt-4 leading-relaxed">
-              {t('wanted.text')}
-            </p>
+            <p className="text-body mt-4 leading-relaxed">{t('wanted.text')}</p>
 
             <div className="mt-6 space-y-1">
               {wanted.map((item, index) => (
@@ -186,13 +186,19 @@ export default function Contributing() {
             <ContentCard variant="highlight" className="mt-6">
               <div className="flex items-start gap-4">
                 <div className="bg-emphasis flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full">
-                  <FontAwesomeIcon icon={faCodeBranch} className="h-5 w-5 text-white" />
+                  <FontAwesomeIcon
+                    icon={faCodeBranch}
+                    className="h-5 w-5 text-white"
+                  />
                 </div>
                 <div className="flex-1">
                   <ul className="text-body space-y-2 text-sm">
                     {features.map((feature, index) => (
                       <li key={index} className="flex items-center gap-2">
-                        <FontAwesomeIcon icon={faCheck} className="text-accent h-4 w-4" />
+                        <FontAwesomeIcon
+                          icon={faCheck}
+                          className="text-accent h-4 w-4"
+                        />
                         {feature}
                       </li>
                     ))}
@@ -205,7 +211,10 @@ export default function Contributing() {
                       rel="noopener noreferrer"
                       size="sm"
                     >
-                      <FontAwesomeIcon icon={faGithub} className="mr-2 h-4 w-4" />
+                      <FontAwesomeIcon
+                        icon={faGithub}
+                        className="mr-2 h-4 w-4"
+                      />
                       {t('technical.githubButton')}
                     </Button>
                     <Button
@@ -229,7 +238,10 @@ export default function Contributing() {
       {/* CTA */}
       <section className="gradient-cta py-16">
         <div className="container-main text-center">
-          <FontAwesomeIcon icon={faHandshake} className="h-10 w-10 text-white/80" />
+          <FontAwesomeIcon
+            icon={faHandshake}
+            className="h-10 w-10 text-white/80"
+          />
           <h2 className="mt-4 text-2xl font-bold text-white sm:text-3xl">
             {t('cta.title')}
           </h2>

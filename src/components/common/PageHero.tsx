@@ -12,9 +12,7 @@ export default function PageHero({ title, subtitle, children }: PageHeroProps) {
           {title}
         </h1>
         {subtitle && (
-          <p className="text-body mx-auto mt-4 max-w-xl text-lg">
-            {subtitle}
-          </p>
+          <p className="text-body mx-auto mt-4 max-w-xl text-lg">{subtitle}</p>
         )}
         {children}
       </div>

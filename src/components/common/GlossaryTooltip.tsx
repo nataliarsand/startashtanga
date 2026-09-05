@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect, useLayoutEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
@@ -13,11 +13,42 @@ interface GlossaryTooltipProps {
   children?: React.ReactNode;
 }
 
-export default function GlossaryTooltip({ term, children }: GlossaryTooltipProps) {
+type Placement = {
+  vertical: 'top' | 'bottom';
+  horizontal: 'center' | 'left' | 'right';
+};
+
+const TOOLTIP_WIDTH = 256; // matches w-64
+const VIEWPORT_PADDING = 16;
+const MIN_SPACE_ABOVE = 120;
+
+function measurePlacement(trigger: HTMLElement): Placement {
+  const rect = trigger.getBoundingClientRect();
+  const triggerCenter = rect.left + rect.width / 2;
+  const leftEdge = triggerCenter - TOOLTIP_WIDTH / 2;
+  const rightEdge = triggerCenter + TOOLTIP_WIDTH / 2;
+
+  let horizontal: Placement['horizontal'] = 'center';
+  if (leftEdge < VIEWPORT_PADDING) horizontal = 'left';
+  else if (rightEdge > window.innerWidth - VIEWPORT_PADDING)
+    horizontal = 'right';
+
+  return {
+    vertical: rect.top < MIN_SPACE_ABOVE ? 'bottom' : 'top',
+    horizontal,
+  };
+}
+
+export default function GlossaryTooltip({
+  term,
+  children,
+}: GlossaryTooltipProps) {
   const { t } = useTranslation('glossary');
   const [isVisible, setIsVisible] = useState(false);
-  const [position, setPosition] = useState<'top' | 'bottom'>('top');
-  const [horizontalPosition, setHorizontalPosition] = useState<'center' | 'left' | 'right'>('center');
+  const [placement, setPlacement] = useState<Placement>({
+    vertical: 'top',
+    horizontal: 'center',
+  });
   const containerRef = useRef<HTMLSpanElement>(null);
   const hideTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const isTouchDevice = useRef(false);
@@ -27,12 +58,25 @@ export default function GlossaryTooltip({ term, children }: GlossaryTooltipProps
     (entry) => entry.term.toLowerCase() === term.toLowerCase()
   );
 
+  // Placement is measured when opening, so the tooltip never renders in the wrong spot first
+  const open = () => {
+    if (containerRef.current) {
+      setPlacement(measurePlacement(containerRef.current));
+    }
+    setIsVisible(true);
+  };
+
+  const toggle = () => {
+    if (isVisible) setIsVisible(false);
+    else open();
+  };
+
   const showTooltip = () => {
     if (hideTimeoutRef.current) {
       clearTimeout(hideTimeoutRef.current);
       hideTimeoutRef.current = null;
     }
-    setIsVisible(true);
+    open();
   };
 
   const hideTooltip = () => {
@@ -54,13 +98,13 @@ export default function GlossaryTooltip({ term, children }: GlossaryTooltipProps
     }
     e.preventDefault();
     e.stopPropagation();
-    setIsVisible((prev) => !prev);
+    toggle();
   };
 
   const handleTouchEnd = (e: React.TouchEvent) => {
     e.preventDefault();
     e.stopPropagation();
-    setIsVisible((prev) => !prev);
+    toggle();
   };
 
   // Close tooltip when clicking outside on mobile
@@ -68,7 +112,10 @@ export default function GlossaryTooltip({ term, children }: GlossaryTooltipProps
     if (!isVisible) return;
 
     const handleClickOutside = (e: MouseEvent | TouchEvent) => {
-      if (containerRef.current && !containerRef.current.contains(e.target as Node)) {
+      if (
+        containerRef.current &&
+        !containerRef.current.contains(e.target as Node)
+      ) {
         setIsVisible(false);
       }
     };
@@ -80,39 +127,6 @@ export default function GlossaryTooltip({ term, children }: GlossaryTooltipProps
       document.removeEventListener('mousedown', handleClickOutside);
       document.removeEventListener('touchstart', handleClickOutside);
     };
-  }, [isVisible]);
-
-  // Use useLayoutEffect to calculate position synchronously before paint
-  // This is a legitimate use case for measuring DOM and updating position
-  useLayoutEffect(() => {
-    if (isVisible && containerRef.current) {
-      const rect = containerRef.current.getBoundingClientRect();
-      const spaceAbove = rect.top;
-      const tooltipWidth = 256; // w-64 = 16rem = 256px
-      const padding = 16; // minimum padding from viewport edge
-
-      // Vertical positioning
-      // eslint-disable-next-line react-hooks/set-state-in-effect
-      setPosition(spaceAbove < 120 ? 'bottom' : 'top');
-
-      // Horizontal positioning - check if tooltip would overflow viewport
-      const triggerCenter = rect.left + rect.width / 2;
-      const leftEdge = triggerCenter - tooltipWidth / 2;
-      const rightEdge = triggerCenter + tooltipWidth / 2;
-
-      if (leftEdge < padding) {
-        // Would overflow left side - align to left
-        // eslint-disable-next-line react-hooks/set-state-in-effect
-        setHorizontalPosition('left');
-      } else if (rightEdge > window.innerWidth - padding) {
-        // Would overflow right side - align to right
-        // eslint-disable-next-line react-hooks/set-state-in-effect
-        setHorizontalPosition('right');
-      } else {
-        // eslint-disable-next-line react-hooks/set-state-in-effect
-        setHorizontalPosition('center');
-      }
-    }
   }, [isVisible]);
 
   // Cleanup timeout on unmount
@@ -155,11 +169,11 @@ export default function GlossaryTooltip({ term, children }: GlossaryTooltipProps
           id={`tooltip-${term}`}
           role="tooltip"
           className={`bg-emphasis absolute z-50 w-64 rounded-lg p-3 shadow-lg ${
-            position === 'top' ? 'bottom-full mb-2' : 'top-full mt-2'
+            placement.vertical === 'top' ? 'bottom-full mb-2' : 'top-full mt-2'
           } ${
-            horizontalPosition === 'center'
+            placement.horizontal === 'center'
               ? 'left-1/2 -translate-x-1/2'
-              : horizontalPosition === 'left'
+              : placement.horizontal === 'left'
                 ? 'left-0'
                 : 'right-0'
           }`}
@@ -169,11 +183,11 @@ export default function GlossaryTooltip({ term, children }: GlossaryTooltipProps
           {/* Arrow */}
           <div
             className={`bg-emphasis absolute h-2 w-2 rotate-45 ${
-              position === 'top' ? '-bottom-1' : '-top-1'
+              placement.vertical === 'top' ? '-bottom-1' : '-top-1'
             } ${
-              horizontalPosition === 'center'
+              placement.horizontal === 'center'
                 ? 'left-1/2 -translate-x-1/2'
-                : horizontalPosition === 'left'
+                : placement.horizontal === 'left'
                   ? 'left-4'
                   : 'right-4'
             }`}
