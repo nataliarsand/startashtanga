@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from '../common/LanguageSwitcher';
+import { siteConfig } from '../../config/site';
 
 export default function Header() {
   const { t } = useTranslation('nav');
@@ -27,7 +28,7 @@ export default function Header() {
           to="/"
           className="text-heading text-xl font-semibold transition-colors"
         >
-          Start Ashtanga
+          {siteConfig.name}
         </Link>
 
         {/* Desktop navigation */}

@@ -26,5 +26,9 @@
   "shalas": {
     "title": "Find Ashtanga Yoga Shalas",
     "description": "Discover Ashtanga Yoga shalas and authorized teachers worldwide. Find a Mysore style practice space near you."
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "description": "This page does not exist."
   }
 }

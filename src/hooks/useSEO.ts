@@ -1,90 +1,86 @@
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import { siteConfig } from '../config/site';
+import type seoEn from '../i18n/locales/en/seo.json';
+
+type SEOPage = keyof typeof seoEn;
 
 interface SEOProps {
-  page:
-    | 'home'
-    | 'gettingStarted'
-    | 'primarySeries'
-    | 'glossary'
-    | 'about'
-    | 'contributing'
-    | 'shalas';
+  page: SEOPage;
   canonical?: string;
   ogType?: 'website' | 'article';
+  /** Ask search engines to skip this page (e.g. 404). */
+  noindex?: boolean;
 }
 
-const SITE_NAME = 'Start Ashtanga';
-const BASE_URL = 'https://www.startashtanga.org';
+function upsertMeta(selector: string, create: () => HTMLMetaElement) {
+  let meta = document.head.querySelector<HTMLMetaElement>(selector);
+  if (!meta) {
+    meta = create();
+    document.head.appendChild(meta);
+  }
+  return meta;
+}
+
+function setMetaProperty(property: string, content: string) {
+  const meta = upsertMeta(`meta[property="${property}"]`, () => {
+    const el = document.createElement('meta');
+    el.setAttribute('property', property);
+    return el;
+  });
+  meta.content = content;
+}
+
+function setMetaName(name: string, content: string) {
+  const meta = upsertMeta(`meta[name="${name}"]`, () => {
+    const el = document.createElement('meta');
+    el.name = name;
+    return el;
+  });
+  meta.content = content;
+}
 
 export default function useSEO({
   page,
   canonical,
   ogType = 'website',
+  noindex = false,
 }: SEOProps) {
   const { t } = useTranslation('seo');
   const title = t(`${page}.title`);
   const description = t(`${page}.description`);
 
   useEffect(() => {
-    // Title (max ~60 chars for Google)
-    const fullTitle = title === 'Home' ? SITE_NAME : `${title} | ${SITE_NAME}`;
+    const fullTitle =
+      page === 'home' ? siteConfig.name : `${title} | ${siteConfig.name}`;
+    const url = canonical || `${siteConfig.url}${window.location.pathname}`;
+
     document.title = fullTitle;
+    setMetaName('description', description);
 
-    // Meta description (max ~155 chars for Google)
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute('content', description);
-    }
-
-    // Canonical URL
-    let canonicalLink = document.querySelector(
+    let canonicalLink = document.head.querySelector<HTMLLinkElement>(
       'link[rel="canonical"]'
-    ) as HTMLLinkElement;
+    );
     if (!canonicalLink) {
       canonicalLink = document.createElement('link');
       canonicalLink.rel = 'canonical';
       document.head.appendChild(canonicalLink);
     }
-    canonicalLink.href = canonical || `${BASE_URL}${window.location.pathname}`;
-
-    // Open Graph tags
-    const setMetaProperty = (property: string, content: string) => {
-      let meta = document.querySelector(
-        `meta[property="${property}"]`
-      ) as HTMLMetaElement;
-      if (!meta) {
-        meta = document.createElement('meta');
-        meta.setAttribute('property', property);
-        document.head.appendChild(meta);
-      }
-      meta.content = content;
-    };
+    canonicalLink.href = url;
 
     setMetaProperty('og:title', fullTitle);
     setMetaProperty('og:description', description);
     setMetaProperty('og:type', ogType);
-    setMetaProperty(
-      'og:url',
-      canonical || `${BASE_URL}${window.location.pathname}`
-    );
-    setMetaProperty('og:site_name', SITE_NAME);
-
-    // Twitter Card tags
-    const setMetaName = (name: string, content: string) => {
-      let meta = document.querySelector(
-        `meta[name="${name}"]`
-      ) as HTMLMetaElement;
-      if (!meta) {
-        meta = document.createElement('meta');
-        meta.name = name;
-        document.head.appendChild(meta);
-      }
-      meta.content = content;
-    };
+    setMetaProperty('og:url', url);
+    setMetaProperty('og:site_name', siteConfig.name);
 
     setMetaName('twitter:card', 'summary');
     setMetaName('twitter:title', fullTitle);
     setMetaName('twitter:description', description);
-  }, [title, description, canonical, ogType]);
+
+    if (noindex) {
+      setMetaName('robots', 'noindex, nofollow');
+      return () => setMetaName('robots', 'index, follow');
+    }
+  }, [page, title, description, canonical, ogType, noindex]);
 }

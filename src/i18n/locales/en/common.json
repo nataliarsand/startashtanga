@@ -1,20 +1,10 @@
 {
-  "siteTitle": "Start Ashtanga",
-  "siteDescription": "A community-driven, beginner-friendly guide to Ashtanga Yoga (Mysore style) and traditional yoga studies.",
-  "buttons": {
-    "startHere": "Start here",
-    "learnMore": "Learn more",
-    "contribute": "Contribute",
-    "viewOnGitHub": "View on GitHub"
-  },
   "footer": {
     "tagline": "A free, open-source resource for the global Ashtanga community.",
     "submitShala": "Submit a shala",
     "contribute": "Contribute on GitHub",
     "contact": "Get in touch",
-    "madeWithLove": "Made with love for and by the community",
-    "openSource": "Open source"
+    "madeWithLove": "Made with love for and by the community"
   },
-  "language": "Language",
-  "loading": "Loading..."
+  "language": "Language"
 }

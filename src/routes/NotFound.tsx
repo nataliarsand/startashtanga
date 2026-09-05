@@ -1,24 +1,10 @@
-import { useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faOm, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { Button } from '../components/common';
+import { useSEO } from '../hooks';
 
 export default function NotFound() {
-  useEffect(() => {
-    document.title = 'Page Not Found | Start Ashtanga';
-    // Tell search engines not to index this page
-    const robotsMeta = document.querySelector(
-      'meta[name="robots"]'
-    ) as HTMLMetaElement;
-    if (robotsMeta) {
-      robotsMeta.content = 'noindex, nofollow';
-    }
-    return () => {
-      if (robotsMeta) {
-        robotsMeta.content = 'index, follow';
-      }
-    };
-  }, []);
+  useSEO({ page: 'notFound', noindex: true });
 
   return (
     <div className="flex min-h-[60vh] flex-col items-center justify-center px-4 py-16 text-center">

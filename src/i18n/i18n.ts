@@ -55,18 +55,7 @@ i18n
     resources,
     fallbackLng: 'en',
     defaultNS: 'common',
-    ns: [
-      'common',
-      'nav',
-      'home',
-      'about',
-      'contributing',
-      'gettingStarted',
-      'glossary',
-      'primarySeries',
-      'seo',
-      'shalas',
-    ],
+    ns: Object.keys(resources.en),
 
     // Language detection options
     detection: {
