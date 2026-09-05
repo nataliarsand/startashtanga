@@ -22,8 +22,9 @@
   },
   "cta": {
     "title": "Know a shala?",
-    "text": "Help us grow this directory.",
-    "button": "Submit a shala"
+    "text": "Help us grow this directory, or tell us when something here is out of date.",
+    "button": "Submit a shala",
+    "correctionButton": "Suggest a correction"
   },
   "list": {
     "teachers": "Teachers",

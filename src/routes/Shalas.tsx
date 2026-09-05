@@ -1,7 +1,11 @@
 import { useState, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMapLocationDot, faUsers } from '@fortawesome/free-solid-svg-icons';
+import {
+  faMapLocationDot,
+  faUsers,
+  faPen,
+} from '@fortawesome/free-solid-svg-icons';
 import {
   Button,
   PageHero,
@@ -170,8 +174,19 @@ function ShalasDirectory() {
           <p className="mx-auto mt-3 max-w-3xl text-white/80">
             {t('cta.text')}
           </p>
-          <div className="mt-8">
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <SubmitShalaButton label={t('cta.button')} />
+            <Button
+              as="a"
+              href={siteConfig.contact.formUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              variant="ghost-on-dark"
+              size="lg"
+            >
+              <FontAwesomeIcon icon={faPen} className="mr-2 h-4 w-4" />
+              {t('cta.correctionButton')}
+            </Button>
           </div>
         </div>
       </section>

@@ -1,7 +1,13 @@
 import { Link } from 'react-router-dom';
 import type { ComponentPropsWithoutRef } from 'react';
 
-type ButtonVariant = 'primary' | 'secondary' | 'outline' | 'info' | 'donate';
+type ButtonVariant =
+  | 'primary'
+  | 'secondary'
+  | 'outline'
+  | 'ghost-on-dark'
+  | 'info'
+  | 'donate';
 type ButtonSize = 'sm' | 'md' | 'lg';
 
 interface BaseButtonProps {
@@ -41,6 +47,8 @@ const variantStyles: Record<ButtonVariant, string> = {
   secondary: 'bg-surface text-heading hover:opacity-90',
   outline:
     'bg-transparent text-heading border-2 border-line hover:border-accent',
+  'ghost-on-dark':
+    'bg-transparent text-white border-2 border-white/40 hover:border-white',
   info: 'bg-info text-white hover:opacity-90',
   donate: 'bg-accent text-white hover:opacity-90',
 };
