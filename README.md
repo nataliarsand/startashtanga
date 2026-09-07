@@ -19,7 +19,7 @@ You don't need to be a developer to help!
 
 We're also looking for help with logo design, social media, and building a resources library.
 
-<a href="https://forms.gle/ih4ZVFEA5GWNYec86" target="_blank">Get in touch</a> or open a GitHub issue.
+<a href="https://forms.gle/a7FjzNYMpbRF8YyFA" target="_blank">Get in touch</a> or open a GitHub issue.
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
 
